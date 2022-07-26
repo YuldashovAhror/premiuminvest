@@ -3,26 +3,23 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
-use App\Models\Invest;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class ProjectController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('isUser');
-    }
-
     public function index()
     {
-        $invest = Invest::where('user_id', auth()->user()->id)->first();
-        return view('front.cabinet', compact('invest'));
-        
+        dd('asdasd');
+        $project = Project::all();
+        return view('front.index',[
+            'project' => $project
+        ]);
     }
 
     /**

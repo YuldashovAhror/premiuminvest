@@ -14,7 +14,9 @@
                                 <th>#</th>
                                 <th>Name</th>
                                 <th>Photo</th>
-                                <th>Description</th>
+                                <th>Description Uz</th>
+                                <th>Description Ru</th>
+                                <th>Description En</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -25,7 +27,9 @@
                                     <td>{{$num++}}</td>
                                     <td>{{$item->name}}</td>
                                     <td><img src="{{$item->photo}}" alt="" style="width: 100px; height: 100px;"></td>
-                                    <td>{{$item->description}}</td>
+                                    <td>{{$item->description_uz}}</td>
+                                    <td>{{$item->description_ru}}</td>
+                                    <td>{{$item->description_en}}</td>
                                     <td>
                                         <form action="{{route('admin.news.edit', $item->id )}}" method="get" style="margin-bottom: 5px;">
                                             @csrf

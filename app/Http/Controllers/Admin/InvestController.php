@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Invest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class InvestController extends Controller
 {
@@ -58,8 +59,17 @@ class InvestController extends Controller
         $invest->current_earning = $request->current_earning;
         $invest->revaluation_date = $request->revaluation_date;
         $invest->end_date = $request->end_date;
-        $invest->use_funds = $request->use_funds;
-        $invest->progress_report = $request->progress_report;
+
+        if(!empty($request->file('use_funds'))){
+            $img_name = Str::random(10).'.'.$request->file('use_funds')->getClientOriginalExtension();
+            $request->file('use_funds')->move(public_path('/images/usefunds'), $img_name);
+            $invest->use_funds = '/images/usefunds/'.$img_name;
+        }
+        if(!empty($request->file('progress_report'))){
+            $img_name = Str::random(10).'.'.$request->file('progress_report')->getClientOriginalExtension();
+            $request->file('progress_report')->move(public_path('/images/progressreport'), $img_name);
+            $invest->progress_report = '/images/progressreport/'.$img_name;
+        }
         $invest->save();
         return redirect()->route('admin.invest');
     }
@@ -113,8 +123,16 @@ class InvestController extends Controller
         $invest->current_earning = $request->current_earning;
         $invest->revaluation_date = $request->revaluation_date;
         $invest->end_date = $request->end_date;
-        $invest->use_funds = $request->use_funds;
-        $invest->progress_report = $request->progress_report;
+        if(!empty($request->file('use_funds'))){
+            $img_name = Str::random(10).'.'.$request->file('use_funds')->getClientOriginalExtension();
+            $request->file('use_funds')->move(public_path('/images/usefunds'), $img_name);
+            $invest->use_funds = '/images/usefunds/'.$img_name;
+        }
+        if(!empty($request->file('progress_report'))){
+            $img_name = Str::random(10).'.'.$request->file('progress_report')->getClientOriginalExtension();
+            $request->file('progress_report')->move(public_path('/images/progressreport'), $img_name);
+            $invest->progress_report = '/images/progressreport/'.$img_name;
+        }
         $invest->save();
         return redirect()->route('admin.invest');
     }

@@ -128,27 +128,30 @@
 				</svg>					
 			</div>
 			<div class="cabinet-title__text">
-				Уважаемый <span>Сабиров Сарвар</span>
+				Уважаемый <span>{{ Auth::user()->name }}</span>
 			</div>
 		</div>
+
 		<div class="cabinet-wrap">
 			<ul class="cabinet-table">
 				<li>
 					<div class="cabinet-table__info">
 						Аванс
-						<span>Июль, 2022</span>
+						<input type="hidden" id="deposit_date" >
+						<span>{{$invest->deposit_date}}</span>
 					</div>
 					<div class="cabinet-table__value">
-						1 000 US$
+						{{-- @dd($invest) --}}
+						{{ $invest->deposit }} US$
 					</div>
 				</li>
 				<li>
 					<div class="cabinet-table__info">
 						Мой вклад
-						<span>Август, 2022</span>
+						<span>{{$invest->investment_date}}</span>
 					</div>
 					<div class="cabinet-table__value">
-						100 000 US$
+						{{$invest->investment}} US$
 					</div>
 				</li>
 				<li>
@@ -156,19 +159,18 @@
 						Доля в фонде
 					</div>
 					<div class="cabinet-table__value">
-						0,5 %
+						{{$invest->percentage}} %
 					</div>
 				</li>
 				<li>
 					<div class="cabinet-table__info">
 						Ожидаемый доход
-						<span>Август, 2022</span>
+						<span>{{$invest->earnings_date}}</span>
 					</div>
 					<div class="cabinet-table__value">
-						130 000 US$
-
+						{{$invest->earnings}} US$
 						<div>
-							+30%
+							+{{$invest->earnings_percentage}} %
 						</div>
 					</div>
 				</li>
@@ -177,15 +179,15 @@
 						Рыночная Σ актива
 					</div>
 					<div class="cabinet-table__value">
-						100 000 US$
+						{{$invest->current_earning}} US$
 					</div>
 				</li>
 				<li>
 					<div class="cabinet-table__info">
-						Дата переоценки
+						{{$invest->revaluation_date}}
 					</div>
 					<div class="cabinet-table__value">
-						<span>Август, 2023</span>
+						<span>{{$invest->revaluation_date}}</span>
 					</div>
 				</li>
 				<li>
@@ -193,7 +195,7 @@
 						Дней до закрытия фонда
 					</div>
 					<div class="cabinet-table__value">
-						<span>15 дней</span>
+						<span>{{$invest->end_date}}</span>
 					</div>
 				</li>
 				<li>
@@ -203,12 +205,12 @@
 					<ul class="cabinet-table__list">
 						<li>
 							<!-- unread непрочитанный-->
-							<a href="#" class="unread">
+							<a href="{{$invest->use_funds}}" download class="unread">
 								Использование средств <img src="assets/img/download.svg" alt="ico">
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="{{$invest->progress_report}}" download>
 								Отчет о прогрессе <img src="assets/img/download.svg" alt="ico">
 							</a>
 						</li>
@@ -385,6 +387,13 @@
 
 		Chart.defaults.color  = '#fff'
 
+		let deposit = <?php echo $invest->deposit/1000; ?>;
+		let investment = <?php echo $invest->investment/1000; ?>;
+		let earnings = <?php echo $invest->earnings/1000; ?>;
+
+		let arr = [deposit, investment, earnings];
+		
+
 		const myChart = new Chart(ctx, {
 		type: 'bar',
 		data: {
@@ -393,7 +402,7 @@
 			datasets: [{
 				label: 'Стоимость вклада, тыс. US$',
 				// значения графиков 
-				data: [100, 110, 130],
+				data: [deposit, investment, earnings],
 				backgroundColor: [
 					'rgba(203, 187, 166, .3)',
 					'rgba(210, 180, 140, .3)',

@@ -12,20 +12,19 @@
                             </tr>
                             <tr>
                                 <th>#</th>
-                                <th>User Id</th>
-                                <th>Deposit</th>
-                                <th>Deposit date</th>
-                                <th>Investment</th>
-                                <th>Investment date</th>
-                                <th>Percentage</th>
-                                <th>Earnings</th>
-                                <th>Earnings Date</th>
-                                <th>Earnings Percentage</th>
-                                <th>Current Earning</th>
-                                <th>Revaluation Date</th>
-                                <th>End Date</th>
-                                <th>Use Funds</th>
-                                <th>Progress Report</th>
+                                <th>Аванс</th>
+                                <th>Аванс дата</th>
+                                <th>Bклад</th>
+                                <th>Bклад дата</th>
+                                <th>Доля в фонде</th>
+                                <th>Доход</th>
+                                <th>Доход дата</th>
+                                <th>Доход Процент</th>
+                                <th>Рыночная актива</th>
+                                <th>Дата переоценки</th>
+                                <th>Дней до закрытия фонда</th>
+                                <th>Использование средств</th>
+                                <th>Отчет о прогрессе</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -34,7 +33,6 @@
                             @foreach($invest as $item)
                                 <tr>
                                     <td>{{$num++}}</td>
-                                    <td>{{$item->user_id}}</td>
                                     <td>{{$item->deposit}}</td>
                                     <td>{{$item->deposit_date}}</td>
                                     <td>{{$item->investment}}</td>
@@ -46,8 +44,8 @@
                                     <td>{{$item->current_earning}}</td>
                                     <td>{{$item->revaluation_date}}</td>
                                     <td>{{$item->end_date}}</td>
-                                    <td>{{$item->use_funds}}</td>
-                                    <td>{{$item->progress_report}}</td>
+                                    <td><img src="{{$item->use_funds}}" alt="" style="width: 100px; height: 100px;"></td>
+                                    <td><img src="{{$item->progress_report}}" alt="" style="width: 100px; height: 100px;"></td>
                                     <td>
                                         <form action="{{route('admin.invest.edit', $item->id )}}" method="get" style="margin-bottom: 5px;">
                                             @csrf

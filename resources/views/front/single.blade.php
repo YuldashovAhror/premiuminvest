@@ -28,21 +28,24 @@
 			<div class="feedback-logo">
 				Premium investment club
 			</div>
-			<div class="feedback-wrap">
-				<div class="feedback__title">
-					Мы вам перезвоним
+			<form action="{{route('admin.message.store')}}" method="POST">
+				@csrf
+				<div class="feedback-wrap">
+					<div class="feedback__title">
+						Мы вам перезвоним
+					</div>
+					<div class="feedback__text">
+						Оставьте ваши контактные данные, и мы с вами свяжемся.
+					</div>
+					<div class="feedback-form">
+						<input type="text" required placeholder="Ваше имя" name="name">
+						<input type="tel"  required placeholder="Номер телефона" name="phone">
+						<button class="btn">
+							Отправить
+						</button>
+					</div>
 				</div>
-				<div class="feedback__text">
-					Оставьте ваши контактные данные, и мы с вами свяжемся.
-				</div>
-				<div class="feedback-form">
-					<input type="text" required placeholder="Ваше имя">
-					<input type="tel"  required placeholder="Номер телефона">
-					<button class="btn">
-						Отправить
-					</button>
-				</div>
-			</div>
+			</form>
 			<div class="feedback-done">
 				<div class="feedback__img">
 					<img src="img/done.svg" alt="ico">

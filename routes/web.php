@@ -26,8 +26,9 @@ use Laravel\Jetstream\Rules\Role;
 
 // Front Routes
 Route::get('/', function(){
-    return view('front.index');
-})->name('home');
+    return view('front.index');})->name('home');
+
+    
 
 Route::get('/logout', function(){
     Auth()->logout();
@@ -96,6 +97,8 @@ Route::middleware([
 Route::name('front.')->group(function () {
     Route::get('/profile', [ProfileController::class,'index'])->name('profile');
 });
+// Route::get('/', [ProjectController::class,'index'])->name('home');
+
 
 
 

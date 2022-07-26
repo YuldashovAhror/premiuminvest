@@ -48,7 +48,9 @@ class NewsController extends Controller
             $news->photo = '/images/news/'.$img_name;
         }
         $news->name = $request->name;
-        $news->description = $request->description;
+        $news->description_uz = $request->description_uz;
+        $news->description_ru = $request->description_ru;
+        $news->description_en = $request->description_en;
         $news->save();
         return redirect()->route('admin.news');
     }
@@ -95,7 +97,9 @@ class NewsController extends Controller
             $news->photo = '/images/news/'.$img_name;
         }
         $news->name = $request->name;
-        $news->description = $request->description;
+        $news->description_uz = $request->description_uz;
+        $news->description_ru = $request->description_ru;
+        $news->description_en = $request->description_en;
         $news->save();
         return redirect()->route('admin.news');
     }

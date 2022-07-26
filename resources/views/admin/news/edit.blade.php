@@ -25,13 +25,38 @@
                                     </div>
                                 </li>
                             </div>
-                            <div style="display: flex; margin-left: -1rem;">
+                            <label for="description_uz" style="margin-top: 2rem; ">Description Uz</label>
+                            <div style="display: flex; margin-left: -1rem; margin-top: -2rem">
                                 <div class="container" style="padding-left: 0; ">
                                     <div class="row">
                                         <div class="col-md-7 offset-3 mt-4" style="margin-left: 0;">
-                                            <div class="card-body" style="width: 46rem;">
+                                            <div class="card-body" style="width: 30rem;">
                                                 <div class="form-group">
-                                                    <textarea class="ckeditor form-control" name="description">{{$news->description}}"</textarea>
+                                                    <textarea class="ckeditor form-control" name="description_uz">{{$news->description_uz}}</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="padding-left: 0;  margin-top: -2rem ">
+                                    <label for="description_uz" style="padding-top: 2.3rem; padding-left: 1rem;">Descripton Uz</label>
+                                    <div class="row">
+                                        <div class="col-md-7 offset-3 mt-4" style="margin-left: 0;">
+                                            <div class="card-body" style="width: 30rem; margin-top: -2.3rem;">                                        
+                                                <div class="form-group">
+                                                    <textarea class="ckeditor form-control" name="description_ru">{{$news->description_ru}}</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="padding-left: 0;  margin-top: -2rem ">
+                                    <label for="description_uz" style="padding-top: 2.3rem; padding-left: 1rem;">Descripton Uz</label>
+                                    <div class="row">
+                                        <div class="col-md-7 offset-3 mt-4" style="margin-left: 0;">
+                                            <div class="card-body" style="width: 30rem; margin-top: -2.3rem;">                                        
+                                                <div class="form-group">
+                                                    <textarea class="ckeditor form-control" name="description_en">{{$news->description_en}}</textarea>
                                                 </div>
                                             </div>
                                         </div>

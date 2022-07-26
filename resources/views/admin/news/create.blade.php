@@ -13,25 +13,50 @@
                         <ul style="padding-top: 20px ">
                             <div style="display: flex; align-items: center; padding-top: 1rem">
                                 <li>
-                                    <div class="" style="width: 300px;" >
+                                    <div class="" style="width: 28rem;" >
                                         <label for="name">Name</label>
                                         <input type="text" style="border-radius: 1rem" class="form-control" id="name" name="name">
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="" style="width: 100%; padding-left: 5rem;" >
+                                    <div class="" style="width: 62.5rem; padding-left: 3.7rem;" >
                                         <label style="" for="photo">Photo</label>
                                         <input type="file" class="form-control" id="photo" name="photo" style="background-color: rgb(188, 222, 250);">
                                     </div>
                                 </li>
                             </div>
-                            <div style="display: flex; margin-left: -1rem;">
+                            <label for="description_uz" style="margin-top: 2rem; ">Description Uz</label>
+                            <div style="display: flex; margin-left: -1rem; margin-top: -2rem">
                                 <div class="container" style="padding-left: 0; ">
                                     <div class="row">
                                         <div class="col-md-7 offset-3 mt-4" style="margin-left: 0;">
-                                            <div class="card-body" style="width: 46rem;">
+                                            <div class="card-body" style="width: 30rem;">
                                                 <div class="form-group">
-                                                    <textarea class="ckeditor form-control" name="description"></textarea>
+                                                    <textarea class="ckeditor form-control" name="description_uz"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="padding-left: 0;  margin-top: -2rem ">
+                                    <label for="description_uz" style="padding-top: 2.3rem; padding-left: 1rem;">Descripton Uz</label>
+                                    <div class="row">
+                                        <div class="col-md-7 offset-3 mt-4" style="margin-left: 0;">
+                                            <div class="card-body" style="width: 30rem; margin-top: -2.3rem;">                                        
+                                                <div class="form-group">
+                                                    <textarea class="ckeditor form-control" name="description_ru"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="padding-left: 0;  margin-top: -2rem ">
+                                    <label for="description_uz" style="padding-top: 2.3rem; padding-left: 1rem;">Descripton Uz</label>
+                                    <div class="row">
+                                        <div class="col-md-7 offset-3 mt-4" style="margin-left: 0;">
+                                            <div class="card-body" style="width: 30rem; margin-top: -2.3rem;">                                        
+                                                <div class="form-group">
+                                                    <textarea class="ckeditor form-control" name="description_en"></textarea>
                                                 </div>
                                             </div>
                                         </div>
