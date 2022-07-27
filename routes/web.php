@@ -96,6 +96,7 @@ Route::middleware([
 
 Route::name('front.')->group(function () {
     Route::get('/profile', [ProfileController::class,'index'])->name('profile');
+    Route::get('/profile', [ProfileController::class,'index'])->name('news.single');
 });
 // Route::get('/', [ProjectController::class,'index'])->name('home');
 
