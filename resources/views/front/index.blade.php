@@ -42,6 +42,7 @@
 		</div>
 	</div>
 
+
 	<!-- FEEDBACK-->
 	<!-- feedback-wrap спрятать feedback-done показать -->
 
@@ -71,6 +72,7 @@
 					</div>
 				</div>
 			</form>
+
 			<div class="feedback-done">
 				<div class="feedback__img">
 					<img src="/assets/img/done.svg" alt="ico">
@@ -133,6 +135,7 @@
 				</a>
 			</li>
 		</ul>
+		
 		<div class="mobile-menu__lang">
 			<a href="#">РУ</a>
 			<a href="#">UZ</a>
@@ -218,6 +221,7 @@
 					<img src="/assets/img/AV-logo2.svg" alt="AV">
 				</div>
 			</div>
+
 			<div class="main-title">
 				<h1 class="main-title__text">Premium investment club</h1>
 				<!-- RU ДЛЯ РУССКОГО ЯЗЫКА И Т.Д-->
@@ -259,9 +263,7 @@
 						<path d="M640.989 84.37C640.989 83.1567 641.942 81.8567 643.849 80.47C644.196 80.2967 644.629 80.2967 645.149 80.47C646.189 80.8167 646.189 81.3367 645.149 82.03L643.069 83.85C641.682 85.2367 640.989 85.41 640.989 84.37ZM630.069 108.29C627.642 107.25 627.122 105.083 628.509 101.79C629.722 98.8433 632.062 95.8967 635.529 92.95C636.396 92.0833 637.089 91.65 637.609 91.65C638.476 91.65 638.909 91.91 638.909 92.43C638.909 92.7767 637.782 94.25 635.529 96.85C632.062 100.837 630.329 103.61 630.329 105.17C630.156 108.81 634.836 108.55 644.369 104.39L648.529 102.31C651.996 100.577 656.762 97.63 662.829 93.47C663.522 93.1233 663.956 93.3833 664.129 94.25C659.102 98.41 653.036 102.137 645.929 105.43C638.822 108.55 633.536 109.503 630.069 108.29Z" stroke="#D9AF78" stroke-width="6" mask="url(#path-1-inside-1_570_606)"/>
 						<path d="M655.671 107.77C653.418 105.517 653.591 102.57 656.191 98.93C658.098 95.6367 660.871 93.21 664.511 91.65C666.591 90.7833 668.064 90.7833 668.931 91.65C669.624 92.17 669.711 93.0367 669.191 94.25C668.844 95.4633 668.064 96.5033 666.851 97.37C664.424 99.1033 661.911 100.143 659.311 100.49C658.618 100.49 658.011 100.923 657.491 101.79C655.411 105.43 656.364 107.51 660.351 108.03C668.151 108.03 677.857 103.957 689.471 95.81L692.591 93.73C692.764 93.5567 693.024 93.5567 693.371 93.73C693.718 93.9033 693.804 94.1633 693.631 94.51C687.218 99.71 679.937 103.87 671.791 106.99C663.644 110.11 658.271 110.37 655.671 107.77ZM659.571 98.93C660.784 98.93 662.518 98.2367 664.771 96.85C666.331 95.81 667.371 94.6833 667.891 93.47C668.064 92.95 667.891 92.69 667.371 92.69L664.511 94.25C661.044 96.85 659.398 98.41 659.571 98.93Z" stroke="#D9AF78" stroke-width="6" mask="url(#path-1-inside-1_570_606)"/>
 						<path d="M724.88 93.73C725.573 93.3833 726.18 93.47 726.7 93.99C722.54 97.4567 717.946 100.837 712.92 104.13C709.8 106.21 706.42 107.857 702.78 109.07C697.06 110.977 692.466 112.103 689 112.45C687.44 112.623 686.226 113.23 685.36 114.27C682.76 117.043 680.42 118.343 678.34 118.17C676.26 117.823 675.393 116.09 675.74 112.97C676.086 110.37 676.606 108.377 677.3 106.99C677.82 106.47 678.686 106.99 679.9 108.55C680.593 110.11 682.066 110.89 684.32 110.89C684.84 110.89 685.446 110.283 686.14 109.07C686.833 107.857 687.7 105.863 688.74 103.09L690.04 99.45L690.56 97.89C690.906 96.85 691.253 96.07 691.6 95.55C691.946 95.03 693.246 93.3833 695.5 90.61C699.14 87.3167 701.393 85.8433 702.26 86.19C703.473 86.3633 702.866 87.6633 700.44 90.09C697.32 92.69 695.24 94.77 694.2 96.33C693.16 97.89 691.946 100.49 690.56 104.13C690.56 104.303 690.126 105.517 689.26 107.77C688.566 109.85 688.133 110.89 687.96 110.89C688.133 111.063 688.826 111.063 690.04 110.89C691.253 110.717 692.64 110.457 694.2 110.11C695.933 109.763 697.32 109.417 698.36 109.07C700.786 108.377 702.78 107.683 704.34 106.99C706.073 106.297 707.806 105.43 709.54 104.39C711.446 103.177 712.746 102.397 713.44 102.05C714.306 101.53 716.126 100.23 718.9 98.15C721.673 96.07 723.666 94.5967 724.88 93.73ZM682.76 113.75L684.32 112.45L681.98 111.41C680.593 110.89 679.64 110.37 679.12 109.85L678.34 109.07C677.993 109.07 677.56 110.457 677.04 113.23C676.693 115.483 676.953 116.61 677.82 116.61C678.86 116.957 680.506 116.003 682.76 113.75Z" stroke="#D9AF78" stroke-width="6" mask="url(#path-1-inside-1_570_606)"/>
-						</svg>
-						
-												
+						</svg>						
 				</div>
 			</div>
 			<div class="main-text">
@@ -712,6 +714,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="exp-gallery">
 				<div class="exp-gallery__arrows">
 					<span class="arrow arrow-left">
@@ -846,8 +849,11 @@
 					</svg>												
 				</div>
 			</div>
+
 			<div class="projects-main">
+
 				<div class="projects-carousel owl-carousel">
+					@foreach($projects as $project)
 					<div class="projects-item">
 						<div class="projects-item__img">
 							<div class="projects-item__date">
@@ -859,11 +865,12 @@
 									<img src="/assets/img/arrow-down.svg" alt="ico">
 								</div>
 							</a>
-							<img src="/assets/img/project.jpg" alt="img">
+							<img src="{{$project->photo}}" alt="img">
 						</div>
+
 						<div class="projects-item__wrap">
 							<div class="projects-item__name">
-								ЖК “МИНОР”
+								{{$project->name}}
 							</div>
 							<div class="projects-item__text">
 								Британскоая архитектура, премиальная локация, уникальный ландшафт.
@@ -901,112 +908,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="projects-item">
-						<div class="projects-item__img">
-							<div class="projects-item__date">
-								2022-2024
-							</div>
-							<div class="projects-item__more">
-								Подробнее
-								<div class="arrow">
-									<img src="/assets/img/arrow-down.svg" alt="ico">
-								</div>
-							</div>
-							<img src="/assets/img/project.jpg" alt="img">
-						</div>
-						<div class="projects-item__wrap">
-							<div class="projects-item__name">
-								ЖК “МИНОР”
-							</div>
-							<div class="projects-item__text">
-								Британскоая архитектура, премиальная локация, уникальный ландшафт.
-							</div>
-							<ul class="projects-item__info list">
-								<li>
-									<span>Инвестиции</span>
-									<span>$13.9-20.3 млн.*</span>
-								</li>
-								<li>
-									<span>ROI (среднее)</span>
-									<span>35.8%</span>
-								</li>
-								<li>
-									<span>Прибыль (O)</span>
-									<span>$5.9 млн.</span>
-								</li>
-							</ul>
-							<div class="projects-item__square">
-								<ul class="projects-item__square-wrap">
-									<li>
-										<span>S земельного участка</span>
-										<span>-</span>
-										<span>41 200 м&sup2;</span>
-									</li>
-									<li>
-										<span>Реализуемая площадь</span>
-										<span>-</span>
-										<span>14 900 м&sup2;</span>
-									</li>
-								</ul>
-							</div>
-							<div class="projects-item__note">
-								*в зависимости от даты старта продаж
-							</div>
-						</div>
-					</div>
-					<div class="projects-item">
-						<div class="projects-item__img">
-							<div class="projects-item__date">
-								2022-2024
-							</div>
-							<div class="projects-item__more">
-								Подробнее
-								<div class="arrow">
-									<img src="/assets/img/arrow-down.svg" alt="ico">
-								</div>
-							</div>
-							<img src="/assets/img/project.jpg" alt="img">
-						</div>
-						<div class="projects-item__wrap">
-							<div class="projects-item__name">
-								ЖК “МИНОР”
-							</div>
-							<div class="projects-item__text">
-								Британскоая архитектура, премиальная локация, уникальный ландшафт.
-							</div>
-							<ul class="projects-item__info list">
-								<li>
-									<span>Инвестиции</span>
-									<span>$13.9-20.3 млн.*</span>
-								</li>
-								<li>
-									<span>ROI (среднее)</span>
-									<span>35.8%</span>
-								</li>
-								<li>
-									<span>Прибыль (O)</span>
-									<span>$5.9 млн.</span>
-								</li>
-							</ul>
-							<div class="projects-item__square">
-								<ul class="projects-item__square-wrap">
-									<li>
-										<span>S земельного участка</span>
-										<span>-</span>
-										<span>41 200 м&sup2;</span>
-									</li>
-									<li>
-										<span>Реализуемая площадь</span>
-										<span>-</span>
-										<span>14 900 м&sup2;</span>
-									</li>
-								</ul>
-							</div>
-							<div class="projects-item__note">
-								*в зависимости от даты старта продаж
-							</div>
-						</div>
-					</div>
+					@endforeach
 				</div>
 				<div class="projects-carousel__arrows">
 					<span class="arrow arrow-left">

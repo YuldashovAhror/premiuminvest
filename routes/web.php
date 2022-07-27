@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\InvestController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Front\ProjectController as FrontProjectController;
 use App\Http\Controllers\Front\ProfileController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\NewsController;
@@ -25,8 +26,8 @@ use Laravel\Jetstream\Rules\Role;
 */
 
 // Front Routes
-Route::get('/', function(){
-    return view('front.index');})->name('home');
+// Route::get('/', function(){
+//     return view('front.index');})->name('home');
 
     
 
@@ -97,7 +98,13 @@ Route::middleware([
 Route::name('front.')->group(function () {
     Route::get('/profile', [ProfileController::class,'index'])->name('profile');
 });
-// Route::get('/', [ProjectController::class,'index'])->name('home');
+Route::get('/', [FrontProjectController::class,'index'])->name('home');
+Route::get('/languages/{lang}', function($lang){
+    if(in_array($lang, ['en', 'ru', 'uz'])){
+        session()->put('locale', $lang);
+    }
+    return redirect()->back();
+});
 
 
 

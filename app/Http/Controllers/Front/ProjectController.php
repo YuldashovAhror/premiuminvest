@@ -15,10 +15,18 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        dd('asdasd');
-        $project = Project::all();
+        if(session()->get('locale') == ''){
+            session()->put('locale', 'ru');
+            app()->setLocale('ru');
+        }else{
+            app()->setLocale(session()->get('locale'));
+        }  
+        $lang = session()->get('locale');
+
+        $projects = Project::all();
         return view('front.index',[
-            'project' => $project
+            'projects' => $projects,
+            'lang' => $lang
         ]);
     }
 
