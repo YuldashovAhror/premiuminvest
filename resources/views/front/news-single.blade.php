@@ -4,30 +4,29 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/jarallax.css">
+	<link rel="stylesheet" href="/assets/css/normalize.css">
+	<link rel="stylesheet" href="/assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="/assets/css/animate.css">
+	<link rel="stylesheet" href="/assets/css/jarallax.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
 	<title>Premium Investment Club</title>
 </head>
 <body>
 	
 
 	<!-- МОБИЛЬНОЕ МЕНЮ -->
-
 	<div class="mobile-menu pattern">
 		<div class="mobile-menu__head">
 			<div class="mobile-menu__logo">
 				<a href="index.html">
-					<img src="img/logo.svg" alt="SUU" title="SUU">
+					<img src="/assets/img/logo.svg" alt="SUU" title="SUU">
 				</a>
 			</div>
 			<div class="mobile-menu__close">
-				<img src="img/close.svg" alt="ico">
+				<img src="/assets/img/close.svg" alt="ico">
 			</div>
 		</div>
 		<ul class="menu">
@@ -72,7 +71,7 @@
 		<div class="container">
 			<div class="header__logo">
 				<a href="#">
-					<img src="img/logo.svg" alt="Premium Investment Club">
+					<img src="/assets/img/logo.svg" alt="Premium Investment Club">
 				</a>
 			</div>			
 			<div>
@@ -80,7 +79,7 @@
 					Новости
 				</a>
 				<a href="#" class="header-cabinet">
-					<img src="img/dot.svg" alt="ico">
+					<img src="/assets/img/dot.svg" alt="ico">
 					<span>Выход</span>
 				</a>
 				<div class="header-mobile">
@@ -109,18 +108,16 @@
 				<div class="news-single__main">
 					<div class="news-single__img">
 						<div class="news-item__date">
-							16.07.2022
+							{{$news->updated_at->format('d/m/Y')}}
 						</div>
-						<img src="img/location.jpg" alt="img">
+						<img src="/assets/img/location.jpg" alt="img">
 					</div>
 					<div class="news-single__text">
 						<h2>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia nunc pharetra, ut ac urna, ornare. Vitae volutpat lacus lectus leo, sapien pretium pellentesque. Venenatis a tristique sit tellus quam a gravida. Massa, laoreet ante quis auctor sit.
+							{{$news->name}}
 						</h2>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nunc, pharetra amet, in amet. Tellus nisl sit eu amet, imperdiet diam sit non. Id est varius ipsum semper platea nec. Molestie amet, amet convallis rhoncus sit. Ipsum ut ullamcorper consectetur vulputate sit tortor. Ligula nisl vel massa fermentum leo ac nibh sapien morbi. Et sit sed interdum non. Sit sed turpis id nunc. Consectetur enim elit bibendum maecenas id fusce. Elementum in morbi gravida facilisi et.
-							Non lacus donec bibendum pharetra vel. Tincidunt massa egestas tortor consequat non. Aliquet duis augue eleifend ut. Pulvinar pharetra, feugiat massa a, rutrum pellentesque mauris. Nunc nibh ullamcorper eget nunc commodo. Non nulla blandit ipsum purus velit est bibendum. Ullamcorper ut vitae ac velit interdum mauris. Bibendum pulvinar neque, tortor semper.
-							Massa at maecenas ipsum, netus pretium posuere in. Aliquam lectus feugiat eget ut libero vitae dignissim. Id risus, orci, egestas eget pretium ut sem sed eget. Platea facilisis curabitur morbi semper dictum tortor, orci. Commodo diam nulla sed euismod euismod odio. Mi quis lacus ultricies in pretium. Ullamcorper sit scelerisque elementum arcu, ipsum dui libero dolor sed. Tristique pretium varius nibh suspendisse sed. Enim ac pharetra, pellentesque ut donec.
+							{!! $news->description_uz !!}
 						</p>
 					</div>
 				</div>
@@ -129,105 +126,24 @@
 						другие НОВОСТИ
 					</div>
 					<ul class="news-other__list">
-						<li class="news-other__item">
-							<div class="news-other__name">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia nunc pharetra, 
-							</div>
-							<div class="news-other__date">
-								<img src="img/calendar.svg" alt="ico">
-								<span>18.09.2022</span>
-								<img src="img/news-arrow.svg" alt="ico">
-							</div>
-							<a href="#" class="news-other__link"></a>
-						</li>
-						<li class="news-other__item">
-							<div class="news-other__name">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia nunc pharetra, 
-							</div>
-							<div class="news-other__date">
-								<img src="img/calendar.svg" alt="ico">
-								<span>18.09.2022</span>
-								<img src="img/news-arrow.svg" alt="ico">
-							</div>
-							<a href="#" class="news-other__link"></a>
-						</li>
-						<li class="news-other__item">
-							<div class="news-other__name">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia nunc pharetra, 
-							</div>
-							<div class="news-other__date">
-								<img src="img/calendar.svg" alt="ico">
-								<span>18.09.2022</span>
-								<img src="img/news-arrow.svg" alt="ico">
-							</div>
-							<a href="#" class="news-other__link"></a>
-						</li>
-						<li class="news-other__item">
-							<div class="news-other__name">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia nunc pharetra, 
-							</div>
-							<div class="news-other__date">
-								<img src="img/calendar.svg" alt="ico">
-								<span>18.09.2022</span>
-								<img src="img/news-arrow.svg" alt="ico">
-							</div>
-							<a href="#" class="news-other__link"></a>
-						</li>
-						<li class="news-other__item">
-							<div class="news-other__name">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia nunc pharetra, 
-							</div>
-							<div class="news-other__date">
-								<img src="img/calendar.svg" alt="ico">
-								<span>18.09.2022</span>
-								<img src="img/news-arrow.svg" alt="ico">
-							</div>
-							<a href="#" class="news-other__link"></a>
-						</li>
-						<li class="news-other__item">
-							<div class="news-other__name">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia nunc pharetra, 
-							</div>
-							<div class="news-other__date">
-								<img src="img/calendar.svg" alt="ico">
-								<span>18.09.2022</span>
-								<img src="img/news-arrow.svg" alt="ico">
-							</div>
-							<a href="#" class="news-other__link"></a>
-						</li>
-						<li class="news-other__item">
-							<div class="news-other__name">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia nunc pharetra, 
-							</div>
-							<div class="news-other__date">
-								<img src="img/calendar.svg" alt="ico">
-								<span>18.09.2022</span>
-								<img src="img/news-arrow.svg" alt="ico">
-							</div>
-							<a href="#" class="news-other__link"></a>
-						</li>
-						<li class="news-other__item">
-							<div class="news-other__name">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia nunc pharetra, 
-							</div>
-							<div class="news-other__date">
-								<img src="img/calendar.svg" alt="ico">
-								<span>18.09.2022</span>
-								<img src="img/news-arrow.svg" alt="ico">
-							</div>
-							<a href="#" class="news-other__link"></a>
-						</li>
-						<li class="news-other__item">
-							<div class="news-other__name">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia nunc pharetra, 
-							</div>
-							<div class="news-other__date">
-								<img src="img/calendar.svg" alt="ico">
-								<span>18.09.2022</span>
-								<img src="img/news-arrow.svg" alt="ico">
-							</div>
-							<a href="#" class="news-other__link"></a>
-						</li>
+
+						@foreach($all_news as $news)
+							<?php $count++ ?>
+							@if($count>9)
+								@break
+							@endif
+							<li class="news-other__item">
+								<div class="news-other__name">
+									{{$news->name}}
+								</div>
+								<div class="news-other__date">
+									<img src="/assets/img/calendar.svg" alt="ico">
+									<span>{{$news->updated_at->format('d/m/Y')}}</span>
+									<img src="/assets/img/news-arrow.svg" alt="ico">
+								</div>
+								<a href="{{Route('front.news.single', $news->id)}}" class="news-other__link"></a>
+							</li>
+						@endforeach
 					</ul>
 				</div>
 			</div>
@@ -260,22 +176,22 @@
 				</div>
 			</div>
 			<div class="cabinet-footer__logo wow fadeInUp" data-wow-delay=".3s">
-				<img src="img/cabinet.png" alt="ico">
+				<img src="/assets/img/cabinet.png" alt="ico">
 			</div>
 		</div>
 	</footer>
 
 	
-	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/owl.carousel.js"></script>
+	<script src="/assets/js/jquery-3.4.1.min.js"></script>
+	<script src="/assets/js/owl.carousel.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-	<script src="js/map.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/gsap.min.js"></script>
-	<script src="js/jarallax.min.js"></script>
-	<script src="js/chart.js"></script>
-	<script src="js/main.js"></script>
+	<script src="/assets/js/map.js"></script>
+	<script src="/assets/js/wow.min.js"></script>
+	<script src="/assets/js/jquery.nicescroll.min.js"></script>
+	<script src="/assets/js/gsap.min.js"></script>
+	<script src="/assets/js/jarallax.min.js"></script>
+	<script src="/assets/js/chart.js"></script>
+	<script src="/assets/js/main.js"></script>
 
 	<!-- CКРИПТ ТОЛЬКО ДЛЯ КАБИНЕТ -->
 

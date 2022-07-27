@@ -10,6 +10,7 @@ use App\Http\Controllers\Front\ProjectController as FrontProjectController;
 use App\Http\Controllers\Front\ProfileController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Front\NewsController as FrontNewsController;
 use App\Http\Livewire\Admin\Dashboard;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Jetstream\Rules\Role;
@@ -97,7 +98,7 @@ Route::middleware([
 
 Route::name('front.')->group(function () {
     Route::get('/profile', [ProfileController::class,'index'])->name('profile');
-    Route::get('/profile', [ProfileController::class,'index'])->name('news.single');
+    Route::get('/news/{id}', [FrontNewsController::class,'index'])->name('news.single');
 });
 Route::get('/', [FrontProjectController::class,'index'])->name('home');
 Route::get('/languages/{lang}', function($lang){

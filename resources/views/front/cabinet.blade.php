@@ -287,14 +287,14 @@
 				<div class="news-item">
 					<div class="news-item__img">
 						<div class="news-item__date">
-							{{$item->updated_at}}
+							{{$item->updated_at->format('d/m/Y')}}
 						</div>
 						<img src="{{$item->photo}}" alt="gallery">
 					</div>
 					<div class="news-item__name">
 						{{$item->name}}
 					</div>
-					<a href="{{}}" class="news-item__link"></a>
+					<a href="{{Route('front.news.single', $item->id)}}" class="news-item__link"></a>
 				</div>
 			@endforeach
     </div>
