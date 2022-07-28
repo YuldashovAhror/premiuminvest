@@ -79,6 +79,13 @@
           </a>
           
         </li>
+        <li>
+          <a href="{{Route('admin.words')}}">
+            <i class="bx bx-file"></i>
+            <span>Словарь</span>
+          </a>
+          
+        </li>
 
 
         {{-- <li>

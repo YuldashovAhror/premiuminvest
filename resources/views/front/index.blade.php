@@ -20,7 +20,7 @@
 
 
 	<!-- PRELOADER -->
-
+	
 	<div class="preloader pattern">
 		<div class="preloader-logo">
 			<div class="preloader-logo__img">
@@ -111,7 +111,7 @@
 		<ul class="menu">
 			<li>
 				<a href="#consort">
-					Международный консорциум
+					{{ __('asd.Международный консорциум') }}
 				</a>
 			</li>
 			<li>
@@ -156,12 +156,12 @@
 				<ul class="header-menu">
 					<li>
 						<a href="#consort">
-							Международный консорциум
+							{{ __('asd.Международный консорциум') }}
 						</a>
 					</li>
 					<li>
 						<a href="#exp">
-							Девелопер
+							{{ __('asd.Девелопер') }}
 						</a>
 					</li>
 					<li>
@@ -180,16 +180,20 @@
 						</a>
 					</li>
 				</ul>
+				<?php $arr = ['РУ'=>'ru','O’z'=>'uz','ENG'=>'en'] ?>
+	
 				<div class="header-lang">
 					<div class="header-lang__btn">
 						<img src="/assets/img/lang.svg" alt="ico">
-						<span>РУ</span>
+						<span>{{ array_search($lang, $arr)}}</span>
 						<img src="/assets/img/chevron-down.svg" alt="ico">
 					</div>
 					<div class="header-lang__list">
-						<a href="#" class="current">РУ</a>
-						<a href="#">O’Z</a>
-						<a href="#">ENG</a>
+						@foreach($arr as $key => $value)
+							@if ($value != $lang)
+								<a href="/languages/{{ $value }}" class="current">{{ $key}}</a>
+							@endif
+						@endforeach
 					</div>
 				</div>
 			</nav>

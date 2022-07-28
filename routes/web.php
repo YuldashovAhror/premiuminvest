@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\NewsController;
 use App\Http\Livewire\Admin\Dashboard;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Jetstream\Rules\Role;
+use App\Http\Controllers\WordsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +48,7 @@ Route::middleware([
             Route::name('admin.')->group(function () {
                 Route::get('/dashboard', Dashboard::class)->name('dashboard');
                 Route::get('/users', [UserController::class, 'index'])->name('users');
+                
 
                 //// Project Routes //////
 
@@ -81,6 +83,13 @@ Route::middleware([
                 Route::get('/news/{id}', [NewsController::class, 'edit'])->name('news.edit');
                 Route::post('/news/{id}', [NewsController::class, 'update'])->name('news.update');
                 Route::delete('/news/{id}', [NewsController::class, 'destroy'])->name('news.destroy');
+
+                ///// Words /////
+                // Route::resource('/words', [WordController::class]);
+
+                Route::get('/words', [WordsController::class, 'index'])->name('words');
+                Route::get('/words/store', [WordsController::class, 'store'])->name('words.store');
+                Route::get('/words/store', [WordsController::class, 'store'])->name('words.store');
 
                 Route::controller(MessageController::class)->group(function () {
                     Route::get('/notifications', 'notifications')->name('notifications');
