@@ -77,7 +77,12 @@
             <i class="bx bx-file"></i>
             <span>News</span>
           </a>
-          
+        </li>
+        <li>
+          <a href="{{Route('admin.employee')}}">
+            <i class="bx bx-file"></i>
+            <span>Employees</span>
+          </a>
         </li>
 
 

@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\EmployeeController;
 use App\Http\Controllers\Admin\InvestController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
@@ -82,6 +83,10 @@ Route::middleware([
                 Route::get('/news/{id}', [NewsController::class, 'edit'])->name('news.edit');
                 Route::post('/news/{id}', [NewsController::class, 'update'])->name('news.update');
                 Route::delete('/news/{id}', [NewsController::class, 'destroy'])->name('news.destroy');
+
+                Route::get('/employee', [EmployeeController::class, 'index'])->name('employee');
+                Route::get('/employee/create', [EmployeeController::class, 'create'])->name('employee.create');
+                Route::post('/employee', [EmployeeController::class, 'store'])->name('employee.store');
 
                 Route::controller(MessageController::class)->group(function () {
                     Route::get('/notifications', 'notifications')->name('notifications');
