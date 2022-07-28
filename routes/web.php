@@ -114,15 +114,34 @@ Route::name('front.')->group(function () {
     Route::get('/news/{id}', [FrontNewsController::class,'index'])->name('news.single');
 });
 Route::get('/', [FrontProjectController::class,'index'])->name('home');
+Route::get('/project/{id}', [FrontProjectController::class,'show'])->name('home.project');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::get('/languages/{lang}', function($lang){
     if(in_array($lang, ['en', 'ru', 'uz'])){
         session()->put('locale', $lang);
     }
     return redirect()->back();
 });
-
-
-
 
 Route::fallback(function () {
     return view('admin.components.error404');

@@ -59,7 +59,19 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        //
+        if(session()->get('locale') == ''){
+            session()->put('locale', 'ru');
+            app()->setLocale('ru');
+        }else{
+            app()->setLocale(session()->get('locale'));
+        }  
+        $lang = session()->get('locale');
+        $project = Project::find($id);
+
+        return view('front.single',[
+            'project' => $project,
+            'lang' => $lang
+        ]);
     }
 
     /**

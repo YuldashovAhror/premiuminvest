@@ -728,68 +728,30 @@
 						<img src="/assets/img/arrow-right.svg" alt="ico">
 					</span>
 				</div>
+				@foreach($projects as $project)
 				<div class="exp-gallery__carousel owl-carousel">
-					<div class="exp-gallery__item">
-						<div class="exp-gallery__img">
-							<img src="/assets/img/gallery1.jpg" alt="img">
+					<a href="{{Route('home.project', $project->id )}}" style="text-decoration: none; color: #fff;">
+						<div class="exp-gallery__item">
+							<div class="exp-gallery__img">
+								<img src="{{$project->photo}}" alt="img">
+							</div>
+							<div class="exp-gallery__name">
+								{{$project->name}}
+							</div>
+							<div class="exp-gallery__date">
+								{{$project->date_from_to}}
+							</div>
 						</div>
-						<div class="exp-gallery__name">
-							Amir temur
-						</div>
-						<div class="exp-gallery__date">
-							2015-2016
-						</div>
-					</div>
-					<div class="exp-gallery__item">
-						<div class="exp-gallery__img">
-							<img src="/assets/img/gallery2.jpg" alt="img">
-						</div>
-						<div class="exp-gallery__name">
-							green city
-						</div>
-						<div class="exp-gallery__date">
-							2016-2017
-						</div>
-					</div>
-					<div class="exp-gallery__item">
-						<div class="exp-gallery__img">
-							<img src="img/gallery3.jpg" alt="img">
-						</div>
-						<div class="exp-gallery__name">
-							Mufarrah
-						</div>
-						<div class="exp-gallery__date">
-							2015-2016
-						</div>
-					</div>
-					<div class="exp-gallery__item">
-						<div class="exp-gallery__img">
-							<img src="/assets/img/gallery2.jpg" alt="img">
-						</div>
-						<div class="exp-gallery__name">
-							green city
-						</div>
-						<div class="exp-gallery__date">
-							2016-2017
-						</div>
-					</div>
-					<div class="exp-gallery__item">
-						<div class="exp-gallery__img">
-							<img src="/assets/img/gallery3.jpg" alt="img">
-						</div>
-						<div class="exp-gallery__name">
-							Mufarrah
-						</div>
-						<div class="exp-gallery__date">
-							2015-2016
-						</div>
-					</div>
+					</a>
+					
 				</div>
+				@endforeach
 			</div>
+			@foreach($projects as $project)
 			<div class="exp-info">
 				<div class="exp-info__item wow fadeInLeft" data-wow-delay=".7s">
 					<div class="exp-info__numbers">
-						>15%
+						{{$project->fin_roi_before_tax}}
 					</div>
 					<div class="exp-info__text">
 						Рентабельность
@@ -797,13 +759,14 @@
 				</div>
 				<div class="exp-info__item wow fadeInLeft" data-wow-delay=".5s">
 					<div class="exp-info__numbers">
-						>32%
+						{{$project->fin_roi_after_tax}}
 					</div>
 					<div class="exp-info__text">
 						ROI
 					</div>
 				</div>
 			</div>
+			@endforeach
 		</div>
 	</section>
 
@@ -861,13 +824,13 @@
 					<div class="projects-item">
 						<div class="projects-item__img">
 							<div class="projects-item__date">
-								2022-2024
+								{{$project->date_from_to}}
 							</div>
 							<a href="#" class="projects-item__more">
 								Подробнее
-								<div class="arrow">
+								{{-- <div class="arrow">
 									<img src="/assets/img/arrow-down.svg" alt="ico">
-								</div>
+								</div> --}}
 							</a>
 							<img src="{{$project->photo}}" alt="img">
 						</div>
@@ -876,21 +839,24 @@
 							<div class="projects-item__name">
 								{{$project->name}}
 							</div>
-							<div class="projects-item__text">
-								Британскоая архитектура, премиальная локация, уникальный ландшафт.
+							<div class="projects-item__text"><?php 
+								$less_description = 'less_description_'.$lang;
+								?>
+								{{$project->$less_description}}
+								
 							</div>
 							<ul class="projects-item__info list">
 								<li>
 									<span>Инвестиции</span>
-									<span>$13.9-20.3 млн.*</span>
+									<span>{{$project->fin_investments}}</span>
 								</li>
 								<li>
 									<span>ROI (среднее)</span>
-									<span>35.8%</span>
+									<span>{{$project->roi}}</span>
 								</li>
 								<li>
 									<span>Прибыль (O)</span>
-									<span>$5.9 млн.</span>
+									<span>{{$project->profit}}</span>
 								</li>
 							</ul>
 							<div class="projects-item__square">
@@ -898,12 +864,12 @@
 									<li>
 										<span>S земельного участка</span>
 										<span></span>
-										<span>41 200 м&sup2;</span>
+										<span>{{$project->area}}&sup2;</span>
 									</li>
 									<li>
 										<span>Реализуемая площадь</span>
 										<span></span>
-										<span>14 900 м&sup2;</span>
+										<span>{{$project->realizable_area}}&sup2;</span>
 									</li>
 								</ul>
 							</div>
