@@ -3,19 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/jarallax.css">
+	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="/assets/css/normalize.css">
+	<link rel="stylesheet" href="/assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="/assets/css/animate.css">
+	<link rel="stylesheet" href="/assets/css/jarallax.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
 	<title>Premium Investment Club</title>
 </head>
 <body>
-
+{{-- @dd($project->en->format('m')) --}}
 
 	<!-- FEEDBACK-->
 	<!-- feedback-wrap спрятать feedback-done показать -->
@@ -23,7 +23,7 @@
 	<div class="feedback">
 		<div class="feedback-content">
 			<div class="feedback-close">
-				<img src="img/close.svg" alt="ico">
+				<img src="/assets/img/close.svg" alt="ico">
 			</div>
 			<div class="feedback-logo">
 				Premium investment club
@@ -48,7 +48,7 @@
 			</form>
 			<div class="feedback-done">
 				<div class="feedback__img">
-					<img src="img/done.svg" alt="ico">
+					<img src="/assets/img/done.svg" alt="ico">
 				</div>
 				<div class="feedback__title">
 					Спасибо ваша заявка принята!
@@ -75,12 +75,17 @@
 	<div class="mobile-menu pattern">
 		<div class="mobile-menu__head">
 			<div class="mobile-menu__logo">
+<<<<<<< HEAD
 				<a href="{{ route('home') }}">
 					<img src="img/logo.svg" alt="SUU" title="SUU">
+=======
+				<a href="index.html">
+					<img src="/assets/img/logo.svg" alt="SUU" title="SUU">
+>>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 				</a>
 			</div>
 			<div class="mobile-menu__close">
-				<img src="img/close.svg" alt="ico">
+				<img src="/assets/img/close.svg" alt="ico">
 			</div>
 		</div>
 		<ul class="menu">
@@ -122,8 +127,13 @@
 	<header class="header">
 		<div class="container">
 			<div class="header__logo">
+<<<<<<< HEAD
 				<a href="{{ route('home') }}">
 					<img src="img/logo.svg" alt="Premium Investment Club">
+=======
+				<a href="#">
+					<img src="/assets/img/logo.svg" alt="Premium Investment Club">
+>>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 				</a>
 			</div>
 			<nav>
@@ -156,9 +166,9 @@
 				</ul>
 				<div class="header-lang">
 					<div class="header-lang__btn">
-						<img src="img/lang.svg" alt="ico">
+						<img src="/assets/img/lang.svg" alt="ico">
 						<span>РУ</span>
-						<img src="img/chevron-down.svg" alt="ico">
+						<img src="/assets/img/chevron-down.svg" alt="ico">
 					</div>
 					<div class="header-lang__list">
 						<a href="#" class="current">РУ</a>
@@ -169,8 +179,13 @@
 			</nav>
 			<div>
 				<a href="#" class="header-cabinet">
+<<<<<<< HEAD
 					<img src="img/dot.svg" alt="ico">
 					<span>{{ __('asd.личный кабинет') }}</span>
+=======
+					<img src="/assets/img/dot.svg" alt="ico">
+					<span>личный кабинет</span>
+>>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 				</a>
 				<div class="header-mobile">
 					<span></span>
@@ -180,23 +195,32 @@
 			</div>
 		</div>
 	</header>
-
 	<!-- SINGLE -->
-
 	<section class="single"> 
 		<div class="single-bg">
-			<img src="img/single.jpg" alt="single">
+			<img src="{{$project->photo}}" alt="single">
 		</div>
 		<div class="single-content">
 			<h1 class="single__name">
+<<<<<<< HEAD
 			{{ __('asd.ЖК “МИНОР”') }}
+=======
+				{{$project->name}}
+>>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 			</h1>
 			<div class="single__date">
-				2022-2024
+				{{$project->date_from_to}}
 			</div>
 		</div>
 		<div class="single-info">
+<<<<<<< HEAD
 			{{ __('asd.Соответствует критериям уникальности МБ. Прошел отбор в портфель фонда') }}
+=======
+			<?php 
+				$less_description = 'less_description_'.$lang;
+				?>
+			{{$project->$less_description}}
+>>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 		</div>
 	</section>
 
@@ -254,25 +278,22 @@
 		<div class="location-info">
 			<div class="location-info__img wow fadeInLeft" data-wow-delay=".3s">
 				<div class="location-info__carousel owl-carousel">
-					<img src="img/location.jpg" alt="img">
-					<img src="img/location.jpg" alt="img">
-					<img src="img/location.jpg" alt="img">
-					<img src="img/location.jpg" alt="img">
-					<img src="img/location.jpg" alt="img">
-					<img src="img/location.jpg" alt="img">
+					<img src="{{$project->photo}}" alt="img">
+					
 				</div>
 				<div class="location-info__arrows">
 					<span class="arrow arrow-left">
-						<img src="img/arrow-left.svg" alt="ico">
+						<img src="/assets/img/arrow-left.svg" alt="ico">
 					</span>
 					<span class="arrow arrow-right">
-						<img src="img/arrow-right.svg" alt="ico">
+						<img src="/assets/img/arrow-right.svg" alt="ico">
 					</span>
 				</div>
 			</div>
 			<div class="location-info__wrap wow fadeInRight" data-wow-delay=".3s">
 				<ul class="projects-item__info list">
 					<li>
+<<<<<<< HEAD
 			<span> {{ __('asd.Прибыль”') }} </span>
 						<span>$4.57 {{ __('asd.млн.”') }}</span>
 					</li>
@@ -283,6 +304,18 @@
 					<li>
 						<span>{{ __('asd.Рентабельность') }}</span>
 						<span>10%</span>
+=======
+						<span>Прибыль</span>
+						<span>{{$project->profit}}</span>
+					</li>
+					<li>
+						<span>ROI</span>
+						<span>{{$project->roi}}</span>
+					</li>
+					<li>
+						<span>Рентабельность</span>
+						<span>{{$project->fin_roi_before_tax}}</span>
+>>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 					</li>
 				</ul>
 				<div class="projects-item__square">
@@ -290,22 +323,22 @@
 						<li>
 							<span>{{ __('asd.Количество квартир') }}</span>
 							<span></span>
-							<span>416</span>
+							<span>{{$project->apart_qty}}</span>
 						</li>
 						<li>
 							<span>{{ __('asd.Этажность') }}</span>
 							<span></span>
-							<span>10 - 16</span>
+							<span>{{$project->floors}}</span>
 						</li>
 						<li>
 							<span>{{ __('asd.Площадь квартир') }}</span>
 							<span></span>
-							<span>33 240 м&sup2;</span>
+							<span>{{$project->apart_size}}&sup2;</span>
 						</li>
 						<li>
 							<span> {{ __('asd.Площадь ком. помещений') }}</span>
 							<span></span>
-							<span>3018 м&sup2;</span>
+							<span>{{$project->commerce_size}}&sup2;</span>
 						</li>
 					</ul>
 				</div>
@@ -395,7 +428,7 @@
 				</div>
 				<div class="advantages-item__img">
 					<div class="advantages-item__img-wrap jarallax">
-						<img src="img/advantages1.jpg" alt="img" class="jarallax-img">
+						<img src="/assets/img/advantages1.jpg" alt="img" class="jarallax-img">
 					</div>
 				</div>
 			</div>
@@ -415,7 +448,7 @@
 				</div>
 				<div class="advantages-item__img">
 					<div class="advantages-item__img-wrap jarallax">
-						<img src="img/advantages2.jpg" alt="img" class="jarallax-img">
+						<img src="/assets/img/advantages2.jpg" alt="img" class="jarallax-img">
 					</div>
 				</div>
 			</div>
@@ -441,7 +474,7 @@
 				</div>
 				<div class="advantages-item__img">
 					<div class="advantages-item__img-wrap jarallax">
-						<img src="img/advantages3.jpg" alt="img" class="jarallax-img">
+						<img src="/assets/img/advantages3.jpg" alt="img" class="jarallax-img">
 					</div>
 				</div>
 			</div>
@@ -492,6 +525,7 @@
 		</div>
 		<ul class="finance__table list">
 			<li>
+<<<<<<< HEAD
 				<span> {{ __('asd.Доходы тыс') }} $</span>
 				<span>48 739</span>
 			</li>
@@ -512,10 +546,33 @@
 					<li>
 						<span> {{ __('asd.Накладные (ПИР, реализация, админ, резерв )') }} </span>
 						<span>4 599</span>
+=======
+				<span>Доходы тыс $</span>
+				<span>{{$project->fin_income}}</span>
+			</li>
+			<li class="sublist">
+				<div>
+					<span>Доходы тыс $</span>
+					<span>{{$project->fin_income}}</span>
+				</div>
+				<ul>
+					<li>
+						<span>В т.ч. Земля</span>
+						<span>{{$project->fin_earth}}</span>
+					</li>
+					<li>
+						<span>СМР</span>
+						<span>{{$project->fin_cmr}}</span>
+					</li>
+					<li>
+						<span>Накладные (ПИР, реализация, админ, резерв)</span>
+						<span>{{$project->fin_overhead}}</span>
+>>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 					</li>
 				</ul>
 			</li>
 			<li>
+<<<<<<< HEAD
 				<span>{{ __('asd.Прибыль (до налога)') }}</span>
 				<span>6 944</span>
 			</li>
@@ -546,6 +603,38 @@
 			<li>
 				<span>{{ __('asd.Земельный участок') }} , м2</span>
 				<span>14 900</span>
+=======
+				<span>Прибыль (до налога)</span>
+				<span>{{$project->fin_profit_before_tax}}</span>
+			</li>
+			<li>
+				<span>Рентабельность (до налога)</span>
+				<span>{{$project->fin_profitability_before_tax}}</span>
+			</li>
+			<li>
+				<span>Прибыль (после налога)</span>
+				<span>{{$project->fin_profit_after_tax}}</span>
+			</li>
+			<li>
+				<span>Рентабельность (после налога)</span>
+				<span>{{$project->fin_profitability_after_tax}} %</span>
+			</li>
+			<li>
+				<span>Инвестиции</span>
+				<span>{{$project->fin_investments}}</span>
+			</li>
+			<li>
+				<span>ROI (до налога)</span>
+				<span>{{$project->fin_roi_before_tax}} %</span>
+			</li>
+			<li>
+				<span>ROI (после налога)</span>
+				<span>{{$project->fin_roi_after_tax}}%</span>
+			</li>
+			<li>
+				<span>Земельный участок, м2</span>
+				<span>{{$project->fin_land_plot}}</span>
+>>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 			</li>
 		</ul>
 	</section>
@@ -555,18 +644,19 @@
 
 
 	<!-- INVEST -->
+	
 
 	<section class="invest">
 		<div class="container">
 			<div class="invest-wrap">
 				<div class="main-logos">
 					<div class="main-logos__item">
-						<img src="img/MB-logo.svg" alt="MB">
-						<img src="img/MB-logo2.svg" alt="MB">
+						<img src="/assets/img/MB-logo.svg" alt="MB">
+						<img src="/assets/img/MB-logo2.svg" alt="MB">
 					</div>
 					<div class="main-logos__item">
-						<img src="img/AV-logo.svg" alt="AV">
-						<img src="img/AV-logo2.svg" alt="AV">
+						<img src="/assets/img/AV-logo.svg" alt="AV">
+						<img src="/assets/img/AV-logo2.svg" alt="AV">
 					</div>
 				</div>
 				<h2 class="invest__title">
@@ -578,7 +668,11 @@
 				</div>
 				<div class="invest-counter">
 					<div class="invest-counter__item month wow fadeInUp" data-wow-delay=".3s">
+<<<<<<< HEAD
 						<span>0</span> {{ __('asd.мес.') }}
+=======
+						<span></span> мес.
+>>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 					</div>
 					<div class="invest-counter__item day wow fadeInUp" data-wow-delay=".4s">
 						<span>0</span> {{ __('asd.дн.') }}
@@ -635,24 +729,29 @@
 		</div>
 		<div class="footer-info">
 			<div class="footer-info__logo">
-				<img src="img/logo.svg" alt="Premium Investment Club">
+				<img src="/assets/img/logo.svg" alt="Premium Investment Club">
 			</div>
 			<div class="footer-info__title">
 						{{ __('asd.Контакты') }}
 			</div>
 			<ul class="footer-info__list">
 				<li>
-					<img src="img/call.svg" alt="ico">
+					<img src="/assets/img/call.svg" alt="ico">
 					<span>+998 71 200 88 22</span>
 				</li>
 				<li>
+<<<<<<< HEAD
 					<img src="img/marker.svg" alt="ico">
 						
 						
 						<span> {{ __('asd.Адрес: Бизнес-центр "Авалон"') }} ,<br> {{ __('asd.1-этаж, ул. Ойбека 38а, г.Ташкент') }} </span>
+=======
+					<img src="/assets/img/marker.svg" alt="ico">
+					<span>Адрес: Бизнес-центр "Авалон",	<br> 1-этаж, ул. Ойбека 38а, г.Ташкент</span>
+>>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 				</li>
 				<li>
-					<img src="img/mail.svg" alt="ico">
+					<img src="/assets/img/mail.svg" alt="ico">
 					<span>info@picgt.uz</span>
 				</li>
 			</ul>
@@ -664,16 +763,16 @@
 			</svg>				
 		</div>
 	</footer>
-	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/owl.carousel.js"></script>
+	<script src="/assets/js/jquery-3.4.1.min.js"></script>
+	<script src="/assets/js/owl.carousel.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-	<script src="js/map.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/gsap.min.js"></script>
-	<script src="js/jarallax.min.js"></script>
-	<script src="js/chart.js"></script>
-	<script src="js/main.js"></script>
+	<script src="/assets/js/map.js"></script>
+	<script src="/assets/js/wow.min.js"></script>
+	<script src="/assets/js/jquery.nicescroll.min.js"></script>
+	<script src="/assets/js/gsap.min.js"></script>
+	<script src="/assets/js/jarallax.min.js"></script>
+	<script src="/assets/js/chart.js"></script>
+	<script src="/assets/js/main.js"></script>
 
 	<!-- CКРИПТ ТОЛЬКО ДЛЯ СИНГЛ -->
 
