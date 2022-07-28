@@ -8,7 +8,8 @@
                 <button type="submit" class="btn btn-primary" style="background-color: blue">Back</button>
             </form>
             <div>
-                <form action="{{Route('admin.project.update')}}" method="post">
+                <form action="{{Route('admin.project.update', $project->id)}}" method="post">
+                    @csrf
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
@@ -20,27 +21,27 @@
                             <div class="row mt-4">
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Name</label>
-                                    <input type="text" class="form-control" wire:model="key">
+                                    <input type="text" class="form-control" name="name" value="{{$project->name}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Less_description UZ</label>
-                                    <input type="text" class="form-control" name="less_description_uz">
+                                    <input type="text" class="form-control" name="less_description_uz" value="{{$project->less_description_uz}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Less_description RU</label>
-                                    <input type="text" class="form-control" name="less_description_ru">
+                                    <input type="text" class="form-control" name="less_description_ru" value="{{$project->less_description_ru}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Less_description EN</label>
-                                    <input type="text" class="form-control" name="less_description_en">
+                                    <input type="text" class="form-control" name="less_description_en" value="{{$project->less_description_en}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Description UZ</label>
-                                    <input type="text" class="form-control" name="description_uz">
+                                    <input type="text" class="form-control" name="description_uz" value="{{$project->description_uz}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Description RU</label>
-                                    <input type="text" class="form-control" name="description_ru">
+                                    <input type="text" class="form-control" name="description_ru" value="{{$project->description_ru}}">
                                 </div>
                                 
                             </div>
@@ -50,27 +51,27 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Description EN</label>
-                                    <input type="text" class="form-control" name="description_en">
+                                    <input type="text" class="form-control" name="description_en" value="{{$project->description_en}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Date_from_to</label>
-                                    <input type="text" class="form-control" name="date_from_to">
+                                    <input type="text" class="form-control" name="date_from_to" value="{{$project->date_from_to}}"> 
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Profit</label>
-                                    <input type="text" class="form-control" name="profit">
+                                    <input type="text" class="form-control" name="profit" value="{{$project->profit}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Roi</label>
-                                    <input type="text" class="form-control" name="roi">
+                                    <input type="text" class="form-control" name="roi" value="{{$project->roi}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Profitability</label>
-                                    <input type="text" class="form-control" name="profitability">
+                                    <input type="text" class="form-control" name="profitability" value="{{$project->profitability}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Apart_qty</label>
-                                    <input type="text" class="form-control" name="apart_qty">
+                                    <input type="text" class="form-control" name="apart_qty" value="{{$project->apart_qty}}">
                                 </div>
                                 
                             </div>
@@ -79,27 +80,27 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <label for="" class="form-label">floors</label>
-                                    <input type="text" class="form-control" name="floors">
+                                    <input type="text" class="form-control" name="floors" value="{{$project->floors}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Apart_size</label>
-                                    <input type="text" class="form-control" name="apart_size">
+                                    <input type="text" class="form-control" name="apart_size" value="{{$project->apart_size}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Commerce_size</label>
-                                    <input type="text" class="form-control" name="commerce_size">
+                                    <input type="text" class="form-control" name="commerce_size" value="{{$project->commerce_size}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Fin_income</label>
-                                    <input type="text" class="form-control" name="fin_income">
+                                    <input type="text" class="form-control" name="fin_income" value="{{$project->fin_income}}"> 
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Fin_earth</label>
-                                    <input type="text" class="form-control" name="fin_earth">
+                                    <input type="text" class="form-control" name="fin_earth" value="{{$project->fin_earth}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Fin_cmr</label>
-                                    <input type="text" class="form-control" name="fin_cmr">
+                                    <input type="text" class="form-control" name="fin_cmr" value="{{$project->fin_cmr}}">
                                 </div>
                                 
                             </div>
@@ -108,27 +109,27 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <label for="" class="form-label">fin_overhead</label>
-                                    <input type="text" class="form-control" name="fin_overhead">
+                                    <input type="text" class="form-control" name="fin_overhead" value="{{$project->fin_overhead}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Fin_profit_before_tax</label>
-                                    <input type="text" class="form-control" name="fin_profit_before_tax">
+                                    <input type="text" class="form-control" name="fin_profit_before_tax" value="{{$project->fin_profit_before_tax}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Fin_profitability_before_tax</label>
-                                    <input type="text" class="form-control" name="fin_profitability_before_tax">
+                                    <input type="text" class="form-control" name="fin_profitability_before_tax" value="{{$project->fin_profitability_before_tax}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Fin_profit_after_tax</label>
-                                    <input type="text" class="form-control" name="fin_profit_after_tax">
+                                    <input type="text" class="form-control" name="fin_profit_after_tax" value="{{$project->fin_profit_after_tax}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Fin_profitability_after_tax</label>
-                                    <input type="text" class="form-control" name="fin_profitability_after_tax">
+                                    <input type="text" class="form-control" name="fin_profitability_after_tax" value="{{$project->fin_profitability_after_tax}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Fin_investments</label>
-                                    <input type="text" class="form-control" name="fin_investments">
+                                    <input type="text" class="form-control" name="fin_investments" value="{{$project->fin_investments}}">
                                 </div>
                                 
                             </div>
@@ -137,27 +138,27 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Fin_roi_before_tax</label>
-                                    <input type="text" class="form-control" name="fin_roi_before_tax">
+                                    <input type="text" class="form-control" name="fin_roi_before_tax" value="{{$project->fin_roi_before_tax}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Fin_roi_after_tax</label>
-                                    <input type="text" class="form-control" name="fin_roi_after_tax">
+                                    <input type="text" class="form-control" name="fin_roi_after_tax" value="{{$project->fin_roi_after_tax}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Fin_land_plot</label>
-                                    <input type="text" class="form-control" name="fin_land_plot">
+                                    <input type="text" class="form-control" name="fin_land_plot" value="{{$project->fin_land_plot}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">End_date</label>
-                                    <input type="text" class="form-control" name="end_date">
+                                    <input type="text" class="form-control" name="end_date" value="{{$project->end_date}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Area</label>
-                                    <input type="text" class="form-control" name="area">
+                                    <input type="text" class="form-control" name="area" value="{{$project->area}}">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Realizable_area</label>
-                                    <input type="text" class="form-control" name="realizable_area">
+                                    <input type="text" class="form-control" name="realizable_area" value="{{$project->realizable_area}}">
                                 </div>
                                 
                             </div>

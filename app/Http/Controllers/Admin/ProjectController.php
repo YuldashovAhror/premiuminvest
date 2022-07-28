@@ -42,21 +42,43 @@ class ProjectController extends Controller
     {
         $project = new Project();
         
+    
         if(!empty($request->file('photo'))){
             
             $img_name = Str::random(10).'.'.$request->file('photo')->getClientOriginalExtension();
-            $request->file('photo')->move(public_path('/images/type'), $img_name);
-            $project->photo = '/images/type/'.$img_name;
+            $request->file('photo')->move(public_path('/images/photo'), $img_name);
+            $project->photo = '/images/photo/'.$img_name;
         }
         $project->name = $request->name;
-        $project->less_description = $request->less_description;
-        $project->description = $request->description;
-        $project->investing_uz	= $request->investing_uz;
-        $project->investing_ru	= $request->investing_ru;
-        $project->investing_en	= $request->investing_en;
+        $project->less_description_uz = $request->less_description_uz;
+        $project->less_description_ru = $request->less_description_uz;
+        $project->less_description_en = $request->less_description_en;
+        $project->description_uz = $request->description_uz;
+        $project->description_ru = $request->description_ru;
+        $project->description_en = $request->description_en;
+        $project->date_from_to = $request->date_from_to;
         $project->roi = $request->roi;
         $project->profit = $request->profit;
+        $project->profitability = $request->profitability;
+        $project->apart_qty = $request->apart_qty;
+        $project->floors = $request->floors;
+        $project->apart_size = $request->apart_size;
+        $project->commerce_size = $request->commerce_size;
+        $project->fin_income = $request->fin_income;
+        $project->fin_earth = $request->fin_earth;
+        $project->fin_cmr = $request->fin_cmr;
+        $project->fin_overhead = $request->fin_overhead;
+        $project->fin_profit_before_tax = $request->fin_profit_before_tax;
+        $project->fin_profitability_before_tax = $request->fin_profitability_before_tax;
+        $project->fin_profit_after_tax = $request->fin_profit_after_tax;
+        $project->fin_profitability_after_tax = $request->fin_profitability_after_tax;
+        $project->fin_investments = $request->fin_investments;
+        $project->fin_roi_before_tax = $request->fin_roi_before_tax;
+        $project->fin_roi_after_tax = $request->fin_roi_after_tax;
+        $project->fin_land_plot = $request->fin_land_plot;
+        $project->end_date = $request->end_date;
         $project->area = $request->area;
+        $project->realizable_area = $request->realizable_area;
         $project->realizable_area = $request->realizable_area;
         $project->save();
 
@@ -107,14 +129,35 @@ class ProjectController extends Controller
             $project->photo = '/images/type/'.$img_name;
         }
         $project->name = $request->name;
-        $project->less_description = $request->less_description;
-        $project->description = $request->description;
-        $project->investing_uz	= $request->investing_uz;
-        $project->investing_ru	= $request->investing_ru;
-        $project->investing_en	= $request->investing_en;
+        $project->less_description_uz = $request->less_description_uz;
+        $project->less_description_ru = $request->less_description_uz;
+        $project->less_description_en = $request->less_description_en;
+        $project->description_uz = $request->description_uz;
+        $project->description_ru = $request->description_ru;
+        $project->description_en = $request->description_en;
+        $project->date_from_to = $request->date_from_to;
         $project->roi = $request->roi;
         $project->profit = $request->profit;
+        $project->profitability = $request->profitability;
+        $project->apart_qty = $request->apart_qty;
+        $project->floors = $request->floors;
+        $project->apart_size = $request->apart_size;
+        $project->commerce_size = $request->commerce_size;
+        $project->fin_income = $request->fin_income;
+        $project->fin_earth = $request->fin_earth;
+        $project->fin_cmr = $request->fin_cmr;
+        $project->fin_overhead = $request->fin_overhead;
+        $project->fin_profit_before_tax = $request->fin_profit_before_tax;
+        $project->fin_profitability_before_tax = $request->fin_profitability_before_tax;
+        $project->fin_profit_after_tax = $request->fin_profit_after_tax;
+        $project->fin_profitability_after_tax = $request->fin_profitability_after_tax;
+        $project->fin_investments = $request->fin_investments;
+        $project->fin_roi_before_tax = $request->fin_roi_before_tax;
+        $project->fin_roi_after_tax = $request->fin_roi_after_tax;
+        $project->fin_land_plot = $request->fin_land_plot;
+        $project->end_date = $request->end_date;
         $project->area = $request->area;
+        $project->realizable_area = $request->realizable_area;
         $project->realizable_area = $request->realizable_area;
         $project->save();
 
