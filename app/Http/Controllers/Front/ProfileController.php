@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Invest;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -21,7 +22,8 @@ class ProfileController extends Controller
     public function index()
     {
         $invest = Invest::where('user_id', auth()->user()->id)->first();
-        return view('front.cabinet', compact('invest'));
+        $news = News::all();
+        return view('front.cabinet', ['invest'=>$invest, 'news'=>$news]);
         
     }
 
