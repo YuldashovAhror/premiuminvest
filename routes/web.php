@@ -126,7 +126,6 @@ Route::middleware([
 
 });
 
-
 Route::name('front.')->group(function () {
     Route::get('/profile', [ProfileController::class,'index'])->name('profile');
     Route::get('/news/{id}', [FrontNewsController::class,'index'])->name('news.single');
