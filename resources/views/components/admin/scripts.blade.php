@@ -14,12 +14,23 @@
 
 <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('.ckeditor').ckeditor();
-    });
+  $(document).ready(function() {
+    $('.ckeditor').ckeditor();
+  });
 </script>
 
 <!-- App js -->
 <script src="/assets/js/app.js"></script>
 {{-- @stack('modals') --}}
+
+<script>
+  $('.btn__delete').click(function(event) {
+    event.preventDefault();
+    $('.popup__confirm').fadeIn();
+  })
+  $('.btn__close').click(function(event) {
+    event.preventDefault();
+    $('.popup__confirm').fadeOut();
+  })
+</script>
 @livewireScripts

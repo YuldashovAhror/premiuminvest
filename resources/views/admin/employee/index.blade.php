@@ -1,83 +1,110 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="row">
-    <div class="col-lg-12">
-        <div class="card">
-            <a href="{{Route('admin.employee.create')}}" class="btn btn-success" style="margin-right: 0px; margin-bottom: 20px;">Добавить Invests</a>
-            <div class="row">
-                <div class="card-body">
-                        <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead>
-                            </tr>
-                            <tr>
-                                <th>#</th>
-                                <th>Аванс</th>
-                                <th>Аванс дата</th>
-                                <th>Bклад</th>
-                                <th>Bклад дата</th>
-                                <th>Доля в фонде</th>
-                                <th>Доход</th>
-                                <th>Доход дата</th>
-                                <th>Доход Процент</th>
-                                <th>Рыночная актива</th>
-                                <th>Дата переоценки</th>
-                                <th>Дней до закрытия фонда</th>
-                                <th>Использование средств</th>
-                                <th>Отчет о прогрессе</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php $num=1; ?>
-                            {{-- @foreach($invest as $item) --}}
-                                <tr>
-                                    {{-- <td>{{$num++}}</td>
-                                    <td>{{$item->deposit}}</td>
-                                    <td>{{$item->deposit_date}}</td>
-                                    <td>{{$item->investment}}</td>
-                                    <td>{{$item->investment_date}}</td>
-                                    <td>{{$item->percentage}}</td>
-                                    <td>{{$item->earnings}}</td>
-                                    <td>{{$item->earnings_date}}</td>
-                                    <td>{{$item->earnings_percentage}}</td>
-                                    <td>{{$item->current_earning}}</td>
-                                    <td>{{$item->revaluation_date}}</td>
-                                    <td>{{$item->end_date}}</td>
-                                    <td><img src="{{$item->use_funds}}" alt="" style="width: 100px; height: 100px;"></td>
-                                    <td><img src="{{$item->progress_report}}" alt="" style="width: 100px; height: 100px;"></td> --}}
-                                    {{-- <td>
-                                        <form action="{{route('admin.invest.edit', $item->id )}}" method="get" style="margin-bottom: 5px;">
-                                            @csrf
-                                            <button type="submit" class="btn btn-primary" style="background-color: blue">Изменить</button>
-                                        </form>
-                                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal{{ $item->id }}">Удалить</a>
-                                    </td> --}}
-                                    {{-- <div id="myModal{{ $item->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="myModalLabel">Rostdan ham o'chirmoqchimisiz?</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form action="{{route('admin.invest.destroy', $item->id)}}" method="POST">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger" style="background-color: blue">Удалить</button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> --}}
-                                </tr>
-                            {{-- @endforeach --}}
-                        </tbody>    
-                    </table>
-                </div>
-            </div>
+  <div class="row">
+
+    {{-- Flash Message for Adding Product Beginning --}}
+    <div style="margin-bottom: 1rem;">
+      @if (session()->has('employee'))
+        <div
+          style="padding: .75rem; background: #9ae6b4; color: #276749; border-radius: 0.25rem; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);"
+          class="alert alert-success">
+          {{ session('employee') }}
         </div>
+      @elseif (session()->has('employee-store'))
+        <div
+          style="padding: .75rem; background: #9ae6b4; color: #276749; border-radius: 0.25rem; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);"
+          class="alert alert-success">
+          {{ session('employee-store') }}
+        </div>
+      @elseif(session()->has('employee-delete'))
+        <div
+          style="padding: .75rem; background: #e69a9a; color: #672727; border-radius: 0.25rem; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);"
+          class="alert alert-danger">
+          {{ session('employee-delete') }}
+        </div>
+      @endif
     </div>
-</div>
+    {{-- Flash Message for Adding Product End --}}
+
+    <div class="col-lg-12">
+      <div class="card">
+        <a href="{{ Route('admin.employee.create') }}" class="btn btn-success"
+          style="margin-right: 0px; margin-bottom: 20px;">Добавить Invests</a>
+        <div class="row">
+          <div class="card-body">
+            <table id="datatable" class="table table-bordered dt-responsive nowrap"
+              style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+              <thead>
+                </tr>
+                <tr>
+                  <th>#</th>
+                  <th>Name Uz</th>
+                  <th>Name Ru</th>
+                  <th>Name En</th>
+                  <th>Type</th>
+                  <th>Companies</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php $num = 1; ?>
+                @foreach ($employees as $employee)
+                  <tr>
+                    <td>{{ $num++ }}</td>
+                    <td>{{ $employee->name_uz }}</td>
+                    <td>{{ $employee->name_ru }}</td>
+                    <td>{{ $employee->name_en }}</td>
+                    <td>{{ $employee->type }}</td>
+                    <td style="display: flex;">
+                      @foreach ($employee->employeeCompany as $company)
+                        <img src="/{{ $company->photo }}" alt=""
+                          style="width: 50px; height: 50px; margin-right: 5px;">
+                      @endforeach
+                    </td>
+                    <td>
+                      <a href="{{ Route('admin.employee.edit', $employee->id) }}" class="btn btn-primary"
+                        style="background-color: blue">Edit</a>
+                      <a class="btn btn__delete btn-danger waves-effect waves-light">Delete</a>
+                    </td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  {{-- Delete Confirm Modal Beginning --}}
+  <div class="popup__confirm"
+    style="
+        display:none; position: fixed; 
+        top: 50%; left: 50%; transform: translate(-50%, -50%); 
+        background-color:#ffffff; width: 500px; height: auto; 
+        z-index:999; 
+        border-radius: 10px;
+        box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.5);
+        ">
+    <div class="card-body">
+
+      <div style="margin: 1rem 0">
+        Do you really want to delete this?
+      </div>
+
+      <div style="display: flex; justify-content: space-between;">
+        <button class="btn btn-primary btn__close" style="color: #fff">Close</button>
+        <form action="{{Route('admin.employee.delete', $employee->id)}}" method="post">
+          @csrf
+          @method('DELETE')
+          <button class="btn btn-danger" style="color: #fff">Delete</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  {{-- Delete Confirm Modal End --}}
 @endsection

@@ -14,7 +14,7 @@
                   <div class="col-md-6">
                     <div class="mb-3">
                       <label for="type" class="form-label">Type</label>
-                      <select id="type" class="form-control select2">
+                      <select name="type" id="type" class="form-control select2">
                         <option value="{{ null }}">Select</option>
                         <option value="1">Type 1</option>
                         <option value="2">Type 2</option>
@@ -24,7 +24,7 @@
                   <div class="col-md-6">
                     <div class="mb-3">
                       <label for="name_uz" class="form-label" for="formrow-email-input">Name Uz</label>
-                      <input type="text" id="name_uz" class="form-control" id="formrow-email-input">
+                      <input name="name_uz" type="text" id="name_uz" class="form-control" id="formrow-email-input">
                     </div>
                   </div>
                 </div>
@@ -32,20 +32,29 @@
                   <div class="col-md-6">
                     <div class="mb-3">
                       <label for="name_ru" class="form-label" for="formrow-password-input">Name Ru</label>
-                      <input id="name_ru" type="text" class="form-control" id="formrow-password-input">
+                      <input name="name_ru" id="name_ru" type="text" class="form-control" id="formrow-password-input">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="mb-3">
                       <label for="name_en" class="form-label" for="formrow-password-input">Name En</label>
-                      <input id="name_en" type="text" class="form-control" id="formrow-password-input">
+                      <input name="name_en" id="name_en" type="text" class="form-control" id="formrow-password-input">
                     </div>
                   </div>
                 </div>
               </div>
               <div style="width: 50%;">
-                <div class="row" >
-                  @livewire('admin.employee-company')
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label class="form-label">Company</label>
+                    <div style="display: flex;">
+                      <div class="col-9 mr-3">
+                        <label class="visually-hidden" for="specificSizeInputName">Name</label>
+                        <input name="companies[]" multiple type="file" class="form-control" id="specificSizeInputName"
+                          placeholder="Enter Name">
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
