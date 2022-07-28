@@ -14,15 +14,11 @@
                                 <th>#</th>
                                 <th>Name</th>
                                 <th>Photo</th>
-                                <th>Less Description</th>
-                                <th>Investing Uz</th>
-                                <th>Investing Ru</th>
-                                <th>Investing En</th>
-                                <th>Description</th>
-                                <th>ROI</th>
-                                <th>Profit</th>
-                                <th>Area</th>
-                                <th>Realizable_area</th>
+                                <th>Less Description UZ</th>
+                                <th>Less Description RU</th>
+                                <th>Less Description EN</th>
+                                <th>Description UZ</th>
+                                <th>Description RU</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -33,23 +29,18 @@
                                     <td>{{$num++}}</td>
                                     <td>{{$project->name}}</td>
                                     <td><img src="{{$project->photo}}" alt="" style="width: 100px; height: 100px;"></td>
-                                    <td>{{$project->less_description}}</td>
-                                    <td>{{$project->investing_uz}}</td>
-                                    <td>{{$project->investing_ru}}</td>
-                                    <td>{{$project->investing_en}}</td>
-                                    <td>{{$project->description}}</td>
-                                    <td>{{$project->roi}}</td>
-                                    <td>{{$project->profit}}</td>
-                                    <td>{{ $project->area}}</td>
-                                    <td>{{$project->realizable_area}}</td>
+                                    <td>{{$project->less_description_uz}}</td>
+                                    <td>{{$project->less_description_ru}}</td>
+                                    <td>{{$project->less_description_en}}</td>
+                                    <td>{{$project->description_uz}}</td>
+                                    <td>{{$project->description_ru}}</td>
                                     <td>
-                                        <td>
+                                        
                                             <form action="{{route('admin.project.edit', $project->id )}}" method="get" style="margin-bottom: 5px;">
                                                 @csrf
                                                 <button type="submit" class="btn btn-primary" style="background-color: blue">Изменить</button>
                                             </form>
                                             <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal{{ $project->id }}">Удалить</a>
-                                        </td>
                                     </td>
                                     <div id="myModal{{ $project->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">

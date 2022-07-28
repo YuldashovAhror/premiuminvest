@@ -8,7 +8,8 @@
                 <button type="submit" class="btn btn-primary" style="background-color: blue">Back</button>
             </form>
             <div>
-                <form action="">
+                <form action="{{Route('admin.project.store')}}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
@@ -20,7 +21,7 @@
                             <div class="row mt-4">
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Name</label>
-                                    <input type="text" class="form-control" wire:model="key">
+                                    <input type="text" class="form-control" name="name">
                                 </div>
                                 <div class="col-md-2">
                                     <label for="" class="form-label">Less_description UZ</label>
@@ -57,7 +58,7 @@
                                     <input type="text" class="form-control" name="date_from_to">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Profit</label>
+                                    <label for="" class="form-label">Прибыль</label>
                                     <input type="text" class="form-control" name="profit">
                                 </div>
                                 <div class="col-md-2">
@@ -65,11 +66,11 @@
                                     <input type="text" class="form-control" name="roi">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Profitability</label>
+                                    <label for="" class="form-label">Рентабельность</label>
                                     <input type="text" class="form-control" name="profitability">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Apart_qty</label>
+                                    <label for="" class="form-label">Количество квартир</label>
                                     <input type="text" class="form-control" name="apart_qty">
                                 </div>
                                 
@@ -78,19 +79,19 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">floors</label>
+                                    <label for="" class="form-label">Этажность</label>
                                     <input type="text" class="form-control" name="floors">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Apart_size</label>
+                                    <label for="" class="form-label">Площадь квартир</label>
                                     <input type="text" class="form-control" name="apart_size">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Commerce_size</label>
+                                    <label for="" class="form-label">Площадь ком. помещений</label>
                                     <input type="text" class="form-control" name="commerce_size">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Fin_income</label>
+                                    <label for="" class="form-label">Доходы тыс $</label>
                                     <input type="text" class="form-control" name="fin_income">
                                 </div>
                                 <div class="col-md-2">
@@ -136,11 +137,11 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Fin_roi_before_tax</label>
+                                    <label for="" class="form-label">ROI (до налога)</label>
                                     <input type="text" class="form-control" name="fin_roi_before_tax">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Fin_roi_after_tax</label>
+                                    <label for="" class="form-label">ROI (после налога)</label>
                                     <input type="text" class="form-control" name="fin_roi_after_tax">
                                 </div>
                                 <div class="col-md-2">
@@ -166,7 +167,7 @@
                             </div>
                         </div>
                     </div>
-            </form>
+                </form>
             </div>    
         </div>
     </div>
