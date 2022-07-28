@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\EmployeeCompany;
 
 class Employee extends Model
 {
@@ -16,7 +17,7 @@ class Employee extends Model
         'type',
     ];
 
-    public function employee_companies()
+    public function employeeCompany()
     {
         return $this->hasMany(EmployeeCompany::class);
     }

@@ -9,4 +9,9 @@ class ProjectPropertyItems extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function project_property()
+    {
+        return $this->belongsTo(ProjectProperties::class, 'project_property_id');
+    }
 }
