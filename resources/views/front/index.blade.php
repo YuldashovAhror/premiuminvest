@@ -48,6 +48,7 @@
 
 	<div class="feedback">
 		<div class="feedback-content">
+			
 			<div class="feedback-close">
 				<img src="/assets/img/close.svg" alt="ico">
 			</div>
@@ -58,16 +59,17 @@
 				@csrf
 				<div class="feedback-wrap">
 					<div class="feedback__title">
-						Мы вам перезвоним
+						{{ __('asd.Мы вам перезвоним') }}
 					</div>
 					<div class="feedback__text">
-						Оставьте ваши контактные данные, и мы с вами свяжемся.
+						{{ __('asd.Оставьте ваши контактные данные, и мы с вами свяжемся.') }}
+
 					</div>
 					<div class="feedback-form">
 						<input type="text" required placeholder="Ваше имя" name="name">
 						<input type="tel"  required placeholder="Номер телефона" name="phone">
 						<button class="btn">
-							Отправить
+						{{ __('asd.Отправить.') }}
 						</button>
 					</div>
 				</div>
@@ -78,10 +80,10 @@
 					<img src="/assets/img/done.svg" alt="ico">
 				</div>
 				<div class="feedback__title">
-					Спасибо ваша заявка принята!
+					{{ __('asd.Спасибо ваша заявка принята!') }}
 				</div>
 				<div class="feedback__text">
-					Мы свяжемся с вами в ближайшее время
+					{{ __('asd.Мы свяжемся с вами в ближайшее время') }}
 				</div>
 			</div>
 		</div>
@@ -100,7 +102,7 @@
 	<div class="mobile-menu pattern">
 		<div class="mobile-menu__head">
 			<div class="mobile-menu__logo">
-				<a href="index.html">
+				<a href="{{ route('home') }}">
 					<img src="/assets/img/logo.svg" alt="SUU" title="SUU">
 				</a>
 			</div>
@@ -116,22 +118,23 @@
 			</li>
 			<li>
 				<a href="#exp">
-					Девелопер
+					{{ __('asd.Девелопер') }}
 				</a>
 			</li>
 			<li>
 				<a href="#projects">
-					Проекты
+					{{ __('asd.Проекты') }}
 				</a>
 			</li>
 			<li>
 				<a href="#team">
-					Команда
+					{{ __('asd.Команда') }}
 				</a>
 			</li>
 			<li>
 				<a href="#footer">
-					Контакты
+					{{ __('asd.Контакты') }}
+
 				</a>
 			</li>
 		</ul>
@@ -148,7 +151,7 @@
 	<header class="header">
 		<div class="container">
 			<div class="header__logo">
-				<a href="#">
+				<a href="{{ route('home') }}">
 					<img src="/assets/img/logo.svg" alt="Premium Investment Club">
 				</a>
 			</div>
@@ -166,17 +169,19 @@
 					</li>
 					<li>
 						<a href="#projects">
-							Проекты
+							{{ __('asd.Проекты') }}
+							
 						</a>
 					</li>
 					<li>
 						<a href="#team">
-							Команда
+							{{ __('asd.Команда') }}
+
 						</a>
 					</li>
 					<li>
 						<a href="#footer">
-							Контакты
+							{{ __('asd.Контакты') }}
 						</a>
 					</li>
 				</ul>
@@ -200,7 +205,7 @@
 			<div>
 				<a href="{{route('front.profile')}}" class="header-cabinet">
 					<img src="/assets/img/dot.svg" alt="ico">
-					<span>личный кабинет</span>
+					<span>{{ __('asd.личный кабинет') }}</span>
 				</a>
 				<div class="header-mobile">
 					<span></span>
@@ -277,7 +282,8 @@
 				<div class="main-text__info">
 					<img src="/assets/img/dot.svg" alt="ico">
 					<p>
-						С соблюдением принципов <br> этического финансирования
+						{{ __('asd.С соблюдением принципов этического финансирования' ) }}
+						
 					</p>
 				</div>
 			</div>
@@ -293,23 +299,24 @@
 		<div class="container">
 			<div class="consort-content wow fadeInLeft" data-wow-delay=".5s">
 				<h2 class="section-title consort__title">
-					01 <span>Международный консорциум</span>
+						
+						01 <span>{{ __('asd.Международный консорциум') }}</span>
 				</h2>
 				<ul class="consort-list list">
-					<li>
-						25+ опыт международного инвестиционного банкинга и управления рисками (UK, РФ, EU);
+					<li> 
+						25+ {{ __('asd.опыт международного инвестиционного банкинга и управления рисками ') }}  (UK, РФ, EU);
 					</li>
 					<li>
-						Надежный застройщик на рынке элитной недвижимости в г.Ташкент;
+						{{ __('asd.Надежный застройщик на рынке элитной недвижимости в г. Ташкент;') }}
 					</li>
 					<li>
-						Венчурное инвестирование на развивающихся рынках;
+						{{ __('asd.Венчурное инвестирование на развивающихся рынках;') }}
 					</li>
 					<li>
-						Размещение ценных бумаг среди инвесторов Лондон, Цюрих, Гонконг, Сингапур;
+						{{ __('asd.Размещение ценных бумаг среди инвесторов Лондон, Цюрих, Гонконг, Сингапур;') }}
 					</li>
 					<li>
-						Экспертиза, контроль и управление строительными рисками на всех стадиях жизненного цикла проекта;
+						{{ __('asd.Экспертиза, контроль и управление строительными рисками на всех стадиях жизненного цикла проекта;') }}
 					</li>
 				</ul>
 			</div>
@@ -333,7 +340,7 @@
 	<section class="risk">
 		<div class="container">
 			<h2 class="risk__title section-title">
-				02 <span>риски</span>
+				02 <span>{{ __('asd.риски') }}</span>
 			</h2>
 			<div class="risk-wrap">
 				<div class="risk-item wow fadeInUp" data-wow-delay="1.1s">
@@ -346,10 +353,10 @@
 						</svg>							
 					</div>
 					<div class="risk-item__title">
-						Волатильность
+						{{ __('asd.Волатильность') }}
 					</div>
 					<div class="risk-item__text">
-						Не известно, что ждать от финансового регулятора завтра
+						{{ __('asd.Не известно, что ждать от финансового регулятора завтра') }}
 					</div>
 				</div>
 				<div class="risk-item wow fadeInUp" data-wow-delay=".9s">
@@ -359,10 +366,10 @@
 						</svg>							
 					</div>
 					<div class="risk-item__title">
-						Доходность
+						{{ __('asd.Доходность') }}
 					</div>
 					<div class="risk-item__text">
-						В банках слишком низкие ставки, Вклад в СУМах не вариант
+						{{ __('asd.В банках слишком низкие ставки, Вклад в СУМах не вариант') }}
 					</div>
 				</div>
 				<div class="risk-item wow fadeInUp" data-wow-delay=".7s">
@@ -375,10 +382,10 @@
 						</svg>							
 					</div>
 					<div class="risk-item__title">
-						Доверие
+						{{ __('asd. Доверие') }}
 					</div>
 					<div class="risk-item__text">
-						Кому доверить вклад? Не хватает прозрачности использования средств.
+						{{ __('asd. Кому доверить вклад? Не хватает прозрачности использования средств.') }}
 					</div>
 				</div>
 				<div class="risk-item wow fadeInUp" data-wow-delay=".5s">
@@ -390,10 +397,10 @@
 						</svg>							
 					</div>
 					<div class="risk-item__title">
-						Надежность
+						{{ __('asd. Надежность') }}
 					</div>
 					<div class="risk-item__text">
-						На рынке нет обеспеченных инструментов с двузначной доходностью.
+						{{ __('asd. На рынке нет обеспеченных инструментов с двузначной доходностью.') }}
 					</div>
 				</div>
 				<div class="risk-item wow fadeInUp" data-wow-delay=".3s">
@@ -404,10 +411,10 @@
 						</svg>							
 					</div>
 					<div class="risk-item__title">
-						Ликвидность
+						{{ __('asd. Ликвидность') }}
 					</div>
 					<div class="risk-item__text">
-						Вернуть вклад, если изменились обстоятельства
+						{{ __('asd.Вернуть вклад, если изменились обстоятельства') }}
 					</div>
 				</div>
 			</div>
@@ -430,36 +437,36 @@
 		<div class="container">
 			<div class="solution-head">
 				<h2 class="solution__title section-title">
-					03 <span>решение</span>
+					03 <span> {{ __('asd.решение') }} </span>
 				</h2>
 				<a href="#" class="solution__btn">
 					<img src="/assets/img/dot.svg" alt="ico">
-					<span>Инвестиционная структура</span>
+					<span>{{ __('asd. Инвестиционная структура') }}</span>
 				</a>
 			</div>
 			<div class="solution-wrap">
 				<div class="solution-item wow fadeInLeft" data-wow-delay=".7s">
 					<div class="solution-item__title">
-						Green <br> Technologies
+						{{ __('asd. Green') }} <br>  {{ __('asd. Technologies') }}
 					</div>
 					<div class="solution-item__text">
-						В соответствие с ПП 4422 <br> Энергосберегающие технологии и возобновляемые источники энергии
+						{{ __('asd. В соответствие с ПП 4422') }} <br> {{ __('asd. Энергосберегающие технологии и возобновляемые источники энергии') }}
 					</div>
 				</div>
 				<div class="solution-item wow fadeInLeft" data-wow-delay=".5s">
 					<div class="solution-item__title">
-						Этическое <br> финансирование
+						{{ __('asd. Этическое') }} <br> {{ __('asd.финансирование') }}
 					</div>
 					<div class="solution-item__text">
-						Соответствие принципам партнерского софинансирования
+						{{ __('asd. Соответствие принципам партнерского софинансирования') }}
 					</div>
 				</div>
-				<div class="solution-item  wow fadeInLeft" data-wow-delay=".3s">
+				<div class="solution-item wow fadeInLeft" data-wow-delay=".3s">
 					<div class="solution-item__title">
-						Высокий доход, <br> ограниченный риск
+						{{ __('asd.Высокий доход,') }} <br> {{ __('asd. ограниченный риск') }} 
 					</div>
 					<div class="solution-item__text">
-						Обеспечен земельным участком и квадратными метрами незавершенного строительства
+						{{ __('asd.Обеспечен земельным участком и квадратными метрами незавершенного строительства') }} 
 					</div>
 				</div>
 			</div>
@@ -471,10 +478,10 @@
 	<section class="earn">
 		<div class="earn-title">
 			<div class="earn-title__name wow fadeInUp" data-wow-delay=".3s">
-				ЗАРАБОТАТЬ
+						{{ __('asd. ЗАРАБОТАТЬ') }} 
 			</div>
 			<div class="earn-title__text wow fadeInUp" data-wow-delay=".5s">
-				вместе с профессионалами на рынке недвижимости
+						{{ __('asd. вместе с профессионалами на рынке недвижимости') }} 
 			</div>
 		</div>
 		<div class="earn-item earn-green">
@@ -491,10 +498,10 @@
 							<img src="/assets/img/earn1.svg" alt="ico">
 						</div>
 						<div class="earn-list__name">
-							Технологичность
+						{{ __('asd. Технологичность') }} 
 						</div>
 						<div class="earn-list__text">
-							Внедрение энергосберегающих технологий и развития возобновляемых источников энергии
+						{{ __('asd. Внедрение энергосберегающих технологий и развития возобновляемых источников энергии') }} 
 						</div>
 					</div>
 					<div class="earn-list__item wow fadeInUp" data-wow-delay=".5s">
@@ -502,10 +509,10 @@
 							<img src="/assets/img/earn2.svg" alt="ico">
 						</div>
 						<div class="earn-list__name">
-							Экологичность
+						{{ __('asd. Экологичность') }} 
 						</div>
 						<div class="earn-list__text">
-							Установка современных солнечных фотоэлектрических станций и водонагревателей для обеспечения горячим водоснабжением и электрической энергией
+						{{ __('asd. 							Установка современных солнечных фотоэлектрических станций и водонагревателей для обеспечения горячим водоснабжением и электрической энергией') }} 
 						</div>
 					</div>
 					<div class="earn-list__item wow fadeInUp" data-wow-delay=".7s">
@@ -513,10 +520,10 @@
 							<img src="/assets/img/earn3.svg" alt="ico">
 						</div>
 						<div class="earn-list__name">
-							Надежность
+						{{ __('asd. Надежность') }} 
 						</div>
 						<div class="earn-list__text">
-							Принятие международных стандартов, устанавливающих требования к энергоэффективным, энергосберегающим технологиям и оборудованию
+						{{ __('asd. Принятие международных стандартов, устанавливающих требования к энергоэффективным, энергосберегающим технологиям и оборудованию') }} 
 						</div>
 					</div>
 				</div>
@@ -558,10 +565,10 @@
 							<img src="/assets/img/earn4.svg" alt="ico">
 						</div>
 						<div class="earn-list__name">
-							Социальная ответственность
+						{{ __('asd. Социальная ответственность') }} 
 						</div>
 						<div class="earn-list__text">
-							Основано на принципах социально-ответственного инвестирования и реальной экономики
+						{{ __('asd. Основано на принципах социально-ответственного инвестирования и реальной экономики') }} 
 						</div>
 					</div>
 					<div class="earn-list__item wow fadeInUp" data-wow-delay=".5s">
@@ -569,10 +576,10 @@
 							<img src="/assets/img/earn5.svg" alt="ico">
 						</div>
 						<div class="earn-list__name">
-							Реальный <br> актив
+						{{ __('asd.Реальный') }}  <br> {{ __('asd. актив') }}
 						</div>
 						<div class="earn-list__text">
-							Финансирование физических и операционных активов для достижения максимально полезного результата
+							{{ __('asd. Финансирование физических и операционных активов для достижения максимально полезного результата') }}
 						</div>
 					</div>
 					<div class="earn-list__item wow fadeInUp" data-wow-delay=".7s">
@@ -580,11 +587,10 @@
 							<img src="/assets/img/earn6.svg" alt="ico">
 						</div>
 						<div class="earn-list__name">
-							Недолговое финансирование
+							{{ __('asd. Недолговое финансирование') }}
 						</div>
 						<div class="earn-list__text">
-							Вознаграждение устанавливается по результатам реализации актива по рыночной цене и не зависит от % ставки
-						</div>
+							{{ __('asd. Вознаграждение устанавливается по результатам реализации актива по рыночной цене и не зависит от % ставки') }}						</div>
 					</div>
 				</div>
 			</div>
@@ -605,7 +611,7 @@
 						<path d="M559.759 107.36C559.065 106.493 559.065 105.193 559.759 103.46C560.279 101.726 562.012 99.2131 564.959 95.9198C566.519 94.1864 567.992 92.7998 569.379 91.7598L571.979 90.1998C572.845 90.1998 573.279 89.9398 573.279 89.4197C573.279 89.2464 573.712 89.1598 574.579 89.1598C575.792 89.5064 576.485 89.9398 576.659 90.4598C576.312 90.8064 576.052 90.8931 575.879 90.7197C575.532 90.8931 575.272 91.2398 575.099 91.7598L574.579 94.0998C574.232 96.1798 574.579 97.7398 575.619 98.7798C580.819 103.46 587.752 102.506 596.419 95.9198L598.239 94.8797C598.932 94.5331 599.365 94.7064 599.539 95.3997L596.419 97.7398C593.645 99.8198 590.439 101.293 586.799 102.16C583.159 103.026 579.692 102.593 576.399 100.86C575.359 99.9931 574.579 99.2131 574.059 98.5198C573.712 97.8264 573.452 97.6531 573.279 97.9998C572.065 100.426 570.419 102.68 568.339 104.76C564.352 108.573 561.492 109.44 559.759 107.36ZM561.319 107.1C562.012 107.966 564.005 106.753 567.299 103.46C569.725 101.38 571.459 98.7797 572.499 95.6598C572.845 94.6198 573.019 93.8398 573.019 93.3198L572.759 92.2798L570.159 94.8797C567.039 97.6531 564.612 100.34 562.879 102.94C561.665 105.193 561.145 106.58 561.319 107.1Z" fill="#D9AF78"/>
 						<path d="M519.477 203.82C514.624 203.82 514.277 199.14 518.437 189.78L520.517 185.88C529.53 168.72 542.877 152.166 560.557 136.22C567.664 129.98 578.324 122.873 592.537 114.9C594.79 113.686 596.61 111.953 597.997 109.7L600.337 106.06L599.297 106.84L598.777 107.36C596.697 109.266 594.704 110.48 592.797 111C590.89 111.52 589.59 111.173 588.897 109.96C587.51 107.36 589.33 103.46 594.357 98.2598C599.557 92.8864 603.977 90.1998 607.617 90.1998C609.004 90.1998 609.784 90.4598 609.957 90.9798C610.477 91.3264 610.824 91.4131 610.997 91.2397L614.637 86.8198C617.583 83.0064 619.49 80.7531 620.357 80.0598C621.917 78.4998 622.957 77.7197 623.477 77.7197L623.997 78.2398C623.997 78.7598 623.304 79.7131 621.917 81.0997C617.93 85.9531 611.17 95.3131 601.637 109.18L599.817 111.78C610.39 107.1 619.75 102.073 627.897 96.6997L630.497 94.8797C630.844 94.5331 631.19 94.7064 631.537 95.3997C631.364 95.7464 630.93 96.1797 630.237 96.6997L629.197 97.4798C625.21 100.426 614.984 105.973 598.517 114.12L595.397 118.28C582.224 137.346 567.49 156.673 551.197 176.26C535.943 194.633 525.37 203.82 519.477 203.82ZM591.757 109.7C593.664 109.7 596.264 108.14 599.557 105.02C603.024 101.726 605.71 98.6931 607.617 95.9198C608.83 94.1864 609.437 93.0598 609.437 92.5397C609.437 92.0198 609.177 91.7598 608.657 91.7598C605.537 91.7598 601.03 95.2264 595.137 102.16C590.804 107.186 589.677 109.7 591.757 109.7ZM518.697 202.26C522.684 202.606 529.703 197.233 539.757 186.14C555.184 168.98 571.65 147.746 589.157 122.44L593.837 115.94C587.944 118.886 582.397 122.093 577.197 125.56C571.13 129.373 564.284 135.006 556.657 142.46C549.03 149.913 542.877 156.846 538.197 163.26C525.89 178.86 519.044 190.646 517.657 198.62C517.137 201.046 517.484 202.26 518.697 202.26Z" fill="#D9AF78"/>
 					</svg>
-					<p>Оптимальное соотношение</p>
+					<p> {{ __('asd. Оптимальное соотношение') }} </p>
 				</div>
 				<div class="earn-risk__wrap">
 					<div class="earn-risk__item wow fadeInLeft" data-wow-delay=".3s">
@@ -629,12 +635,12 @@
 							</div>
 							<ul class="earn-risk__list list">
 								<li>
-									50 % прибыли распределяется среди инвесторов фонда. <br>
-									Это эквивалент 15+% годовых*.
+								{{ __('asd. 50 % прибыли распределяется среди инвесторов фонда.') }} <br>
+									{{ __('asd. Это эквивалент 15+% годовых*.') }}
 								</li>
 							</ul>
 							<div class="earn-risk__note">
-								*Согласно финансовой модели
+								{{ __('asd. *Согласно финансовой модели') }}
 							</div>
 						</div>
 					</div>
@@ -656,17 +662,17 @@
 								25+%
 							</div>
 							<div class="earn-risk__text">
-								В случае неисполнения обязательства у инвестора есть право реализовать:
+								{{ __('asd. В случае неисполнения обязательства у инвестора есть право реализовать:') }}
 							</div>
 							<ul class="earn-risk__list list">
 								<li>
-									Ликвидный земельный участок.
+								{{ __('asd. Ликвидный земельный участок.') }}
 								</li>
 								<li>
-									Незавершенное строительство.
+								{{ __('asd. Незавершенное строительство.') }}
 								</li>
 								<li>
-									Уникальную недвижимость по цене, близкой к себестоимости с дисконтом 25+%, или сменить подрядчика.
+								{{ __('asd. Уникальную недвижимость по цене, близкой к себестоимости с дисконтом 25+%, или сменить подрядчика.') }}
 								</li>
 							</ul>
 						</div>
@@ -682,7 +688,7 @@
 		<div class="container">
 			<div class="exp-head">
 				<h2 class="exp__title section-title">
-					04 <span>ОПЫТНЫЙ ДЕВЕЛОПЕР</span>
+					04 <span> {{ __('asd. ОПЫТНЫЙ ДЕВЕЛОПЕР') }} </span>
 				</h2>
 				<div class="main-logos__item">
 					<img src="/assets/img/MB-logo.svg" alt="MB">
@@ -695,15 +701,15 @@
 						18
 					</div>
 					<div class="exp-item__text">
-						Лет на рынке недвижимости
+						{{ __('asd. Лет на рынке недвижимости') }}
 					</div>
 				</div>
 				<div class="exp-item wow fadeInUp" data-wow-delay=".5s">
 					<div class="exp-item__number">
-						> 500 <span>тыс. м2 </span>
+						> 500 <span> {{ __('asd. тыс. м2') }}  </span>
 					</div>
 					<div class="exp-item__text">
-						Сдано в эксплуатацию в процессе строительства
+						{{ __('asd. Сдано в эксплуатацию в процессе строительства') }}
 					</div>
 				</div>
 				<div class="exp-item wow fadeInUp" data-wow-delay=".3s">
@@ -711,10 +717,10 @@
 						2021, 2020, 2019, 2018 
 					</div>
 					<div class="exp-item__text">
-						Бренд года / Лучший работодатель *
+						{{ __('asd. Бренд года / Лучший работодатель *') }}
 					</div>
 					<div class="exp-item__note">
-						*По версии Davinci и Маркетинговой ассоциации Узбекистана
+						{{ __('asd.*По версии Davinci и Маркетинговой ассоциации Узбекистана') }}
 					</div>
 				</div>
 			</div>
@@ -792,7 +798,7 @@
 						>15%
 					</div>
 					<div class="exp-info__text">
-						Рентабельность
+						{{ __('asd. Рентабельность') }}
 					</div>
 				</div>
 				<div class="exp-info__item wow fadeInLeft" data-wow-delay=".5s">
@@ -800,7 +806,7 @@
 						>32%
 					</div>
 					<div class="exp-info__text">
-						ROI
+						{{ __('asd. ROI') }}
 					</div>
 				</div>
 			</div>
@@ -812,7 +818,7 @@
 	<section class="projects" id="projects">
 		<div class="container">
 			<div class="main-title">
-				<h2 class="main-title__text">перспективные Проекты</h2>
+				<h2 class="main-title__text">{{ __('asd. перспективные Проекты') }}</h2>
 				<!-- RU ДЛЯ РУССКОГО ЯЗЫКА И Т.Д-->
 				<div class="main-title__sign ru">
 					<svg width="812" height="186" viewBox="0 0 812 186" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -864,7 +870,7 @@
 								2022-2024
 							</div>
 							<a href="#" class="projects-item__more">
-								Подробнее
+								{{ __('asd. Подробнее') }}
 								<div class="arrow">
 									<img src="/assets/img/arrow-down.svg" alt="ico">
 								</div>
@@ -877,38 +883,38 @@
 								{{$project->name}}
 							</div>
 							<div class="projects-item__text">
-								Британскоая архитектура, премиальная локация, уникальный ландшафт.
+								{{ __('asd. Британскоая архитектура, премиальная локация, уникальный ландшафт.') }}
 							</div>
 							<ul class="projects-item__info list">
 								<li>
-									<span>Инвестиции</span>
-									<span>$13.9-20.3 млн.*</span>
+									<span>{{ __('asd. Инвестиции') }}</span>
+									<span>$13.9-20.3 {{ __('asd. млн') }}.*</span>
 								</li>
 								<li>
-									<span>ROI (среднее)</span>
+									<span> {{ __('asd. ROI') }} ( {{ __('asd. среднее') }} )</span>
 									<span>35.8%</span>
 								</li>
 								<li>
-									<span>Прибыль (O)</span>
-									<span>$5.9 млн.</span>
+									<span> {{ __('asd. Прибыль (O)') }}</span>
+									<span>$5.9 {{ __('asd. млн') }}.</span>
 								</li>
 							</ul>
 							<div class="projects-item__square">
 								<ul class="projects-item__square-wrap">
 									<li>
-										<span>S земельного участка</span>
+										<span>S {{ __('asd. земельного участка ') }}</span>
 										<span></span>
 										<span>41 200 м&sup2;</span>
 									</li>
 									<li>
-										<span>Реализуемая площадь</span>
+										<span>{{ __('asd. Реализуемая площадь  ') }}</span>
 										<span></span>
 										<span>14 900 м&sup2;</span>
 									</li>
 								</ul>
 							</div>
 							<div class="projects-item__note">
-								*в зависимости от даты старта продаж
+								{{ __('asd. *в зависимости от даты старта продаж   ') }}
 							</div>
 						</div>
 					</div>
@@ -932,20 +938,20 @@
 	<section class="criteria">
 		<div class="container">
 			<h2 class="criteria__title section-title">
-				05 <span>Критерии отбора проектов</span>
+				05 <span> {{ __('asd. Реализуемая площадь ') }} </span>
 			</h2>
 		</div>
 		<div class="criteria-main">
 			<div class="criteria-circle wow fadeIn" data-wow-delay=".3s">
 				<ul class="criteria-circle__outer">
 					<li>
-						Уникальность;
+						{{ __('asd. Уникальность') }} ;
 					</li>
 					<li>
-						Соответствие тебованиям законодательства и принципам этического финансирования;
+						{{ __('asd.Соответствие тебованиям законодательства и принципам этического финансирования;') }}
 					</li>
 					<li>
-						Ответственность застройщика по EPC контракту;
+						{{ __('asd.Ответственность застройщика по EPC контракту;') }}
 					</li>
 				</ul>
 				<div class="criteria-circle__img">
@@ -960,10 +966,10 @@
 	<section class="management">
 		<div class="container">
 			<h2 class="management__title section-title">
-				06 <span>Риск менеджмент и отчетность</span>
+				06 <span>{{ __('asd. Риск менеджмент и отчетность ') }}</span>
 			</h2>
 			<div class="section-text">
-				По международным ISO и AIFMD стандартам
+				{{ __('asd. По международным ISO и AIFMD стандартам ') }}
 			</div>
 			<div class="management-wrap">
 				<div class="management-diag wow fadeInLeft" data-wow-delay=".3s">
@@ -972,7 +978,7 @@
 							<img src="/assets/img/management-arrow1.svg" alt="ico">
 						</div>
 						<div class="management-item management-item1 arrow">
-							Определение ситуации
+							{{ __('asd. Определение ситуации  ') }}
 						</div>
 						<div class="management-diag__arrow management-diag__arrow2">
 							<img src="/assets/img/management-arrow2.svg" alt="ico">
@@ -981,7 +987,7 @@
 					<div class="management-diag__row">
 						<div class="management-diag__wrap">
 							<div class="management-item management-item5 arrow">
-								Мониторинг
+								{{ __('asd. Мониторинг  ') }}
 							</div>
 							<div class="management-diag__arrow management-diag__arrow3">
 								<img src="/assets/img/management-arrow3.svg" alt="ico">
@@ -989,7 +995,7 @@
 						</div>
 						<div class="management-diag__wrap">
 							<div class="management-item management-item2 arrow">
-								Идентификация риска
+								{{ __('asd. Идентификация риска   ') }}
 							</div>
 							<div class="management-diag__arrow management-diag__arrow4">
 								<img src="/assets/img/management-arrow4.svg" alt="ico">
@@ -998,53 +1004,52 @@
 					</div>
 					<div class="management-diag__row">
 						<div class="management-item management-item4 arrow">
-							Воздействие на риск
+							{{ __('asd. Воздействие на риск   ') }}
 						</div>
 						<div class="management-diag__arrow management-diag__arrow5">
 							<img src="/assets/img/management-arrow5.svg" alt="ico">
 						</div>
 						<div class="management-item management-item3 arrow">
-							Анализ и оценивание риска
+							{{ __('asd. Анализ и оценивание риска   ') }}
 						</div>
 					</div>
 				</div>
 				<ul class="management-list list wow fadeInRight" data-wow-delay=".3s">
 					<li>
-						Мониторинг стадий готовности проекта
+						{{ __('asd. Мониторинг стадий готовности проекта') }}
 					</li>
 					<li>
-						Исполнение сметы и сроков, ЕРС контракта
+						{{ __('asd.Исполнение сметы и сроков, ЕРС контракта') }}
 					</li>
 					<li>
-						План-факт анализ и контроль за расходами
-					</li>
+						{{ __('asd. План-факт анализ и контроль за расходами') }}
+					</li> 
 					<li>
-						Аудит
+						{{ __('asd. Аудит') }}
 					</li>
 					<li class="sublist">
-						Регулярный репортинг инвесторам:
+						{{ __('asd. Регулярный репортинг инвесторам:') }}
 						
 						<ul>
 							<li>
-								Исполнение ЕРС контракта
+								{{ __('asd. Исполнение ЕРС контракта') }}
 							</li>
 							<li>
-								Sales & Marketing update
+								{{ __('asd. Sales & Marketing update') }}
 							</li>
 							<li>
-								Расходы фонда
+								{{ __('asd. Расходы фонда') }}
 							</li>
 						</ul>
 					</li>
 					<li>
-						Оценка / Переоценка актива
+								{{ __('asd. Оценка / Переоценка актива') }}
 					</li>
 					<li>
-						Оценка / Стоимости вклада
-
+						{{ __('asd. Оценка / Стоимости вклада') }}
 						<ul class="last">
 							<li>
-								Инвестиционный комитет
+								{{ __('asd. Инвестиционный комитет') }}
 							</li>
 						</ul>
 					</li>
@@ -1058,12 +1063,12 @@
 	<section class="offer">
 		<div class="container">
 			<h2 class="offer__title section-title">
-				07 <span>Предложение. 24 месяца (оферта 12 мес. - best efforts)</span>
+				07 <span> {{ __('asd. Предложение. 24 месяца') }}  {{ __('asd.(оферта 12 мес. - best efforts)') }}</span>
 			</h2>
 			<div class="section-text">
-				График погашения долей участников.
+				{{ __('asd.График погашения долей участников.') }}
 			</div>
-			<div class="offer-info  wow fadeInUp" data-wow-delay=".3s">
+			<div class="offer-info wow fadeInUp" data-wow-delay=".3s">
 				<img src="/assets/img/offer.png" alt="offer">
 			</div>
 		</div>
@@ -1074,20 +1079,20 @@
 	<section class="team" id="team">
 		<div class="container">
 			<h2 class="team__title section-title">
-				08 <span>команда</span>
+				08 <span>{{ __('asd. команда') }}</span>
 			</h2>
 			<div class="team-wrap">
 				<div class="team-left wow fadeInLeft" data-wow-delay=".3s">
 					<div class="team-info">
 						<ul>
 							<li>
-								Исполнение контрактов
+								{{ __('asd. Исполнение контрактов') }}
 							</li>
 							<li>
-								Контроль, риск менеджмент
+								{{ __('asd. Контроль, риск менеджмент') }}
 							</li>
 							<li>
-								Репортинг
+								{{ __('asd. Репортинг') }}
 							</li>
 						</ul>
 					</div>
@@ -1098,7 +1103,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									Камолиддин Атаев
+									{{ __('asd. Камолиддин Атаев') }}
 								</div>
 							</div>
 							<div class="team-item__companies">
@@ -1114,7 +1119,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									Камолиддин Атаев
+									{{ __('asd. Камолиддин Атаев') }}
 								</div>
 							</div>
 							<div class="team-item__companies">
@@ -1127,7 +1132,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									Камолиддин Атаев
+									{{ __('asd. Камолиддин Атаев') }}
 								</div>
 							</div>
 							<div class="team-item__companies">
@@ -1140,7 +1145,7 @@
 									<img src="img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									Камолиддин Атаев
+									{{ __('asd. Камолиддин Атаев') }}
 								</div>
 							</div>
 							<div class="team-item__companies">
@@ -1153,7 +1158,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									Камолиддин Атаев
+									{{ __('asd. Камолиддин Атаев') }}
 								</div>
 							</div>
 							<div class="team-item__companies">
@@ -1166,7 +1171,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									Камолиддин Атаев
+									{{ __('asd. Камолиддин Атаев') }}
 								</div>
 							</div>
 						</div>
@@ -1176,10 +1181,10 @@
 					<div class="team-info">
 						<ul>
 							<li>
-								Инвестиционный комитет
+								{{ __('asd. Инвестиционный комитет') }}
 							</li>
 							<li>
-								Этическое финансирование
+								{{ __('asd. Этическое финансирование') }}
 							</li>
 						</ul>
 					</div>
@@ -1190,7 +1195,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									Камолиддин Атаев
+								{{ __('asd. Камолиддин Атаев') }}
 								</div>
 							</div>
 						</div>
@@ -1200,7 +1205,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									Камолиддин Атаев
+									{{ __('asd. Камолиддин Атаев') }}
 								</div>
 							</div>
 						</div>
@@ -1210,7 +1215,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									Камолиддин Атаев
+									{{ __('asd. Камолиддин Атаев') }}
 								</div>
 							</div>
 						</div>
@@ -1226,7 +1231,7 @@
 	<section class="strategy">
 		<div class="container">
 			<div class="main-title">
-				<h2 class="main-title__text">Стратегия развития</h2>
+				<h2 class="main-title__text">{{ __('asd.Стратегия развития') }}</h2>
 				<!-- RU ДЛЯ РУССКОГО ЯЗЫКА И Т.Д-->
 				<div class="main-title__sign ru">
 					<svg width="757" height="196" viewBox="0 0 757 196" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1269,7 +1274,7 @@
 				<div class="strategy-item wow fadeInUp" data-wow-delay=".3s">
 					<div class="strategy-item__head">
 						<div class="strategy-item__step">
-							01 <span>этап</span>
+							01 <span>{{ __('asd. этап') }} </span>
 						</div>
 						<div class="strategy-item__date">
 							2022 г.
@@ -1277,13 +1282,13 @@
 					</div>
 					<div class="strategy-item__price">
 						<img src="/assets/img/strategy1.png" alt="img">
-						<span>25 млн. $</span>
+						<span>25 {{ __('asd. млн') }}. $</span>
 					</div>
 				</div>
 				<div class="strategy-item wow fadeInUp" data-wow-delay=".5s">
 					<div class="strategy-item__head">
 						<div class="strategy-item__step">
-							02 <span>этап</span>
+							02 <span>{{ __('asd. этап') }}</span>
 						</div>
 						<div class="strategy-item__date">
 							2023 г.
@@ -1291,13 +1296,13 @@
 					</div>
 					<div class="strategy-item__price">
 						<img src="/assets/img/strategy2.png" alt="img">
-						<span>60 млн. $</span>
+						<span>60 {{ __('asd. млн') }}. $</span>
 					</div>
 				</div>
 				<div class="strategy-item wow fadeInUp" data-wow-delay=".7s">
 					<div class="strategy-item__head">
 						<div class="strategy-item__step">
-							03 <span>этап</span>
+							03 <span>{{ __('asd. этап') }}</span>
 						</div>
 						<div class="strategy-item__date">
 							2024 г.
@@ -1305,7 +1310,7 @@
 					</div>
 					<div class="strategy-item__price">
 						<img src="/assets/img/strategy3.png" alt="img">
-						<span>100+ млн. $</span>
+						<span>100+ {{ __('asd. млн') }}. $</span>
 					</div>
 				</div>
 			</div>
@@ -1317,10 +1322,10 @@
 	<section class="fund pattern">
 		<div class="container">
 			<h2 class="fund__title section-title">
-				09 <span>Международный фонд</span>
+				09 <span>{{ __('asd. Международный фонд') }}</span>
 			</h2>
 			<div class="section-text">
-				Повышение цены вкладов участников за счет рыночной переоценки базового актива
+				{{ __('asd. Повышение цены вкладов участников за счет рыночной переоценки базового актива') }}
 			</div>
 			<div class="fund-wrap">
 				<div class="fund-item wow fadeInLeft" data-wow-delay=".3s">
@@ -1331,29 +1336,27 @@
 						15+%
 					</div>
 					<div class="fund-item__text">
-						50% прибыли для инвестора соответствует ставке 15+% годовых в валюте. 
-					</div>
+						50% {{ __('asd. прибыли для инвестора соответствует ставке 15+% годовых в валюте.') }}</div>
 				</div>
 				<div class="fund-item wow fadeInLeft" data-wow-delay=".5s">
 					<div class="fund-item__number">
 						25+%
 					</div>
 					<div class="fund-item__title">
-						Земля + незавершенное строительство
-					</div>
+						{{ __('asd. Земля + незавершенное строительство') }}</div>
 					<div class="fund-item__text">
-						Обеспечение по конкурентной цене
+						{{ __('asd. Обеспечение по конкурентной цене') }}
 					</div>
 				</div>
 				<div class="fund-item wow fadeInLeft" data-wow-delay=".7s">
 					<div class="fund-item__number">
-						12 мес.
+						12  {{ __('asd. мес.') }} 
 					</div>
 					<div class="fund-item__title">
 						12/24
 					</div>
 					<div class="fund-item__text">
-						После 12-ти месячного периода инвестор может  продать долю 
+						{{ __('asd. После 12-ти месячного периода инвестор может  продать долю') }} 
 					</div>
 				</div>
 				<div class="fund-item wow fadeInLeft" data-wow-delay=".9s">
@@ -1361,15 +1364,15 @@
 						$100k
 					</div>
 					<div class="fund-item__title">
-						Ticket
+						{{ __('asd. Ticket') }}
 					</div>
 					<div class="fund-item__text">
-						Принимаются вклады от $100 000 
+						{{ __('asd. Принимаются вклады от') }} $100 000 
 					</div>
 				</div>
 			</div>
 			<div class="fund-quote">
-				<span>«Выше степень</span> готовности объекта – <span>выше стоимость</span> вклада!»
+				<span> {{ __('asd. «Выше степень') }}</span> {{ __('asd. готовности объекта') }} – <span> {{ __('asd. выше стоимость') }}</span> {{ __('asd.вклада!') }}»
 			</div>
 		</div>
 	</section>
@@ -1390,24 +1393,24 @@
 					</div>
 				</div>
 				<h2 class="invest__title">
-					<span>Инвестируйте </span>
-					вместе с профессионалами!
+					<span>{{ __('asd. Инвестируйте') }} </span>
+					{{ __('asd. вместе с профессионалами!') }} 
 				</h2>
 				<div class="invest__text">
-					До конца окончания приёма заявок осталось:
+					{{ __('asd. До конца окончания приёма заявок осталось:') }} 
 				</div>
 				<div class="invest-counter">
 					<div class="invest-counter__item month wow fadeInUp" data-wow-delay=".3s">
-						<span>0</span> мес.
+						<span>0</span>  {{ __('asd. мес.') }} 
 					</div>
 					<div class="invest-counter__item day wow fadeInUp" data-wow-delay=".4s">
-						<span>0</span> дн.
+						<span>0</span>  {{ __('asd. дн.') }} 
 					</div>
 					<div class="invest-counter__item hour wow fadeInUp" data-wow-delay=".5s">
-						<span>0</span> ч.
+						<span>0</span>  {{ __('asd. ч.') }} 
 					</div>
 					<div class="invest-counter__item minute wow fadeInUp" data-wow-delay=".6s">
-						<span>0</span> м.
+						<span>0</span> м. 
 					</div>
 					<div class="invest-counter__item sec wow fadeInUp" data-wow-delay=".7s">
 						<span>0</span> С.
@@ -1415,7 +1418,7 @@
 				</div>
 				<div class="invest-already">
 					<div class="invest-already__text">
-						Уже инвестировали:
+						{{ __('asd. Уже инвестировали:') }} 
 					</div>
 					<div class="invest-already__count">
 						27 700 000 $
@@ -1428,18 +1431,18 @@
 						<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M15 7.49997L14.9989 7.49998L14.9955 7.50003L14.9899 7.50017L14.982 7.50045L14.9719 7.50091L14.9596 7.50159L14.945 7.50254L14.9283 7.5038L14.9093 7.50542L14.8882 7.50743L14.8648 7.50989L14.8394 7.51284L14.8117 7.51631L14.782 7.52035L14.7502 7.525L14.7163 7.5303L14.6803 7.53629L14.6423 7.54301L14.6023 7.55049L14.5604 7.55878L14.5165 7.56791L14.4707 7.57792L14.423 7.58884L14.3734 7.6007L14.322 7.61355L14.2689 7.6274L14.214 7.6423L14.1574 7.65827L14.0992 7.67534L14.0393 7.69354L13.9778 7.71289L13.9148 7.73343L13.8503 7.75517L13.7843 7.77813L13.7169 7.80235L13.6482 7.82784L13.5781 7.85462L13.5067 7.88271L13.4341 7.91213L13.3604 7.94288L13.2855 7.97498L13.2095 8.00846L13.1325 8.04331L13.0546 8.07954L12.9756 8.11717L12.8959 8.15621L12.8153 8.19665L12.7339 8.2385L12.6518 8.28176L12.569 8.32644L12.4857 8.37253L12.4017 8.42004L12.3173 8.46895L12.2324 8.51926L12.1471 8.57097L12.0615 8.62407L11.9755 8.67854L11.8894 8.73439L11.803 8.79159L11.7165 8.85013L11.6299 8.90999L11.5433 8.97117L11.4568 9.03363L11.3703 9.09737L11.2839 9.16235L11.1977 9.22857L11.1117 9.29598L11.026 9.36457L10.9406 9.43432L10.8556 9.50519L10.7711 9.57715L10.687 9.65018L10.6034 9.72423L10.5203 9.79929L10.4379 9.87531L10.3561 9.95226L10.2751 10.0301L10.1947 10.1088L10.1151 10.1883L10.0364 10.2686L9.95844 10.3496L9.88142 10.4314L9.80532 10.5137L9.73018 10.5967L9.65605 10.6803L9.58294 10.7643L9.51089 10.8489L9.43993 10.9339L9.3701 11.0192L9.30141 11.1049L9.2339 11.1908L9.16759 11.277L9.10251 11.3634L9.03867 11.4499L8.9761 11.5364L8.91483 11.623L8.85486 11.7096L8.79621 11.7961L8.7389 11.8825L8.68295 11.9687L8.62837 12.0546L8.57516 12.1403L8.52334 12.2256L8.47291 12.3105L8.42389 12.395L8.37628 12.479L8.33007 12.5624L8.28528 12.6452L8.2419 12.7274L8.19994 12.8088L8.15939 12.8895L8.12024 12.9693L8.0825 13.0483L8.04615 13.1264L8.01119 13.2034L7.97761 13.2795L7.9454 13.3545L7.91454 13.4283L7.88502 13.501L7.85683 13.5724L7.82994 13.6426L7.80435 13.7115L7.78003 13.779L7.75696 13.8451L7.73513 13.9097L7.7145 13.9729L7.69505 14.0345L7.67676 14.0945L7.6596 14.1529L7.64354 14.2096L7.62856 14.2646L7.61463 14.3179L7.6017 14.3694L7.58976 14.4191L7.57877 14.4669L7.56869 14.5129L7.55949 14.557L7.55114 14.5991L7.54359 14.6392L7.53681 14.6774L7.53077 14.7135L7.52541 14.7476L7.52071 14.7796L7.51662 14.8095L7.51311 14.8372L7.51012 14.8629L7.50763 14.8864L7.50558 14.9077L7.50393 14.9268L7.50264 14.9438L7.50167 14.9585L7.50097 14.971L7.50049 14.9813L7.50021 14.9893L7.50005 14.9951L7.5 14.9987L7.49999 15L7.49998 14.9991L7.49993 14.9959L7.4998 14.9904L7.49953 14.9827L7.49909 14.9728L7.49843 14.9607L7.49751 14.9463L7.49627 14.9297L7.49468 14.9109L7.4927 14.8899L7.49028 14.8668L7.48737 14.8415L7.48394 14.814L7.47995 14.7845L7.47535 14.7528L7.4701 14.719L7.46417 14.6833L7.45751 14.6454L7.45009 14.6056L7.44187 14.5638L7.4328 14.52L7.42287 14.4744L7.41202 14.4268L7.40024 14.3774L7.38747 14.3262L7.3737 14.2732L7.35889 14.2185L7.343 14.162L7.32602 14.1039L7.30791 14.0441L7.28865 13.9828L7.26821 13.9199L7.24657 13.8555L7.2237 13.7896L7.19958 13.7223L7.17419 13.6537L7.14751 13.5837L7.11953 13.5125L7.09022 13.44L7.05958 13.3663L7.02758 13.2915L6.99422 13.2156L6.95948 13.1387L6.92335 13.0608L6.88583 12.982L6.84691 12.9023L6.80658 12.8217L6.76485 12.7404L6.72169 12.6584L6.67713 12.5756L6.63115 12.4923L6.58376 12.4084L6.53496 12.324L6.48476 12.2392L6.43316 12.1539L6.38017 12.0683L6.3258 11.9824L6.27007 11.8962L6.21298 11.8099L6.15454 11.7234L6.09478 11.6368L6.03371 11.5502L5.97135 11.4636L5.90772 11.3771L5.84283 11.2907L5.77671 11.2045L5.70939 11.1185L5.64089 11.0328L5.57124 10.9474L5.50046 10.8624L5.42858 10.7778L5.35564 10.6936L5.28166 10.61L5.20669 10.5269L5.13074 10.4445L5.05386 10.3626L4.97609 10.2815L4.89745 10.2011L4.818 10.1214L4.73777 10.0426L4.6568 9.9646L4.57512 9.88751L4.4928 9.81133L4.40986 9.73612L4.32636 9.6619L4.24233 9.58871L4.15783 9.51658L4.0729 9.44553L3.98758 9.37561L3.90194 9.30683L3.816 9.23922L3.72984 9.17282L3.64349 9.10763L3.557 9.0437L3.47043 8.98103L3.38383 8.91965L3.29725 8.85957L3.21075 8.80082L3.12436 8.74341L3.03816 8.68735L2.95219 8.63265L2.8665 8.57933L2.78114 8.5274L2.69618 8.47687L2.61167 8.42773L2.52765 8.38L2.44418 8.33369L2.36132 8.28878L2.27911 8.24529L2.19762 8.20322L2.11689 8.16255L2.03697 8.1233L1.95792 8.08544L1.8798 8.04898L1.80264 8.01392L1.7265 7.98022L1.65144 7.9479L1.5775 7.91693L1.50472 7.88731L1.43317 7.85901L1.36289 7.83202L1.29392 7.80633L1.22631 7.78191L1.1601 7.75874L1.09535 7.73681L1.03209 7.71608L0.970372 7.69654L0.910231 7.67816L0.851711 7.66091L0.794852 7.64477L0.739692 7.6297L0.686269 7.61568L0.634621 7.60268L0.584781 7.59066L0.536786 7.5796L0.490667 7.56945L0.446456 7.56018L0.404185 7.55176L0.363883 7.54415L0.325577 7.53731L0.289293 7.53121L0.255058 7.5258L0.222895 7.52105L0.192826 7.51691L0.164872 7.51335L0.139053 7.51033L0.115387 7.50779L0.0938896 7.50571L0.0745766 7.50403L0.0574614 7.50272L0.0425558 7.50172L0.0298703 7.501L0.0194138 7.50051L0.0111935 7.50021L0.00521528 7.50005L0.00148323 7.49998L0 7.49997L0.000766622 7.49997L0.00378256 7.49992L0.0090457 7.4998L0.0165524 7.49955L0.0262973 7.49912L0.0382737 7.49848L0.0524732 7.49758L0.0688858 7.49637L0.0875001 7.49481L0.108303 7.49286L0.13128 7.49047L0.156415 7.48761L0.183691 7.48422L0.213089 7.48028L0.244587 7.47573L0.278165 7.47053L0.313798 7.46465L0.351463 7.45805L0.391133 7.45069L0.43278 7.44254L0.476376 7.43354L0.52189 7.42368L0.569291 7.41291L0.618547 7.40119L0.669623 7.38851L0.722485 7.37482L0.777096 7.36009L0.833418 7.34429L0.891413 7.3274L0.951042 7.30938L1.01226 7.29021L1.07504 7.26987L1.13932 7.24832L1.20506 7.22555L1.27223 7.20153L1.34077 7.17624L1.41064 7.14967L1.4818 7.12179L1.55419 7.09259L1.62776 7.06205L1.70247 7.03016L1.77827 6.99691L1.85511 6.96228L1.93294 6.92626L2.0117 6.88886L2.09134 6.85005L2.17182 6.80983L2.25307 6.7682L2.33506 6.72517L2.41772 6.68071L2.501 6.63485L2.58485 6.58757L2.66921 6.53888L2.75404 6.48879L2.83927 6.4373L2.92486 6.38442L3.01075 6.33017L3.09688 6.27454L3.18321 6.21756L3.26969 6.15923L3.35625 6.09957L3.44285 6.0386L3.52943 5.97634L3.61595 5.91281L3.70235 5.84802L3.78858 5.782L3.87459 5.71478L3.96034 5.64637L4.04576 5.57681L4.13082 5.50612L4.21546 5.43433L4.29965 5.36147L4.38332 5.28757L4.46645 5.21267L4.54897 5.1368L4.63085 5.05999L4.71205 4.98229L4.79253 4.90372L4.87223 4.82433L4.95113 4.74416L5.02918 4.66325L5.10635 4.58163L5.1826 4.49935L5.25789 4.41646L5.33219 4.333L5.40546 4.24902L5.47768 4.16455L5.54881 4.07965L5.61883 3.99436L5.6877 3.90874L5.7554 3.82283L5.8219 3.73668L5.88718 3.65034L5.95122 3.56387L6.01399 3.4773L6.07547 3.3907L6.13565 3.30412L6.19451 3.2176L6.25203 3.13121L6.3082 3.04499L6.363 2.95899L6.41643 2.87328L6.46847 2.7879L6.51912 2.70291L6.56837 2.61835L6.61621 2.53429L6.66264 2.45078L6.70765 2.36786L6.75125 2.2856L6.79344 2.20405L6.83422 2.12326L6.87359 2.04327L6.91155 1.96416L6.94812 1.88595L6.9833 1.80872L7.0171 1.7325L7.04953 1.65734L7.08061 1.58331L7.11034 1.51044L7.13874 1.43879L7.16583 1.36841L7.19163 1.29933L7.21615 1.23161L7.23942 1.16529L7.26145 1.10042L7.28227 1.03704L7.3019 0.975197L7.32038 0.914929L7.33771 0.856278L7.35394 0.799285L7.36909 0.743988L7.38319 0.690425L7.39628 0.638634L7.40837 0.588649L7.41951 0.540505L7.42974 0.494235L7.43907 0.449872L7.44756 0.407445L7.45523 0.366985L7.46213 0.328518L7.46829 0.292073L7.47375 0.257674L7.47855 0.225345L7.48274 0.195108L7.48634 0.166985L7.48941 0.140995L7.49198 0.117157L7.4941 0.0954862L7.49581 0.0759987L7.49715 0.058708L7.49817 0.043626L7.49891 0.0307634L7.49942 0.020129L7.49973 0.0117304L7.4999 0.00557342L7.49997 0.00166237L7.49999 0L7.49999 0.00058746L7.50003 0.00342434L7.50014 0.00850867L7.50038 0.0158369L7.50079 0.0254038L7.50142 0.0372028L7.5023 0.0512256L7.50348 0.0674625L7.50501 0.0859019L7.50693 0.106531L7.50928 0.129336L7.5121 0.1543L7.51545 0.181406L7.51935 0.210635L7.52385 0.241967L7.52899 0.27538L7.53481 0.310851L7.54135 0.348355L7.54865 0.387866L7.55674 0.429357L7.56567 0.472799L7.57546 0.518162L7.58616 0.565414L7.59779 0.614524L7.6104 0.665456L7.62401 0.718177L7.63866 0.77265L7.65437 0.828838L7.67117 0.886701L7.6891 0.946202L7.70817 1.0073L7.72842 1.06995L7.74988 1.13411L7.77255 1.19974L7.79647 1.2668L7.82165 1.33523L7.84812 1.405L7.8759 1.47605L7.90499 1.54835L7.93542 1.62183L7.9672 1.69645L8.00035 1.77217L8.03487 1.84892L8.07077 1.92667L8.10807 2.00536L8.14677 2.08494L8.18687 2.16535L8.22838 2.24655L8.27131 2.32848L8.31565 2.41108L8.3614 2.49432L8.40857 2.57812L8.45715 2.66245L8.50712 2.74724L8.5585 2.83244L8.61127 2.918L8.66542 3.00387L8.72093 3.08999L8.77781 3.17631L8.83603 3.26277L8.89558 3.34933L8.95645 3.43593L9.0186 3.52251L9.08204 3.60904L9.14673 3.69545L9.21265 3.7817L9.27978 3.86773L9.34809 3.95349L9.41756 4.03895L9.48817 4.12404L9.55987 4.20871L9.63264 4.29294L9.70646 4.37666L9.78128 4.45982L9.85707 4.5424L9.93381 4.62434L10.0114 4.70559L10.0899 4.78612L10.1693 4.86589L10.2494 4.94486L10.3302 5.02298L10.4118 5.10022L10.494 5.17654L10.5769 5.25191L10.6603 5.32629L10.7442 5.39965L10.8287 5.47195L10.9135 5.54317L10.9988 5.61328L11.0844 5.68224L11.1703 5.75003L11.2564 5.81663L11.3427 5.88201L11.4292 5.94615L11.5157 6.00902L11.6023 6.0706L11.6889 6.13089L11.7755 6.18985L11.8619 6.24748L11.9481 6.30376L12.0341 6.35867L12.1199 6.41221L12.2053 6.46436L12.2903 6.51512L12.3749 6.56448L12.459 6.61243L12.5425 6.65897L12.6255 6.7041L12.7078 6.74782L12.7894 6.79012L12.8703 6.83101L12.9503 6.87049L13.0295 6.90856L13.1078 6.94524L13.1851 6.98053L13.2614 7.01444L13.3367 7.04699L13.4108 7.07817L13.4837 7.10801L13.5555 7.13651L13.626 7.16371L13.6952 7.18961L13.763 7.21423L13.8294 7.23759L13.8944 7.25972L13.9579 7.28064L14.0199 7.30037L14.0803 7.31893L14.1391 7.33636L14.1962 7.35268L14.2516 7.36791L14.3053 7.38209L14.3572 7.39526L14.4074 7.40743L14.4557 7.41865L14.5021 7.42894L14.5466 7.43834L14.5892 7.4469L14.6298 7.45464L14.6684 7.46159L14.705 7.46781L14.7396 7.47333L14.7721 7.47818L14.8025 7.48241L14.8308 7.48606L14.8569 7.48917L14.881 7.49178L14.9028 7.49393L14.9225 7.49567L14.9399 7.49704L14.9552 7.49808L14.9682 7.49884L14.979 7.49937L14.9876 7.4997L14.994 7.49988L14.998 7.49995L14.9999 7.49997L15 7.49997Z" fill="white"/>
 						</svg>						
-						Стать инвестором
+						{{ __('asd. Стать инвестором') }} 
 					</a>
 				</div>
 				<ul class="invest-list list">
 					<li>
-						Создаем современное, технологичное жилье
+						{{ __('asd. Создаем современное, технологичное жилье') }} 
 					</li>
 					<li>
-						С участием международных консультантов
+						{{ __('asd. С участием международных консультантов') }} 
 					</li>
 					<li>
-						Вклад, обеспеченный недвижимостью
+						{{ __('asd. Вклад, обеспеченный недвижимостью') }} 
 					</li>
 				</ul>
 			</div>
@@ -1458,7 +1461,7 @@
 				<img src="/assets/img/logo.svg" alt="Premium Investment Club">
 			</div>
 			<div class="footer-info__title">
-				Контакты
+				{{ __('asd.Контакты') }}  
 			</div>
 			<ul class="footer-info__list">
 				<li>
@@ -1467,7 +1470,7 @@
 				</li>
 				<li>
 					<img src="/assets/img/marker.svg" alt="ico">
-					<span>Адрес: Бизнес-центр "Авалон",	<br> 1-этаж, ул. Ойбека 38а, г.Ташкент</span>
+					<span> {{ __('asd.Адрес: Бизнес-центр "Авалон",') }} <br> {{ __('asd. 1-этаж, ул. Ойбека 38а, г.Ташкент') }} </span>
 				</li>
 				<li>
 					<img src="/assets/img/mail.svg" alt="ico">
