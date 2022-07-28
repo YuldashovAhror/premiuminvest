@@ -86,18 +86,14 @@ Route::middleware([
                 Route::post('/news/{id}', [NewsController::class, 'update'])->name('news.update');
                 Route::delete('/news/{id}', [NewsController::class, 'destroy'])->name('news.destroy');
 
-<<<<<<< HEAD
                 Route::get('/employee', [EmployeeController::class, 'index'])->name('employee');
                 Route::get('/employee/create', [EmployeeController::class, 'create'])->name('employee.create');
                 Route::post('/employee', [EmployeeController::class, 'store'])->name('employee.store');
-=======
-                ///// Words /////
                 // Route::resource('/words', [WordController::class]);
 
                 Route::get('/words', [WordsController::class, 'index'])->name('words');
                 Route::get('/words/store', [WordsController::class, 'store'])->name('words.store');
                 Route::get('/words/store', [WordsController::class, 'store'])->name('words.store');
->>>>>>> ac183334401ff24851375603789676f64991fd15
 
                 Route::controller(MessageController::class)->group(function () {
                     Route::get('/notifications', 'notifications')->name('notifications');
