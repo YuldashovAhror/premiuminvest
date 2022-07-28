@@ -19,6 +19,7 @@
                                 <th>Less Description EN</th>
                                 <th>Description UZ</th>
                                 <th>Description RU</th>
+                                <th>Description EN</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -34,6 +35,7 @@
                                     <td>{{$project->less_description_en}}</td>
                                     <td>{{$project->description_uz}}</td>
                                     <td>{{$project->description_ru}}</td>
+                                    <td>{{$project->description_en}}</td>
                                     <td>
                                         
                                             <form action="{{route('admin.project.edit', $project->id )}}" method="get" style="margin-bottom: 5px;">
