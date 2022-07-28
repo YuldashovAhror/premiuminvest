@@ -47,7 +47,9 @@ class NewsController extends Controller
             $request->file('photo')->move(public_path('/images/news'), $img_name);
             $news->photo = '/images/news/'.$img_name;
         }
-        $news->name = $request->name;
+        $news->name_uz = $request->name_uz;
+        $news->name_ru = $request->name_ru;
+        $news->name_en = $request->name_en;
         $news->description_uz = $request->description_uz;
         $news->description_ru = $request->description_ru;
         $news->description_en = $request->description_en;
@@ -91,12 +93,13 @@ class NewsController extends Controller
     {
         $news = News::find($id);
         if(!empty($request->file('photo'))){
-            
             $img_name = Str::random(10).'.'.$request->file('photo')->getClientOriginalExtension();
             $request->file('photo')->move(public_path('/images/news'), $img_name);
             $news->photo = '/images/news/'.$img_name;
         }
-        $news->name = $request->name;
+        $news->name_uz = $request->name_uz;
+        $news->name_ru = $request->name_ru;
+        $news->name_en = $request->name_en;
         $news->description_uz = $request->description_uz;
         $news->description_ru = $request->description_ru;
         $news->description_en = $request->description_en;

@@ -13,18 +13,30 @@
                         <ul style="padding-top: 20px ">
                             <div style="display: flex; align-items: center; padding-top: 1rem">
                                 <li>
-                                    <div class="" style="width: 300px;" >
-                                        <label for="name">Name</label>
-                                        <input type="text" style="border-radius: 1rem" class="form-control" id="name" name="name" value="{{$news->name}}">
+                                    <div class="" style="width: 28rem;" >
+                                        <label for="name_uz">Name UZ</label>
+                                        <input type="text" style="border-radius: 1rem" class="form-control" id="name_uz" name="name_uz" value="{{$news->name_uz}}">
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="" style="width: 100%; padding-left: 5rem;" >
-                                        <label style="" for="photo">Photo</label>
-                                        <input type="file" class="form-control" id="photo" name="photo" style="background-color: rgb(188, 222, 250);" >
+                                    <div class="" style="width: 28rem; padding-left: 3%" >
+                                        <label for="name_ru">Name RU</label>
+                                        <input type="text" style="border-radius: 1rem" class="form-control" id="name_ru" name="name_ru" value="{{$news->name_ru}}">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="" style="width: 28rem; padding-left: 3%" >
+                                        <label for="name_en">Name EN</label>
+                                        <input type="text" style="border-radius: 1rem" class="form-control" id="name_en" name="name_en" value="{{$news->name_en}}">
                                     </div>
                                 </li>
                             </div>
+                            <li>
+                                <div class="" style="width: 91% ";>
+                                    <label for="photo">Photo</label>
+                                    <input type="file" class="form-control" id="photo" name="photo" style="background-color: rgb(188, 222, 250);">
+                                </div>
+                            </li>
                             <label for="description_uz" style="margin-top: 2rem; ">Description Uz</label>
                             <div style="display: flex; margin-left: -1rem; margin-top: -2rem">
                                 <div class="container" style="padding-left: 0; ">

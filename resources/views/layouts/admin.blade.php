@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+  @livewireStyles
   @include('components.admin.links')
 </head>
 
@@ -26,5 +27,6 @@
   </div>
   @include('components.admin.scripts')
   @stack('scripts')
+  @livewireScripts
 </body>
 </html>
