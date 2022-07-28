@@ -56,6 +56,17 @@
             <span>Project</span>
           </a>
         </li>
+        <li class="mm-active">
+          <a href="javascript: void(0);" class="has-arrow waves-effect mm-active">
+            <i class="uil-file-alt"></i>
+            <span>Project</span>
+          </a>
+          <ul class="sub-menu mm-collapse mm-show" aria-expanded="false">
+            <li><a href="{{Route('admin.project')}}">Projects</a></li>
+            <li><a href="{{Route('admin.project-property')}}">Project Property</a></li>
+            <li><a href="{{Route('admin.project-property-item')}}">Project Property Items</a></li>
+          </ul>
+        </li>
 
         <li>
           <a href="{{Route('admin.invest')}}">

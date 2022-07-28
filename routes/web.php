@@ -63,6 +63,16 @@ Route::middleware([
                 Route::post('/update/{id}', [ProjectController::class, 'update'])->name('project.update');
                 Route::delete('/destroy/{id}', [ProjectController::class, 'destroy'])->name('project.destroy');
 
+                Route::get('/project-property', [\App\Http\Controllers\ProjectPropertiesController::class, 'index'])->name('project-property');
+                Route::post('/project-property', [\App\Http\Controllers\ProjectPropertiesController::class, 'store'])->name('project-property.store');
+                Route::put('/project-property/{id}', [\App\Http\Controllers\ProjectPropertiesController::class, 'update'])->name('project-property.update');
+                Route::delete('/project-property/{id}', [\App\Http\Controllers\ProjectPropertiesController::class, 'destroy'])->name('project-property.destroy');
+
+                Route::get('/project-property-item', [\App\Http\Controllers\ProjectPropertyItemsController::class, 'index'])->name('project-property-item');
+                Route::post('/project-property-item', [\App\Http\Controllers\ProjectPropertyItemsController::class, 'store'])->name('project-property-item.store');
+                Route::put('/project-property-item/{id}', [\App\Http\Controllers\ProjectPropertyItemsController::class, 'update'])->name('project-property-item.update');
+                Route::delete('/project-property-item/{id}', [\App\Http\Controllers\ProjectPropertyItemsController::class, 'destroy'])->name('project-property-item.destroy');
+
                 ///// INVEST /////
 
                 Route::get('/invest', [InvestController::class, 'index'])->name('invest');
