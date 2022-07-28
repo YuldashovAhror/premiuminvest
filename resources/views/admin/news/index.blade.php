@@ -12,7 +12,9 @@
                             </tr>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
+                                <th>Name UZ</th>
+                                <th>Name RU</th>
+                                <th>Name EN</th>
                                 <th>Photo</th>
                                 <th>Description Uz</th>
                                 <th>Description Ru</th>
@@ -25,7 +27,9 @@
                             @foreach($news as $item)
                                 <tr>
                                     <td>{{$num++}}</td>
-                                    <td>{{$item->name}}</td>
+                                    <td>{{$item->name_uz}}</td>
+                                    <td>{{$item->name_ru}}</td>
+                                    <td>{{$item->name_en}}</td>
                                     <td><img src="{{$item->photo}}" alt="" style="width: 100px; height: 100px;"></td>
                                     <td>{{$item->description_uz}}</td>
                                     <td>{{$item->description_ru}}</td>

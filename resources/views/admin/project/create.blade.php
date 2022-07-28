@@ -7,89 +7,167 @@
                 @csrf
                 <button type="submit" class="btn btn-primary" style="background-color: blue">Back</button>
             </form>
-                <div class="form-group container-fluid d-flex justify-content-between align-items-end" style="padding: 0px;display: flex ">
-                    <form action="{{route('admin.project.store')}}" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <ul style="padding-top: 20px ">
-                            <div style="display: flex; align-items: center; padding-top: 1rem">
-                                <li>
-                                    <div class="" style="width: 300px;" >
-                                        <label for="name">Name</label>
-                                        <input type="text" style="border-radius: 1rem" class="form-control" id="name" name="name">
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="" style="width: 100%; padding-left: 5rem;" >
-                                        <label style="" for="photo">Photo</label>
-                                        <input type="file" class="form-control" id="photo" name="photo" style="background-color: rgb(188, 222, 250);">
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="" style="width: 400px; padding-left: 5rem" >
-                                        <label for="less_description">Less Description</label>
-                                        <input type="text" style="border-radius: 1rem" class="form-control" id="less_description" name="less_description">
-                                    </div>
-                                </li>
-                            </div>
-                            <div style="display: flex;">
-                                <div class="" style="width: 300px; padding-top: 2rem" >
-                                    <label for="investing_uz">Investing Uz</label>
-                                    <input type="text" style="border-radius: 1rem" class="form-control" id="investing_uz" name="investing_uz">
-                                </div>
-                                <div class="" style="width: 400px; padding-top: 2rem; padding-left: 5rem" >
-                                    <label for="investing_ru">Investing En</label>
-                                    <input type="text" style="border-radius: 1rem" class="form-control" id="investing_ru" name="investing_ru">
-                                </div>
-                                <div class="" style="width: 400px; padding-top: 2rem; padding-left: 5rem" >
-                                    <label for="investing_en">Investing Ru</label>
-                                    <input type="text" style="border-radius: 1rem" class="form-control" id="investing_en" name="investing_en">
+            <div>
+                <form action="">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="" class="form-label">Photo</label>
+                                    <input type="file" name="photo" class="form-control" style="color: rgb(27, 59, 221)">
                                 </div>
                             </div>
-                            <div style="display: flex">
-                                <div class="" style="width: 300px; padding-top: 2rem;" >
-                                    <label for="description	">Description</label>
-                                    <input type="text" style="border-radius: 1rem" class="form-control" id="description	" name="description">
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Name</label>
+                                    <input type="text" class="form-control" wire:model="key">
                                 </div>
-                                <div class="" style="width: 400px; padding-top: 2rem; padding-left: 5rem" >
-                                    <label for="roi">ROI</label>
-                                    <input type="text" style="border-radius: 1rem" class="form-control" id="roi" name="roi">
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Less_description UZ</label>
+                                    <input type="text" class="form-control" name="less_description_uz">
                                 </div>
-                                <div class="" style="width: 400px; padding-top: 2rem; padding-left: 5rem" >
-                                    <label for="profit">Profit</label>
-                                    <input type="text" style="border-radius: 1rem" class="form-control" id="profit" name="profit">
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Less_description RU</label>
+                                    <input type="text" class="form-control" name="less_description_ru">
                                 </div>
-                            </div>
-                            <div style="display: flex; margin-left: -1rem;">
-                                <div class="container" style="padding-left: 0; ">
-                                    <div class="row">
-                                        <div class="col-md-7 offset-3 mt-4" style="margin-left: 0;">
-                                            <div class="card-body" style="width: 30.5rem;">
-                                                <div class="form-group">
-                                                    <textarea class="ckeditor form-control" name="area"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Less_description EN</label>
+                                    <input type="text" class="form-control" name="less_description_en">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Description UZ</label>
+                                    <input type="text" class="form-control" name="description_uz">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Description RU</label>
+                                    <input type="text" class="form-control" name="description_ru">
                                 </div>
                                 
-                                <div class="container" style="margin-left: 7.5rem;">
-                                    <div class="row">
-                                        <div class="col-md-7 offset-3 mt-4" style="margin-left: 0;">
-                                            <div class="card-body" style="width: 30.5rem;">
-                                                <div class="form-group">
-                                                    <textarea class="ckeditor form-control" name="realizable_area"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                            
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Description EN</label>
+                                    <input type="text" class="form-control" name="description_en">
                                 </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Date_from_to</label>
+                                    <input type="text" class="form-control" name="date_from_to">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Profit</label>
+                                    <input type="text" class="form-control" name="profit">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Roi</label>
+                                    <input type="text" class="form-control" name="roi">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Profitability</label>
+                                    <input type="text" class="form-control" name="profitability">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Apart_qty</label>
+                                    <input type="text" class="form-control" name="apart_qty">
+                                </div>
+                                
                             </div>
-                            <div>
-                                <button type="submit" class="btn btn-primary" style="margin: 10px 10px 15px 20px; background-color: blue">Сохранить</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">floors</label>
+                                    <input type="text" class="form-control" name="floors">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Apart_size</label>
+                                    <input type="text" class="form-control" name="apart_size">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Commerce_size</label>
+                                    <input type="text" class="form-control" name="commerce_size">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Fin_income</label>
+                                    <input type="text" class="form-control" name="fin_income">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Fin_earth</label>
+                                    <input type="text" class="form-control" name="fin_earth">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Fin_cmr</label>
+                                    <input type="text" class="form-control" name="fin_cmr">
+                                </div>
+                                
                             </div>
-                        </ul>
-                    </form>
-                </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">fin_overhead</label>
+                                    <input type="text" class="form-control" name="fin_overhead">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Fin_profit_before_tax</label>
+                                    <input type="text" class="form-control" name="fin_profit_before_tax">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Fin_profitability_before_tax</label>
+                                    <input type="text" class="form-control" name="fin_profitability_before_tax">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Fin_profit_after_tax</label>
+                                    <input type="text" class="form-control" name="fin_profit_after_tax">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Fin_profitability_after_tax</label>
+                                    <input type="text" class="form-control" name="fin_profitability_after_tax">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Fin_investments</label>
+                                    <input type="text" class="form-control" name="fin_investments">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Fin_roi_before_tax</label>
+                                    <input type="text" class="form-control" name="fin_roi_before_tax">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Fin_roi_after_tax</label>
+                                    <input type="text" class="form-control" name="fin_roi_after_tax">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Fin_land_plot</label>
+                                    <input type="text" class="form-control" name="fin_land_plot">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">End_date</label>
+                                    <input type="text" class="form-control" name="end_date">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Area</label>
+                                    <input type="text" class="form-control" name="area">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="" class="form-label">Realizable_area</label>
+                                    <input type="text" class="form-control" name="realizable_area">
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-3" style="margin-top:28px">
+                                <button class="btn btn-success" wire:click='store()'>сохранить</button>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+            </div>    
         </div>
     </div>
 </div>
