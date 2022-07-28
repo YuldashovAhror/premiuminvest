@@ -46,7 +46,7 @@
               <div style="width: 50%;">
                 <div class="row">
                   <div class="col-lg-6">
-                    <label class="form-label">Create Company</label>
+                    <label class="form-label">Company</label>
                     <div style="display: flex;">
                       <div class="col-9 mr-3">
                         <label class="visually-hidden" for="specificSizeInputName">Name</label>
