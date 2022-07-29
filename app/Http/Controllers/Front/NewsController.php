@@ -12,6 +12,14 @@ class NewsController extends Controller
         $news = News::find($id);
         $all_news = News::all();
         $count = 0;
-        return view('front.news-single', ['news'=>$news, 'all_news'=>$all_news, 'count'=>$count]);
+
+        if(session()->get('locale') == ''){
+            session()->put('locale', 'ru');
+            app()->setLocale('ru');
+        }else{
+            app()->setLocale(session()->get('locale'));
+        }  
+        $lang = session()->get('locale');
+        return view('front.news-single', ['news'=>$news, 'all_news'=>$all_news, 'count'=>$count, 'lang'=>$lang]);
     }
 }

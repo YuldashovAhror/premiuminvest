@@ -67,7 +67,6 @@ class ProjectController extends Controller
         }  
         $lang = session()->get('locale');
         $project = Project::find($id);
-
         return view('front.single',[
             'project' => $project,
             'lang' => $lang

@@ -18,51 +18,7 @@
 	
 
 	<!-- МОБИЛЬНОЕ МЕНЮ -->
-	<div class="mobile-menu pattern">
-		<div class="mobile-menu__head">
-			<div class="mobile-menu__logo">
-				<a href="{{ route('home') }}">
-					<img src="/assets/img/logo.svg" alt="SUU" title="SUU">
-				</a>
-			</div>
-			<div class="mobile-menu__close">
-				<img src="/assets/img/close.svg" alt="ico">
-			</div>
-		</div>
-		<ul class="menu">
-			<li>
-				<a href="#consort">
-					{{ __('asd.Международный консорциум ') }}
-				</a>
-			</li>
-			<li>
-				<a href="#exp">
-					{{ __('asd.Девелопер') }}
-				</a>
-			</li>
-			<li>
-				<a href="#projects">
-					{{ __('asd.Проекты ') }}
-				</a>
-			</li>
-			<li>
-				<a href="#team">
-					{{ __('asd.Команда') }}
-					
-				</a>
-			</li>
-			<li>
-				<a href="#footer">
-					{{ __('asd.Контакты') }}
-				</a>
-			</li>
-		</ul>
-		<div class="mobile-menu__lang">
-			<a href="#">РУ</a>
-			<a href="#">UZ</a>
-			<a href="#">EN</a>
-		</div>
-	</div>
+	@include('components.front.mobile-menu')
 
 
 
@@ -118,7 +74,10 @@
 							{{$news->name}}
 						</h2>
 						<p>
-							{!! $news->description_uz !!}
+							<?php 
+								$description = 'description_'.$lang;
+								?>
+							{!! $news->$description !!}
 						</p>
 					</div>
 				</div>

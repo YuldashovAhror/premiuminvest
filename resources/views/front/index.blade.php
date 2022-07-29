@@ -59,95 +59,45 @@
 				@csrf
 				<div class="feedback-wrap">
 					<div class="feedback__title">
-						{{ __('asd.Мы вам перезвоним') }}
+						Мы вам перезвоним
 					</div>
 					<div class="feedback__text">
-						{{ __('asd.Оставьте ваши контактные данные, и мы с вами свяжемся.') }}
+						Оставьте ваши контактные данные, и мы с вами свяжемся.
 
 					</div>
 					<div class="feedback-form">
 						<input type="text" required placeholder="Ваше имя" name="name">
 						<input type="tel"  required placeholder="Номер телефона" name="phone">
 						<button class="btn">
-						{{ __('asd.Отправить.') }}
+							Отправить.
 						</button>
 					</div>
 				</div>
+				<div class="feedback-done">
+					<div class="feedback__img">
+						<img src="/assets/img/done.svg" alt="ico">
+					</div>
+					<div class="feedback__title">
+						{{ __('asd.Спасибо ваша заявка принята!') }}
+					</div>
+					<div class="feedback__text">
+						{{ __('asd.Мы свяжемся с вами в ближайшее время') }}
+					</div>
+				</div>
 			</form>
-
-			<div class="feedback-done">
-				<div class="feedback__img">
-					<img src="/assets/img/done.svg" alt="ico">
-				</div>
-				<div class="feedback__title">
-					{{ __('asd.Спасибо ваша заявка принята!') }}
-				</div>
-				<div class="feedback__text">
-					{{ __('asd.Мы свяжемся с вами в ближайшее время') }}
-				</div>
-			</div>
 		</div>
 	</div>
-
 	<!-- TEL-POPUP -->
-
 	<div class="tel-popup feedback-open">
 		<svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M24.5886 20.011C24.5207 19.7979 24.0888 19.4841 23.2932 19.0701C23.0776 18.9397 22.7705 18.7624 22.3731 18.5374C21.9754 18.3125 21.6143 18.1052 21.2907 17.9158C20.9663 17.7264 20.6625 17.543 20.3786 17.3657C20.3332 17.3302 20.1912 17.2267 19.9525 17.0547C19.7137 16.8832 19.5122 16.7559 19.3471 16.6729C19.1824 16.5904 19.0204 16.5488 18.8612 16.5488C18.634 16.5488 18.3502 16.7176 18.0094 17.0547C17.6686 17.3923 17.3559 17.759 17.072 18.1558C16.788 18.5525 16.4868 18.9192 16.1689 19.2566C15.8505 19.5941 15.589 19.7627 15.3847 19.7627C15.2821 19.7627 15.1542 19.7329 15.0009 19.6741C14.8477 19.615 14.7312 19.5643 14.6512 19.5234C14.5719 19.4817 14.4358 19.3991 14.2425 19.2744C14.0488 19.1501 13.9411 19.082 13.9184 19.0701C12.3616 18.1703 11.0264 17.1405 9.9126 15.9808C8.79916 14.8205 7.81032 13.4299 6.94668 11.8081C6.93534 11.7844 6.86984 11.6719 6.75061 11.4708C6.6312 11.2695 6.55161 11.1277 6.51185 11.0446C6.47208 10.9618 6.42378 10.8404 6.36706 10.6806C6.31034 10.5209 6.28186 10.3878 6.28186 10.2811C6.28186 10.0682 6.44384 9.79581 6.76775 9.46434C7.09159 9.13306 7.44397 8.81925 7.82453 8.52354C8.20539 8.22783 8.55741 7.90221 8.88137 7.54723C9.20522 7.19207 9.36714 6.8963 9.36714 6.65961C9.36714 6.494 9.32737 6.32515 9.2479 6.15357C9.16838 5.98162 9.04622 5.77179 8.88137 5.5231C8.71647 5.27453 8.61706 5.12671 8.58291 5.07913C8.41263 4.78342 8.23668 4.46682 8.05463 4.12944C7.87259 3.79213 7.67389 3.41613 7.45788 3.00189C7.24204 2.58783 7.0717 2.26812 6.94656 2.04324C6.54904 1.21482 6.24795 0.764817 6.04334 0.694046C5.96375 0.658535 5.84434 0.640625 5.68541 0.640625C5.3784 0.640625 4.9779 0.699705 4.4836 0.818237C3.98912 0.936583 3.60002 1.06071 3.31588 1.19112C2.74766 1.43957 2.14542 2.16159 1.50896 3.35693C0.929398 4.46937 0.639648 5.57043 0.639648 6.6593C0.639648 6.97864 0.65953 7.28934 0.699294 7.59145C0.739058 7.89325 0.810107 8.23362 0.912502 8.61247C1.01472 8.99121 1.09717 9.27255 1.1595 9.45576C1.22189 9.63909 1.33838 9.96751 1.5089 10.4411C1.67918 10.9147 1.78157 11.2045 1.81566 11.311C2.21336 12.4711 2.68497 13.5068 3.23038 14.4183C4.12775 15.9333 5.35237 17.4991 6.90351 19.1149C8.45472 20.7305 9.95762 22.006 11.4123 22.9411C12.2873 23.5092 13.2819 24.0003 14.3955 24.4149C14.4978 24.4502 14.7761 24.5566 15.2305 24.7346C15.6851 24.9121 16.0005 25.0334 16.1765 25.0985C16.3526 25.1637 16.6228 25.2496 16.9861 25.3563C17.3502 25.463 17.6766 25.537 17.9664 25.5787C18.2563 25.6195 18.5547 25.6406 18.8613 25.6406C19.9066 25.6406 20.9638 25.3386 22.032 24.735C23.1794 24.0723 23.8724 23.4449 24.1111 22.8526C24.2366 22.557 24.3554 22.1516 24.4691 21.6365C24.583 21.1217 24.6396 20.7046 24.6396 20.3849C24.64 20.2187 24.6229 20.0946 24.5886 20.011Z" fill="#171715"/>
 		</svg>						
 	</div>
-
 	<!-- МОБИЛЬНОЕ МЕНЮ -->
 
-	<div class="mobile-menu pattern">
-		<div class="mobile-menu__head">
-			<div class="mobile-menu__logo">
-				<a href="{{ route('home') }}">
-					<img src="/assets/img/logo.svg" alt="SUU" title="SUU">
-				</a>
-			</div>
-			<div class="mobile-menu__close">
-				<img src="/assets/img/close.svg" alt="ico">
-			</div>
-		</div>
-		<ul class="menu">
-			<li>
-				<a href="#consort">
-					{{ __('asd.Международный консорциум') }}
-				</a>
-			</li>
-			<li>
-				<a href="#exp">
-					{{ __('asd.Девелопер') }}
-				</a>
-			</li>
-			<li>
-				<a href="#projects">
-					{{ __('asd.Проекты') }}
-				</a>
-			</li>
-			<li>
-				<a href="#team">
-					{{ __('asd.Команда') }}
-				</a>
-			</li>
-			<li>
-				<a href="#footer">
-					{{ __('asd.Контакты') }}
-
-				</a>
-			</li>
-		</ul>
-		
-		<div class="mobile-menu__lang">
-			<a href="#">РУ</a>
-			<a href="#">UZ</a>
-			<a href="#">EN</a>
-		</div>
-	</div>
+	@include('components.front.mobile-menu')
 
 	<!-- HEADER -->
-
 	<header class="header">
 		<div class="container">
 			<div class="header__logo">
@@ -512,7 +462,7 @@
 						{{ __('asd. Экологичность') }} 
 						</div>
 						<div class="earn-list__text">
-						{{ __('asd. 							Установка современных солнечных фотоэлектрических станций и водонагревателей для обеспечения горячим водоснабжением и электрической энергией') }} 
+						{{ __('asd.Установка современных солнечных фотоэлектрических станций и водонагревателей для обеспечения горячим водоснабжением и электрической энергией') }} 
 						</div>
 					</div>
 					<div class="earn-list__item wow fadeInUp" data-wow-delay=".7s">
@@ -523,7 +473,7 @@
 						{{ __('asd. Надежность') }} 
 						</div>
 						<div class="earn-list__text">
-						{{ __('asd. Принятие международных стандартов, устанавливающих требования к энергоэффективным, энергосберегающим технологиям и оборудованию') }} 
+						{{ __('asd.Принятие международных стандартов, устанавливающих требования к энергоэффективным, энергосберегающим технологиям и оборудованию') }} 
 						</div>
 					</div>
 				</div>
@@ -824,97 +774,73 @@
 			</div>
 
 			<div class="projects-main">
-
 				<div class="projects-carousel owl-carousel">
-					@foreach($projects as $project)
 					<div class="projects-item">
+						@foreach ($projects as $project)
 						<div class="projects-item__img">
 							<div class="projects-item__date">
 								{{$project->date_from_to}}
 							</div>
 							<a href="#" class="projects-item__more">
-<<<<<<< HEAD
-								{{ __('asd. Подробнее') }}
+								{{ __('asd.Подробнее') }}
 								<div class="arrow">
-=======
-								Подробнее
-								{{-- <div class="arrow">
->>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
-									<img src="/assets/img/arrow-down.svg" alt="ico">
-								</div> --}}
+									<img src="assets/img/arrow-down.svg" alt="ico">
+								</div>
 							</a>
 							<img src="{{$project->photo}}" alt="img">
 						</div>
-
 						<div class="projects-item__wrap">
 							<div class="projects-item__name">
 								{{$project->name}}
 							</div>
-<<<<<<< HEAD
 							<div class="projects-item__text">
-								{{ __('asd. Британскоая архитектура, премиальная локация, уникальный ландшафт.') }}
-							</div>
-							<ul class="projects-item__info list">
-								<li>
-									<span>{{ __('asd. Инвестиции') }}</span>
-									<span>$13.9-20.3 {{ __('asd. млн') }}.*</span>
-								</li>
-								<li>
-									<span> {{ __('asd. ROI') }} ( {{ __('asd. среднее') }} )</span>
-									<span>35.8%</span>
-								</li>
-								<li>
-									<span> {{ __('asd. Прибыль (O)') }}</span>
-									<span>$5.9 {{ __('asd. млн') }}.</span>
-=======
-							<div class="projects-item__text"><?php 
+								<?php 
 								$less_description = 'less_description_'.$lang;
 								?>
 								{{$project->$less_description}}
-								
 							</div>
 							<ul class="projects-item__info list">
 								<li>
-									<span>Инвестиции</span>
+									<span>{{ __('asd.Инвестиции') }}</span>
 									<span>{{$project->fin_investments}}</span>
 								</li>
 								<li>
-									<span>ROI (среднее)</span>
+									<span>{{ __('asd.ROI') }} ( {{ __('asd.среднее') }} )</span>
 									<span>{{$project->roi}}</span>
 								</li>
 								<li>
-									<span>Прибыль (O)</span>
+									<span>{{ __('asd.Прибыль (O)') }}</span>
 									<span>{{$project->profit}}</span>
->>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 								</li>
 							</ul>
 							<div class="projects-item__square">
 								<ul class="projects-item__square-wrap">
 									<li>
-										<span>S {{ __('asd. земельного участка ') }}</span>
+										<span>S {{ __('asd.земельного участка') }}</span>
 										<span></span>
-										<span>{{$project->area}}&sup2;</span>
+										<span>{{$project->Area}} м&sup2;</span>
 									</li>
 									<li>
-										<span>{{ __('asd. Реализуемая площадь  ') }}</span>
+										<span>{{ __('asd.Реализуемая площадь') }}</span>
 										<span></span>
-										<span>{{$project->realizable_area}}&sup2;</span>
+										<span>{{$project->realizable_area}} м&sup2;</span>
 									</li>
 								</ul>
 							</div>
 							<div class="projects-item__note">
-								{{ __('asd. *в зависимости от даты старта продаж   ') }}
+								{{__('asd.*в зависимости от даты старта продаж') }}
 							</div>
 						</div>
+						@endforeach
 					</div>
-					@endforeach
+					
 				</div>
 				<div class="projects-carousel__arrows">
 					<span class="arrow arrow-left">
-						<img src="/assets/img/arrow-left.svg" alt="ico">
+						<img src="assets/img/arrow-left.svg" alt="ico">
 					</span>
 					<span class="arrow arrow-right">
-						<img src="/assets/img/arrow-right.svg" alt="ico">
+						<img src="assets/img/arrow-right.svg" alt="ico">
 					</span>
 				</div>
 			</div>
@@ -927,7 +853,7 @@
 	<section class="criteria">
 		<div class="container">
 			<h2 class="criteria__title section-title">
-				05 <span> {{ __('asd. Реализуемая площадь ') }} </span>
+				05 <span>{{ __('asd.Реализуемая площадь') }}</span>
 			</h2>
 		</div>
 		<div class="criteria-main">
@@ -967,7 +893,7 @@
 							<img src="/assets/img/management-arrow1.svg" alt="ico">
 						</div>
 						<div class="management-item management-item1 arrow">
-							{{ __('asd. Определение ситуации  ') }}
+							{{ __('asd.Определение ситуации') }}
 						</div>
 						<div class="management-diag__arrow management-diag__arrow2">
 							<img src="/assets/img/management-arrow2.svg" alt="ico">
@@ -976,7 +902,7 @@
 					<div class="management-diag__row">
 						<div class="management-diag__wrap">
 							<div class="management-item management-item5 arrow">
-								{{ __('asd. Мониторинг  ') }}
+								{{ __('asd.Мониторинг') }}
 							</div>
 							<div class="management-diag__arrow management-diag__arrow3">
 								<img src="/assets/img/management-arrow3.svg" alt="ico">
@@ -984,7 +910,7 @@
 						</div>
 						<div class="management-diag__wrap">
 							<div class="management-item management-item2 arrow">
-								{{ __('asd. Идентификация риска   ') }}
+								{{ __('asd.Идентификация риска') }}
 							</div>
 							<div class="management-diag__arrow management-diag__arrow4">
 								<img src="/assets/img/management-arrow4.svg" alt="ico">
@@ -993,13 +919,13 @@
 					</div>
 					<div class="management-diag__row">
 						<div class="management-item management-item4 arrow">
-							{{ __('asd. Воздействие на риск   ') }}
+							{{ __('asd.Воздействие на риск') }}
 						</div>
 						<div class="management-diag__arrow management-diag__arrow5">
 							<img src="/assets/img/management-arrow5.svg" alt="ico">
 						</div>
 						<div class="management-item management-item3 arrow">
-							{{ __('asd. Анализ и оценивание риска   ') }}
+							{{ __('asd.Анализ и оценивание риска') }}
 						</div>
 					</div>
 				</div>
@@ -1038,7 +964,7 @@
 						{{ __('asd. Оценка / Стоимости вклада') }}
 						<ul class="last">
 							<li>
-								{{ __('asd. Инвестиционный комитет') }}
+								{{ __('asd.Инвестиционный комитет') }}
 							</li>
 						</ul>
 					</li>
@@ -1068,20 +994,20 @@
 	<section class="team" id="team">
 		<div class="container">
 			<h2 class="team__title section-title">
-				08 <span>{{ __('asd. команда') }}</span>
+				08 <span>{{ __('asd.команда') }}</span>
 			</h2>
 			<div class="team-wrap">
 				<div class="team-left wow fadeInLeft" data-wow-delay=".3s">
 					<div class="team-info">
 						<ul>
 							<li>
-								{{ __('asd. Исполнение контрактов') }}
+								{{ __('asd.Исполнение контрактов') }}
 							</li>
 							<li>
-								{{ __('asd. Контроль, риск менеджмент') }}
+								{{ __('asd.Контроль, риск менеджмент') }}
 							</li>
 							<li>
-								{{ __('asd. Репортинг') }}
+								{{ __('asd.Репортинг') }}
 							</li>
 						</ul>
 					</div>
@@ -1092,7 +1018,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									{{ __('asd. Камолиддин Атаев') }}
+									{{ __('asd.Камолиддин Атаев') }}
 								</div>
 							</div>
 							<div class="team-item__companies">
@@ -1108,7 +1034,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									{{ __('asd. Камолиддин Атаев') }}
+									{{ __('asd.Камолиддин Атаев') }}
 								</div>
 							</div>
 							<div class="team-item__companies">
@@ -1121,7 +1047,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									{{ __('asd. Камолиддин Атаев') }}
+									{{ __('asd.Камолиддин Атаев') }}
 								</div>
 							</div>
 							<div class="team-item__companies">
@@ -1134,7 +1060,7 @@
 									<img src="img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									{{ __('asd. Камолиддин Атаев') }}
+									{{ __('asd.Камолиддин Атаев') }}
 								</div>
 							</div>
 							<div class="team-item__companies">
@@ -1147,7 +1073,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									{{ __('asd. Камолиддин Атаев') }}
+									{{ __('asd.Камолиддин Атаев') }}
 								</div>
 							</div>
 							<div class="team-item__companies">
@@ -1160,7 +1086,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-									{{ __('asd. Камолиддин Атаев') }}
+									{{ __('asd.Камолиддин Атаев') }}
 								</div>
 							</div>
 						</div>
@@ -1173,7 +1099,7 @@
 								{{ __('asd. Инвестиционный комитет') }}
 							</li>
 							<li>
-								{{ __('asd. Этическое финансирование') }}
+								{{ __('asd.Этическое финансирование') }}
 							</li>
 						</ul>
 					</div>
@@ -1184,7 +1110,7 @@
 									<img src="/assets/img/people.png" alt="people">
 								</div>
 								<div class="team-item__name">
-								{{ __('asd. Камолиддин Атаев') }}
+								{{ __('asd.Камолиддин Атаев') }}
 								</div>
 							</div>
 						</div>
@@ -1325,7 +1251,7 @@
 						15+%
 					</div>
 					<div class="fund-item__text">
-						50% {{ __('asd. прибыли для инвестора соответствует ставке 15+% годовых в валюте.') }}</div>
+						50% {{ __('asd.прибыли для инвестора соответствует ставке 15+% годовых в валюте.') }}</div>
 				</div>
 				<div class="fund-item wow fadeInLeft" data-wow-delay=".5s">
 					<div class="fund-item__number">
@@ -1345,7 +1271,7 @@
 						12/24
 					</div>
 					<div class="fund-item__text">
-						{{ __('asd. После 12-ти месячного периода инвестор может  продать долю') }} 
+						{{ __('asd.После 12-ти месячного периода инвестор может  продать долю') }} 
 					</div>
 				</div>
 				<div class="fund-item wow fadeInLeft" data-wow-delay=".9s">
@@ -1386,11 +1312,11 @@
 					{{ __('asd. вместе с профессионалами!') }} 
 				</h2>
 				<div class="invest__text">
-					{{ __('asd. До конца окончания приёма заявок осталось:') }} 
+					{{ __('asd.До конца окончания приёма заявок осталось:') }} 
 				</div>
 				<div class="invest-counter">
 					<div class="invest-counter__item month wow fadeInUp" data-wow-delay=".3s">
-						<span>0</span>  {{ __('asd. мес.') }} 
+						<span></span>  {{ __('asd. мес.') }} 
 					</div>
 					<div class="invest-counter__item day wow fadeInUp" data-wow-delay=".4s">
 						<span>0</span>  {{ __('asd. дн.') }} 

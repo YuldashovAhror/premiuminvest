@@ -19,7 +19,6 @@
 
 	<!-- FEEDBACK-->
 	<!-- feedback-wrap спрятать feedback-done показать -->
-
 	<div class="feedback">
 		<div class="feedback-content">
 			<div class="feedback-close">
@@ -32,16 +31,17 @@
 				@csrf
 				<div class="feedback-wrap">
 					<div class="feedback__title">
-						Мы вам перезвоним
+						{{ __('asd.Мы вам перезвоним') }}
 					</div>
 					<div class="feedback__text">
-						Оставьте ваши контактные данные, и мы с вами свяжемся.
+						{{ __('asd.Оставьте ваши контактные данные, и мы с вами свяжемся.') }}
+
 					</div>
 					<div class="feedback-form">
 						<input type="text" required placeholder="Ваше имя" name="name">
 						<input type="tel"  required placeholder="Номер телефона" name="phone">
 						<button class="btn">
-							Отправить
+						{{ __('asd.Отправить.') }}
 						</button>
 					</div>
 				</div>
@@ -72,68 +72,17 @@
 
 	<!-- МОБИЛЬНОЕ МЕНЮ -->
 
-	<div class="mobile-menu pattern">
-		<div class="mobile-menu__head">
-			<div class="mobile-menu__logo">
-<<<<<<< HEAD
-				<a href="{{ route('home') }}">
-					<img src="img/logo.svg" alt="SUU" title="SUU">
-=======
-				<a href="index.html">
-					<img src="/assets/img/logo.svg" alt="SUU" title="SUU">
->>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
-				</a>
-			</div>
-			<div class="mobile-menu__close">
-				<img src="/assets/img/close.svg" alt="ico">
-			</div>
-		</div>
-		<ul class="menu">
-			<li>
-				<a href="#consort">
-					Международный консорциум
-				</a>
-			</li>
-			<li>
-				<a href="#exp">
-					Девелопер
-				</a>
-			</li>
-			<li>
-				<a href="#projects">
-					Проекты
-				</a>
-			</li>
-			<li>
-				<a href="#team">
-					Команда
-				</a>
-			</li>
-			<li>
-				<a href="#footer">
-					Контакты
-				</a>
-			</li>
-		</ul>
-		<div class="mobile-menu__lang">
-			<a href="#">РУ</a>
-			<a href="#">UZ</a>
-			<a href="#">EN</a>
-		</div>
-	</div>
+	@include('components.front.mobile-menu')
 
 	<!-- HEADER -->
 
 	<header class="header">
 		<div class="container">
 			<div class="header__logo">
-<<<<<<< HEAD
-				<a href="{{ route('home') }}">
-					<img src="img/logo.svg" alt="Premium Investment Club">
-=======
-				<a href="#">
+
+				
+				<a href="{{Route('home')}}">
 					<img src="/assets/img/logo.svg" alt="Premium Investment Club">
->>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 				</a>
 			</div>
 			<nav>
@@ -154,38 +103,36 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="/#team">
 							Команда
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="#contacts">
 							Контакты
 						</a>
 					</li>
 				</ul>
+				<?php $arr = ['РУ'=>'ru','O’z'=>'uz','ENG'=>'en'] ?>
 				<div class="header-lang">
 					<div class="header-lang__btn">
 						<img src="/assets/img/lang.svg" alt="ico">
-						<span>РУ</span>
+						<span>{{ array_search($lang, $arr)}}</span>
 						<img src="/assets/img/chevron-down.svg" alt="ico">
 					</div>
 					<div class="header-lang__list">
-						<a href="#" class="current">РУ</a>
-						<a href="#">O’Z</a>
-						<a href="#">ENG</a>
+						@foreach($arr as $key => $value)
+							@if ($value != $lang)
+								<a href="/languages/{{ $value }}" class="current">{{ $key}}</a>
+							@endif
+						@endforeach
 					</div>
 				</div>
 			</nav>
 			<div>
-				<a href="#" class="header-cabinet">
-<<<<<<< HEAD
-					<img src="img/dot.svg" alt="ico">
-					<span>{{ __('asd.личный кабинет') }}</span>
-=======
+				<a href="{{route('front.profile')}}" class="header-cabinet">
 					<img src="/assets/img/dot.svg" alt="ico">
-					<span>личный кабинет</span>
->>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
+					<span>{{ __('asd.личный кабинет') }}</span>
 				</a>
 				<div class="header-mobile">
 					<span></span>
@@ -202,25 +149,21 @@
 		</div>
 		<div class="single-content">
 			<h1 class="single__name">
-<<<<<<< HEAD
-			{{ __('asd.ЖК “МИНОР”') }}
-=======
-				{{$project->name}}
->>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
+
+			{{ $project->name }}	
+
+				
 			</h1>
 			<div class="single__date">
 				{{$project->date_from_to}}
 			</div>
 		</div>
 		<div class="single-info">
-<<<<<<< HEAD
-			{{ __('asd.Соответствует критериям уникальности МБ. Прошел отбор в портфель фонда') }}
-=======
 			<?php 
 				$less_description = 'less_description_'.$lang;
 				?>
 			{{$project->$less_description}}
->>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
+
 		</div>
 	</section>
 
@@ -293,29 +236,18 @@
 			<div class="location-info__wrap wow fadeInRight" data-wow-delay=".3s">
 				<ul class="projects-item__info list">
 					<li>
-<<<<<<< HEAD
-			<span> {{ __('asd.Прибыль”') }} </span>
-						<span>$4.57 {{ __('asd.млн.”') }}</span>
-					</li>
-					<li>
-						<span>{{ __('asd.ROI') }}</span>
-						<span>35.8%</span>
-					</li>
-					<li>
-						<span>{{ __('asd.Рентабельность') }}</span>
-						<span>10%</span>
-=======
-						<span>Прибыль</span>
+
+						<span>{{__('asd.Прибыль') }}</span>
 						<span>{{$project->profit}}</span>
 					</li>
 					<li>
-						<span>ROI</span>
+						<span>{{ __('asd.ROI') }}</span>
 						<span>{{$project->roi}}</span>
 					</li>
 					<li>
-						<span>Рентабельность</span>
+						<span>{{ __('asd.Рентабельность') }}</span>
 						<span>{{$project->fin_roi_before_tax}}</span>
->>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
+
 					</li>
 				</ul>
 				<div class="projects-item__square">
@@ -462,7 +394,7 @@
 							{{ __('asd.Количество парковок на одном этаже') }} - 156 шт.
 						</li>
 						<li>
-							{{ __('asd.Количество парковок в двух этажах + кровля ') }}	- 468 шт.
+							{{ __('asd.Количество парковок в двух этажах + кровля') }}	- 468 шт.
 						</li>
 						<li>
 							{{ __('asd.Высота этажа коммерции') }} - 4.8 м 
@@ -525,116 +457,61 @@
 		</div>
 		<ul class="finance__table list">
 			<li>
-<<<<<<< HEAD
-				<span> {{ __('asd.Доходы тыс') }} $</span>
-				<span>48 739</span>
-			</li>
-			<li class="sublist">
-				<div>
-					<span>{{ __('asd.Доходы тыс') }}$</span>
-					<span>48 739</span>
-				</div>
-				<ul>
-					<li>
-						<span>{{ __('asd.В т.ч. Земля') }}</span>
-						<span>14 669</span>
-					</li>
-					<li>
-						<span>{{ __('asd.СМР') }}</span>
-						<span>22 528</span>
-					</li>
-					<li>
-						<span> {{ __('asd.Накладные (ПИР, реализация, админ, резерв )') }} </span>
-						<span>4 599</span>
-=======
-				<span>Доходы тыс $</span>
+				<span>{{ __('asd.Доходы тыс') }}</span>
 				<span>{{$project->fin_income}}</span>
 			</li>
 			<li class="sublist">
 				<div>
-					<span>Доходы тыс $</span>
+					<span>{{ __('asd.Доходы тыс') }}</span>
 					<span>{{$project->fin_income}}</span>
 				</div>
 				<ul>
 					<li>
-						<span>В т.ч. Земля</span>
+						<span>{{ __('asd.В т.ч. Земля') }}</span>
 						<span>{{$project->fin_earth}}</span>
 					</li>
 					<li>
-						<span>СМР</span>
+						<span>{{ __('asd.СМР') }}</span>
 						<span>{{$project->fin_cmr}}</span>
 					</li>
 					<li>
-						<span>Накладные (ПИР, реализация, админ, резерв)</span>
+						<span>{{ __('asd.Накладные (ПИР, реализация, админ, резерв )') }}</span>
 						<span>{{$project->fin_overhead}}</span>
->>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
+
 					</li>
 				</ul>
 			</li>
 			<li>
-<<<<<<< HEAD
 				<span>{{ __('asd.Прибыль (до налога)') }}</span>
-				<span>6 944</span>
-			</li>
-			<li>
-				<span> {{ __('asd.Рентабельность (до налога)') }}</span>
-				<span>14 %</span>
-			</li>
-			<li>
-				<span> {{ __('asd.Прибыль (после налога)') }}</span>
-				<span>5 902</span>
-			</li>
-			<li>
-				<span>  {{ __('asd.Рентабельность (после налога)') }}</span>
-				<span>12 %</span>
-			</li>
-			<li>
-				<span>{{ __('asd.Инвестиции') }}</span>
-				<span>17 300</span>
-			</li>
-			<li>
-				<span>{{ __('asd.ROI (до налога)') }}</span>
-				<span>40 %</span>
-			</li>
-			<li>
-				<span>{{ __('asd.ROI (после налога)') }}</span>
-				<span>34,1%</span>
-			</li>
-			<li>
-				<span>{{ __('asd.Земельный участок') }} , м2</span>
-				<span>14 900</span>
-=======
-				<span>Прибыль (до налога)</span>
 				<span>{{$project->fin_profit_before_tax}}</span>
 			</li>
 			<li>
-				<span>Рентабельность (до налога)</span>
+				<span>{{ __('asd.Рентабельность (до налога)') }}</span>
 				<span>{{$project->fin_profitability_before_tax}}</span>
 			</li>
 			<li>
-				<span>Прибыль (после налога)</span>
+				<span>{{ __('asd.Прибыль (после налога)') }}</span>
 				<span>{{$project->fin_profit_after_tax}}</span>
 			</li>
 			<li>
-				<span>Рентабельность (после налога)</span>
+				<span>{{ __('asd.Рентабельность (после налога)') }}</span>
 				<span>{{$project->fin_profitability_after_tax}} %</span>
 			</li>
 			<li>
-				<span>Инвестиции</span>
+				<span>{{ __('asd.Инвестиции') }}</span>
 				<span>{{$project->fin_investments}}</span>
 			</li>
 			<li>
-				<span>ROI (до налога)</span>
+				<span>{{ __('asd.ROI (до налога)') }}</span>
 				<span>{{$project->fin_roi_before_tax}} %</span>
 			</li>
 			<li>
-				<span>ROI (после налога)</span>
+				<span>{{ __('asd.ROI (после налога)') }}</span>
 				<span>{{$project->fin_roi_after_tax}}%</span>
 			</li>
 			<li>
-				<span>Земельный участок, м2</span>
+				<span>{{ __('asd.Земельный участок') }} м2</span>
 				<span>{{$project->fin_land_plot}}</span>
->>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
 			</li>
 		</ul>
 	</section>
@@ -668,11 +545,7 @@
 				</div>
 				<div class="invest-counter">
 					<div class="invest-counter__item month wow fadeInUp" data-wow-delay=".3s">
-<<<<<<< HEAD
-						<span>0</span> {{ __('asd.мес.') }}
-=======
-						<span></span> мес.
->>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
+						<span></span>{{ __('asd.мес.') }}
 					</div>
 					<div class="invest-counter__item day wow fadeInUp" data-wow-delay=".4s">
 						<span>0</span> {{ __('asd.дн.') }}
@@ -723,7 +596,7 @@
 
 	<!-- FOOTER -->
 
-	<footer class="footer">
+	<footer class="footer" id="contacts">
 		<div class="footer-map">
 			<div id="map"></div>	
 		</div>
@@ -732,7 +605,7 @@
 				<img src="/assets/img/logo.svg" alt="Premium Investment Club">
 			</div>
 			<div class="footer-info__title">
-						{{ __('asd.Контакты') }}
+						asd.Контакты
 			</div>
 			<ul class="footer-info__list">
 				<li>
@@ -740,15 +613,8 @@
 					<span>+998 71 200 88 22</span>
 				</li>
 				<li>
-<<<<<<< HEAD
-					<img src="img/marker.svg" alt="ico">
-						
-						
-						<span> {{ __('asd.Адрес: Бизнес-центр "Авалон"') }} ,<br> {{ __('asd.1-этаж, ул. Ойбека 38а, г.Ташкент') }} </span>
-=======
 					<img src="/assets/img/marker.svg" alt="ico">
-					<span>Адрес: Бизнес-центр "Авалон",	<br> 1-этаж, ул. Ойбека 38а, г.Ташкент</span>
->>>>>>> 18236ffd750bbb9ad6f5af13528bf83bc0e41894
+					<span>Адрес: Бизнес-центр "Авалон" ,<br> 1-этаж, ул. Ойбека 38а, г.Ташкент'</span>
 				</li>
 				<li>
 					<img src="/assets/img/mail.svg" alt="ico">
@@ -777,32 +643,21 @@
 	<!-- CКРИПТ ТОЛЬКО ДЛЯ СИНГЛ -->
 
 	<script>
-		
-
-
 		let singleSigns = document.querySelectorAll('.sign-title svg path')
-
 		singleSigns.forEach(item => {
 			let length = item.getTotalLength()
 			item.style.strokeDasharray = length; 
 			item.style.strokeDashoffset = length;
 		})
-
 		$(window).on('scroll', () => {
 			let scroll = $(document).scrollTop()
-
 			$('.sign-title').map((index, item) => {
 				let offset = $(item).offset().top
-
 				if(scroll > (offset - ($(window).height()/1.5))) {
 					$(item).addClass('show')
 				}
-			})
-			
-		})
-
-		
-
+			})				
+		})		
 	</script>
 </body>
 </html>
