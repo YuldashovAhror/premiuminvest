@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Employee;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -24,9 +25,14 @@ class ProjectController extends Controller
         $lang = session()->get('locale');
 
         $projects = Project::all();
+
+        $left_employees = Employee::where('type', 1)->get();
+        $right_employees = Employee::where('type', 2)->get();
         return view('front.index',[
             'projects' => $projects,
-            'lang' => $lang
+            'lang' => $lang,
+            'left_employees' => $left_employees,
+            'right_employees' => $right_employees,
         ]);
     }
 

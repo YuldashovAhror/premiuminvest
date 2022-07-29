@@ -97,6 +97,7 @@ class EmployeeController extends Controller
 
     public function destroy($id)
     {
+        dd($id);
         $employee = Employee::find($id);
         
         if($employee->employeeCompany){
