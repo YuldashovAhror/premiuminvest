@@ -5,7 +5,7 @@
         <div class="card">
             <form action="{{route('admin.project')}}" method="get" style="margin-top: 2rem; padding-left: 1rem">
                 @csrf
-                <button type="submit" class="btn btn-primary" style="background-color: blue">Back</button>
+                <button type="submit" class="btn btn-primary" style="background-color: blue">Назад</button>
             </form>
             <div>
                 <form action="{{Route('admin.project.update', $project->id)}}" method="post">
@@ -14,33 +14,33 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <label for="" class="form-label">Photo</label>
+                                    <label for="" class="form-label">Фото</label>
                                     <input type="file" name="photo" class="form-control" style="color: rgb(27, 59, 221)">
                                 </div>
                             </div>
-                            <div class="row mt-4">
+                            <div class="mt-4 row">
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Name</label>
+                                    <label for="" class="form-label">Имя</label>
                                     <input type="text" class="form-control" name="name" value="{{$project->name}}">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Less_description UZ</label>
+                                    <label for="" class="form-label">Меньше_описания UZ</label>
                                     <input type="text" class="form-control" name="less_description_uz" value="{{$project->less_description_uz}}">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Less_description RU</label>
+                                    <label for="" class="form-label">Меньше_описания RU</label>
                                     <input type="text" class="form-control" name="less_description_ru" value="{{$project->less_description_ru}}">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Less_description EN</label>
+                                    <label for="" class="form-label">Меньше_описания EN</label>
                                     <input type="text" class="form-control" name="less_description_en" value="{{$project->less_description_en}}">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Description UZ</label>
+                                    <label for="" class="form-label">Описания UZ</label>
                                     <input type="text" class="form-control" name="description_uz" value="{{$project->description_uz}}">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Description RU</label>
+                                    <label for="" class="form-label">Описания RU</label>
                                     <input type="text" class="form-control" name="description_ru" value="{{$project->description_ru}}">
                                 </div>
                                 
@@ -50,11 +50,11 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Description EN</label>
+                                    <label for="" class="form-label">Описания EN</label>
                                     <input type="text" class="form-control" name="description_en" value="{{$project->description_en}}">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Date_from_to</label>
+                                    <label for="" class="form-label">Дата_от_до</label>
                                     <input type="text" class="form-control" name="date_from_to" value="{{$project->date_from_to}}"> 
                                 </div>
                                 <div class="col-md-2">
@@ -149,7 +149,7 @@
                                     <input type="text" class="form-control" name="fin_land_plot" value="{{$project->fin_land_plot}}">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">End_date</label>
+                                    <label for="" class="form-label">Дата окончания</label>
                                     <input type="text" class="form-control" name="end_date" value="{{$project->end_date}}">
                                 </div>
                                 <div class="col-md-2">

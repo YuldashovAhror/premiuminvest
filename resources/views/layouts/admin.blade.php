@@ -16,10 +16,10 @@
       <div class="page-content">
 
         {{-- Main Content Beginning --}}
-        {{ isset($slot) ? $slot : ''}}
+        {{ isset($slot) ? $slot : 'aaa'}}
         @yield('content')
         {{-- Main Content End --}}
-        
+
       </div>
       @include('components.admin.footer')
     </div>
