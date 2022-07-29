@@ -6,12 +6,12 @@
       <div class="card">
         <div class="card-body">
 
-          <h4 class="card-title">Notifications</h4>
+          <h4 class="card-title">Уведомления</h4>
 
           <div class="">
             @foreach (auth()->user()->unreadnotifications as $notification)
               <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                <strong>{{ $notification->data['user_name'] }}</strong> started following you.
+                <strong>{{ $notification->data['user_name'] }}</strong> начал следовать за вами.
                   <a href="{{Route('admin.markasread', $notification->id)}}" class="btn-close"></a>
               </div>
             @endforeach
@@ -37,7 +37,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
               </button>
             </div>
-            <div class="alert alert-info alert-dismissible fade show mb-0" role="alert">
+            <div class="mb-0 alert alert-info alert-dismissible fade show" role="alert">
               A simple info alert—check it out!
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
               </button>

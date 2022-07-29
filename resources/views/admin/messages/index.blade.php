@@ -11,9 +11,9 @@
                             </tr>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Action</th>
+                                <th>Имя</th>
+                                <th>Телефон</th>
+                                <th>Действие</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,7 +34,7 @@
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="myModalLabel">Rostdan ham o'chirmoqchimisiz?</h5>
+                                                    <h5 class="modal-title" id="myModalLabel">Вы уверены, что хотите удалить?</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                                     </button>
                                                 </div>

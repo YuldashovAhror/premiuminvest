@@ -103,7 +103,7 @@ Route::middleware([
 
                 Route::get('/employee/edit/{id}', [EmployeeController::class, 'edit'])->name('employee.edit');
                 Route::put('/employee/update/{id}', [EmployeeController::class, 'update'])->name('employee.update');
-                Route::delete('/employee/{id}', [EmployeeController::class, 'deleteImg'])->name('delete.company_img');
+                Route::delete('/employee/img/{id}', [EmployeeController::class, 'deleteImg'])->name('delete.company_img');
                 Route::delete('/employee/{id}', [EmployeeController::class, 'destroy'])->name('employee.delete');
 
                 Route::get('/words', [WordsController::class, 'index'])->name('words');

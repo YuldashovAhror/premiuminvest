@@ -21,7 +21,7 @@
     </a>
   </div>
 
-  <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect vertical-menu-btn">
+  <button type="button" class="px-3 btn btn-sm font-size-16 header-item waves-effect vertical-menu-btn">
     <i class="fa fa-fw fa-bars"></i>
   </button>
 
@@ -31,7 +31,7 @@
     <div id="sidebar-menu">
       <!-- Left Menu Start -->
       <ul class="metismenu list-unstyled" id="side-menu">
-        <li class="menu-title">Menu</li>
+        <li class="menu-title">Меню</li>
 
         <li>
           <a href="{{ Route('admin.dashboard') }}">
@@ -40,12 +40,12 @@
           </a>
         </li>
 
-        <li class="menu-title">Apps</li>
+        <li class="menu-title">Программы</li>
 
         <li>
           <a href="{{ Route('admin.users') }}">
             <i class="uil-users-alt"></i>
-            <span>Users</span>
+            <span>User</span>
           </a>
 
         </li>
@@ -53,25 +53,25 @@
         <li>
           <a href="{{Route('admin.project')}}" >
             <i class="uil-store"></i>
-            <span>Project</span>
+            <span>Проект</span>
           </a>
         </li>
         <li class="mm-active">
           <a href="javascript: void(0);" class="has-arrow waves-effect mm-active">
             <i class="uil-file-alt"></i>
-            <span>Project</span>
+            <span>Проект</span>
           </a>
           <ul class="sub-menu mm-collapse mm-show" aria-expanded="false">
-            <li><a href="{{Route('admin.project')}}">Projects</a></li>
-            <li><a href="{{Route('admin.project-property')}}">Project Property</a></li>
-            <li><a href="{{Route('admin.project-property-item')}}">Project Property Items</a></li>
+            <li><a href="{{Route('admin.project')}}">Проект</a></li>
+            <li><a href="{{Route('admin.project-property')}}">Недвижимость проекта</a></li>
+            <li><a href="{{Route('admin.project-property-item')}}">Элементы свойств проекта</a></li>
           </ul>
         </li>
 
         <li>
           <a href="{{Route('admin.invest')}}">
             <i class="bx bxs-bar-chart-alt-2"></i>
-            <span>Invest</span>
+            <span>Инвестировать</span>
           </a>
 
         </li>
@@ -79,20 +79,20 @@
         <li>
           <a href="{{Route('admin.message')}}">
             <i class="bx bxs-message"></i>
-            <span>Messages</span>
+            <span>Сообщения</span>
           </a>
 
         </li>
         <li>
           <a href="{{Route('admin.news')}}">
             <i class="bx bx-file"></i>
-            <span>News</span>
+            <span>Новости</span>
           </a>
         </li>
         <li>
           <a href="{{Route('admin.employee')}}">
             <i class="bx bx-file"></i>
-            <span>Employees</span>
+            <span>Сотрудники</span>
           </a>
         </li>
         <li>
