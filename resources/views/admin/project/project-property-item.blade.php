@@ -1,6 +1,8 @@
 @extends('layouts.admin')
 
 @section('content')
+    {{-- @dd($project_properties[0]) --}}
+
         <div class="modal fade bs-example-modal-center" tabindex="-1" aria-labelledby="mySmallModalLabel" style="display: none;" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -11,12 +13,12 @@
                     </div>
                     <div class="modal-body">
                         <form action="{{ Route('admin.project-property-item.store') }}" method="post">
-                           @csrf
+                            @csrf
                             <div class="row">
                                 <label for="" class="form-label">Выберите project_property_id</label>
                                 <select name="project_property_id" id="" class="form-control">
-                                    @foreach($projects_property as $project_property)
-                                        <option value="{{ $project_property->id }}">{{ $project_property->name }}</option>
+                                    @foreach($project_properties as $project_property)
+                                        <option value="{{ $project_property->id }}">{{ $project_property->name_uz }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -68,18 +70,19 @@
                                 @foreach($projects_property_items as $project_property_item)
                                     <tr>
                                         <th scope="row">{{ $k }}</th>
+                                        <td>{{ $project_property_item->project_property->name_uz }}</td>
                                         <td>{{ $project_property_item->name_ru }}</td>
                                         <td>{{ $project_property_item->name_uz }}</td>
                                         <td>{{ $project_property_item->name_en }}</td>
                                         <td>
-                                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target=".bs-example-modal-center{{ $project_property_item->id }}Edit">Добавить</button>
-                                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target=".bs-example-modal-center{{ $project_property_item->id }}Delete">Добавить</button>
+                                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target=".bs-example-modal-center{{ $project_property_item->id }}Edit">Edit</button>
+                                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target=".bs-example-modal-center{{ $project_property_item->id }}Delete">Delete</button>
 
                                             <div class="modal fade bs-example-modal-center{{ $project_property_item->id }}Edit" tabindex="-1" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-centered">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title">Добавить</h5>
+                                                            <h5 class="modal-title">Edit</h5>
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                                             </button>
                                                         </div>
@@ -89,9 +92,9 @@
                                                                 {{ method_field('put') }}
                                                                 <div class="row">
                                                                     <label for="" class="form-label">Выберите project</label>
-                                                                    <select name="project_id" id="" class="form-control">
-                                                                        @foreach($projects as $project)
-                                                                            <option value="{{ $project->id }}" @if($project->id == $project_property_item->id) selected @endif>{{ $project->name }}</option>
+                                                                    <select name="project_property_id" id="" class="form-control">
+                                                                        @foreach($project_properties as $project_property)
+                                                                            <option @if($project_property->id == $project_property_item->project_property->id) selected @endif value="{{ $project_property->id }}">{{ $project_property->name_uz }}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
@@ -108,7 +111,7 @@
                                                                     <input type="text" class="form-control" name="name_en" value="{{ $project_property_item->name_en }}">
                                                                 </div>
                                                                 <div class="row mt-2">
-                                                                    <button class="btn btn-success">Сохранить</button>
+                                                                    <button type="submit" class="btn btn-success">Сохранить</button>
                                                                 </div>
                                                             </form>
                                                         </div>

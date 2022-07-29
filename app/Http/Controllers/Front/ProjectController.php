@@ -28,6 +28,7 @@ class ProjectController extends Controller
 
         $left_employees = Employee::where('type', 1)->get();
         $right_employees = Employee::where('type', 2)->get();
+
         return view('front.index',[
             'projects' => $projects,
             'lang' => $lang,
@@ -73,6 +74,8 @@ class ProjectController extends Controller
         }  
         $lang = session()->get('locale');
         $project = Project::find($id);
+
+        // dd($project->projectProperties[1]->projectPropertyItems);
         return view('front.single',[
             'project' => $project,
             'lang' => $lang

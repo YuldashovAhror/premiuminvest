@@ -10,10 +10,14 @@ class ProjectPropertyItemsController extends Controller
 {
     public function index()
     {
-        $projects_property = ProjectProperties::orderBy('id')->get();
+        // edit
+        $project_properties = ProjectProperties::orderBy('id')->get();
+        
+        // show
         $projects_property_items = ProjectPropertyItems::orderBy('id')->get();
 
-        return view('admin.project.project-property-item', ['projects_property' => $projects_property, 'projects_property_items' => $projects_property_items]);
+
+        return view('admin.project.project-property-item', ['project_properties' => $project_properties, 'projects_property_items' => $projects_property_items]);
     }
 
     public function store(Request $request)
