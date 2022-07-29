@@ -95,11 +95,11 @@
                                     <input type="text" class="form-control" name="fin_income">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Fin_earth</label>
+                                    <label for="" class="form-label">В т.ч. Земля</label>
                                     <input type="text" class="form-control" name="fin_earth">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Fin_cmr</label>
+                                    <label for="" class="form-label">СМР</label>
                                     <input type="text" class="form-control" name="fin_cmr">
                                 </div>
                                 
@@ -108,27 +108,27 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">fin_overhead</label>
+                                    <label for="" class="form-label">Накладные (ПИР, реализация, админ, резерв)</label>
                                     <input type="text" class="form-control" name="fin_overhead">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Fin_profit_before_tax</label>
+                                    <label for="" class="form-label">Прибыль (до налога)</label>
                                     <input type="text" class="form-control" name="fin_profit_before_tax">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Fin_profitability_before_tax</label>
+                                    <label for="" class="form-label">Рентабельность (до налога)</label>
                                     <input type="text" class="form-control" name="fin_profitability_before_tax">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Fin_profit_after_tax</label>
+                                    <label for="" class="form-label">Прибыль (после налога)</label>
                                     <input type="text" class="form-control" name="fin_profit_after_tax">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Fin_profitability_after_tax</label>
+                                    <label for="" class="form-label">Рентабельность (после налога)</label>
                                     <input type="text" class="form-control" name="fin_profitability_after_tax">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Fin_investments</label>
+                                    <label for="" class="form-label">Инвестиции</label>
                                     <input type="text" class="form-control" name="fin_investments">
                                 </div>
                                 
@@ -145,7 +145,7 @@
                                     <input type="text" class="form-control" name="fin_roi_after_tax">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label">Fin_land_plot</label>
+                                    <label for="" class="form-label">Земельный участок, м2</label>
                                     <input type="text" class="form-control" name="fin_land_plot">
                                 </div>
                                 <div class="col-md-2">

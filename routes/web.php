@@ -100,11 +100,15 @@ Route::middleware([
                 Route::get('/employee', [EmployeeController::class, 'index'])->name('employee');
                 Route::get('/employee/create', [EmployeeController::class, 'create'])->name('employee.create');
                 Route::post('/employee', [EmployeeController::class, 'store'])->name('employee.store');
+
                 Route::get('/employee/edit/{id}', [EmployeeController::class, 'edit'])->name('employee.edit');
                 Route::put('/employee/update/{id}', [EmployeeController::class, 'update'])->name('employee.update');
                 Route::delete('/employee/{id}', [EmployeeController::class, 'deleteImg'])->name('delete.company_img');
                 Route::delete('/employee/{id}', [EmployeeController::class, 'destroy'])->name('employee.delete');
 
+                Route::get('/words', [WordsController::class, 'index'])->name('words');
+
+                // Route::resource('/words', [WordController::class]);
 
                 Route::get('/words', [WordsController::class, 'index'])->name('words');
                 Route::get('/words/store', [WordsController::class, 'store'])->name('words.store');
@@ -122,21 +126,39 @@ Route::middleware([
 
 });
 
-
 Route::name('front.')->group(function () {
     Route::get('/profile', [ProfileController::class,'index'])->name('profile');
     Route::get('/news/{id}', [FrontNewsController::class,'index'])->name('news.single');
 });
 Route::get('/', [FrontProjectController::class,'index'])->name('home');
+Route::get('/project/{id}', [FrontProjectController::class,'show'])->name('home.project');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::get('/languages/{lang}', function($lang){
     if(in_array($lang, ['en', 'ru', 'uz'])){
         session()->put('locale', $lang);
     }
     return redirect()->back();
 });
-
-
-
 
 Route::fallback(function () {
     return view('admin.components.error404');

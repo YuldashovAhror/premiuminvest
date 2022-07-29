@@ -18,50 +18,7 @@
 	
 
 	<!-- МОБИЛЬНОЕ МЕНЮ -->
-	<div class="mobile-menu pattern">
-		<div class="mobile-menu__head">
-			<div class="mobile-menu__logo">
-				<a href="index.html">
-					<img src="/assets/img/logo.svg" alt="SUU" title="SUU">
-				</a>
-			</div>
-			<div class="mobile-menu__close">
-				<img src="/assets/img/close.svg" alt="ico">
-			</div>
-		</div>
-		<ul class="menu">
-			<li>
-				<a href="#consort">
-					Международный консорциум
-				</a>
-			</li>
-			<li>
-				<a href="#exp">
-					Девелопер
-				</a>
-			</li>
-			<li>
-				<a href="#projects">
-					Проекты
-				</a>
-			</li>
-			<li>
-				<a href="#team">
-					Команда
-				</a>
-			</li>
-			<li>
-				<a href="#footer">
-					Контакты
-				</a>
-			</li>
-		</ul>
-		<div class="mobile-menu__lang">
-			<a href="#">РУ</a>
-			<a href="#">UZ</a>
-			<a href="#">EN</a>
-		</div>
-	</div>
+	@include('components.front.mobile-menu')
 
 
 
@@ -70,17 +27,17 @@
 	<header class="header header__cabinet">
 		<div class="container">
 			<div class="header__logo">
-				<a href="#">
+				<a href="{{ route('home') }}">
 					<img src="/assets/img/logo.svg" alt="Premium Investment Club">
 				</a>
 			</div>			
 			<div>
 				<a href="#news" class="header-news">
-					Новости
+					{{ __('asd. Новости') }}
 				</a>
-				<a href="#" class="header-cabinet">
+				<a href="{{ route('home') }}" class="header-cabinet">
 					<img src="/assets/img/dot.svg" alt="ico">
-					<span>Выход</span>
+					<span>{{ __('asd. Выход') }}</span>
 				</a>
 				<div class="header-mobile">
 					<span></span>
@@ -97,11 +54,11 @@
 	<section class="news-single">
 		<div class="container">
 			<div class="news-single__back">
-				<a href="#">
+				<a href="{{ route('front.profile') }}">
 					<svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M9.03174 1.07215L8.01783 0L0 7.99974L8.01783 16L9.03174 14.9276L2.80708 8.71596L2.08937 7.99974L2.84179 7.24892L9.03174 1.07215Z" fill="#D9AF78"/>
 					</svg>
-					<span>Назад</span>
+					<span>{{ __('asd. Назад') }}</span>
 				</a>
 			</div>
 			<div class="news-single__wrap">
@@ -117,13 +74,16 @@
 							{{$news->name}}
 						</h2>
 						<p>
-							{!! $news->description_uz !!}
+							<?php 
+								$description = 'description_'.$lang;
+								?>
+							{!! $news->$description !!}
 						</p>
 					</div>
 				</div>
 				<div class="news-other">
 					<div class="news-other__title">
-						другие НОВОСТИ
+					{{ __('asd.другие НОВОСТИ') }}
 					</div>
 					<ul class="news-other__list">
 
@@ -156,17 +116,17 @@
 	<footer class="cabinet-footer">
 		<div class="container">
 			<div class="invest__text">
-				До конца окончания приёма заявок осталось:
+				{{ __('asd.До конца окончания приёма заявок осталось:') }}
 			</div>
 			<div class="invest-counter">
 				<div class="invest-counter__item month wow fadeInUp" data-wow-delay=".3s">
-					<span>0</span> мес.
+					<span>0</span> {{ __('asd. мес.') }}
 				</div>
 				<div class="invest-counter__item day wow fadeInUp" data-wow-delay=".4s">
-					<span>0</span> дн.
+					<span>0</span>  {{ __('asd. дн.') }}
 				</div>
 				<div class="invest-counter__item hour wow fadeInUp" data-wow-delay=".5s">
-					<span>0</span> ч.
+					<span>0</span>  {{ __('asd. ч.') }}
 				</div>
 				<div class="invest-counter__item minute wow fadeInUp" data-wow-delay=".6s">
 					<span>0</span> м.

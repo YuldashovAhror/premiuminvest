@@ -21,9 +21,20 @@ class ProfileController extends Controller
 
     public function index()
     {
+        if(session()->get('locale') == ''){
+            session()->put('locale', 'ru');
+            app()->setLocale('ru');
+        }else{
+            app()->setLocale(session()->get('locale'));
+        }  
+        $lang = session()->get('locale');
         $invest = Invest::where('user_id', auth()->user()->id)->first();
         $news = News::all();
-        return view('front.cabinet', ['invest'=>$invest, 'news'=>$news]);
+        return view('front.cabinet', [
+            'invest'=>$invest,
+            'news'=>$news,
+            'lang'=>$lang
+        ]);
         
     }
 
