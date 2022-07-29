@@ -2,14 +2,14 @@
 
   <!-- LOGO -->
   <div class="navbar-brand-box" style="height: 70px; display: flex; justify-content: flex-start; align-items: center;">
-    <a href="{{ Route('admin.dashboard') }}" class="logo logo-dark">
-      {{-- <span class="logo-sm">
-        <img src="/assets/images/logo-sm.png" alt="" height="22" style="height: 22px;">
-      </span> --}}
-      <span class="logo-lg">
-        <img src="/assets/images/logo-dark.png" alt="" height="20" style="height: 20px;">
-      </span>
-    </a>
+{{--    <a href="{{ Route('admin.dashboard') }}" class="logo logo-dark">--}}
+{{--      --}}{{-- <span class="logo-sm">--}}
+{{--        <img src="/assets/images/logo-sm.png" alt="" height="22" style="height: 22px;">--}}
+{{--      </span> --}}
+{{--      <span class="logo-lg">--}}
+{{--        <img src="/assets/images/logo-dark.png" alt="" height="20" style="height: 20px;">--}}
+{{--      </span>--}}
+{{--    </a>--}}
 
     <a href="index.html" class="logo logo-light">
       <span class="logo-sm">
@@ -47,7 +47,7 @@
             <i class="uil-users-alt"></i>
             <span>Users</span>
           </a>
-          
+
         </li>
 
         <li>
@@ -73,7 +73,7 @@
             <i class="bx bxs-bar-chart-alt-2"></i>
             <span>Invest</span>
           </a>
-          
+
         </li>
 
         <li>
@@ -81,7 +81,7 @@
             <i class="bx bxs-message"></i>
             <span>Messages</span>
           </a>
-          
+
         </li>
         <li>
           <a href="{{Route('admin.news')}}">
@@ -100,7 +100,7 @@
             <i class="bx bx-file"></i>
             <span>Словарь</span>
           </a>
-          
+
         </li>
 
 
