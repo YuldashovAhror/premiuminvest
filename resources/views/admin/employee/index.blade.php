@@ -39,12 +39,12 @@
                 </tr>
                 <tr>
                   <th>#</th>
-                  <th>Name Uz</th>
-                  <th>Name Ru</th>
-                  <th>Name En</th>
-                  <th>Type</th>
-                  <th>Companies</th>
-                  <th>Actions</th>
+                  <th>Имя Uz</th>
+                  <th>Имя Ru</th>
+                  <th>Имя En</th>
+                  <th>Тип</th>
+                  <th>Компания</th>
+                  <th>Действия</th>
                 </tr>
               </thead>
               <tbody>
@@ -65,11 +65,11 @@
                         </td>
                         <td style="">
                           <a href="{{ Route('admin.employee.edit', $employee->id) }}" class="btn btn-primary"
-                            style="background-color: blue; margin-right: 10px;">Edit</a>
+                            style="background-color: blue; margin-right: 10px;">Редактировать</a>
                           <form action="{{ Route('admin.employee.delete', $employee->id) }}" method="post" style="display: inline;">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger" style="color: #fff">Delete</button>
+                            <button class="btn btn-danger" style="color: #fff">Удалить</button>
                           </form>
                         </td>
                     </tr>

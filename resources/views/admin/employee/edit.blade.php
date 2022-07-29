@@ -22,23 +22,23 @@
           @method('PUT')
           <div class="card-body">
             <a href="{{ route('admin.invest') }}" class="btn btn-primary"
-              style="background-color: blue; margin-bottom: 10px;">Back</a>
+              style="background-color: blue; margin-bottom: 10px;">Назад</a>
             <div style="display: flex;">
               <div style="width: 50%;">
                 <div style="width: 100%;" class="row">
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="type" class="form-label">Type</label>
+                      <label for="type" class="form-label">Тип</label>
                       <select name="type" id="type" class="form-control select2">
                         <option value="{{ null }}">Select</option>
-                        <option @if ($employee->type == 1) selected @endif value="1">Type 1</option>
-                        <option @if ($employee->type == 2) selected @endif value="2">Type 2</option>
+                        <option @if ($employee->type == 1) selected @endif value="1">Тип 1</option>
+                        <option @if ($employee->type == 2) selected @endif value="2">Тип 2</option>
                       </select>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="name_uz" class="form-label" for="formrow-email-input">Name Uz</label>
+                      <label for="name_uz" class="form-label" for="formrow-email-input">Имя Uz</label>
                       <input value="{{ $employee->name_uz }}" name="name_uz" type="text" id="name_uz"
                         class="form-control" id="formrow-email-input">
                     </div>
@@ -47,14 +47,14 @@
                 <div style="width: 100%;" class="row">
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="name_ru" class="form-label" for="formrow-password-input">Name Ru</label>
+                      <label for="name_ru" class="form-label" for="formrow-password-input">Имя Ru</label>
                       <input value="{{ $employee->name_ru }}" name="name_ru" id="name_ru" type="text"
                         class="form-control" id="formrow-password-input">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="name_en" class="form-label" for="formrow-password-input">Name En</label>
+                      <label for="name_en" class="form-label" for="formrow-password-input">Имя En</label>
                       <input value="{{ $employee->name_en }}" name="name_en" id="name_en" type="text"
                         class="form-control" id="formrow-password-input">
                     </div>
@@ -64,10 +64,10 @@
               <div style="width: 50%;">
                 <div class="row">
                   <div class="col-lg-6">
-                    <label class="form-label">Company</label>
+                    <label class="form-label">Компания</label>
                     <div style="display: flex;">
-                      <div class="col-9 mr-3">
-                        <label class="visually-hidden" for="specificSizeInputName">Name</label>
+                      <div class="mr-3 col-9">
+                        <label class="visually-hidden" for="specificSizeInputName">Имя</label>
 
                         <input name="companies[]" multiple type="file" class="form-control" id="specificSizeInputName"
                           placeholder="Enter Name">
@@ -105,15 +105,15 @@
                   ">
                 <div class="card-body">
                   <div style="margin: 1rem 0">
-                    Do you really want to delete this?
+                    Вы действительно хотите удалить это?
                   </div>
                   <div style="display: flex; justify-content: space-between;">
-                    <button class="btn btn-primary btn__close" style="color: #fff">Close</button>
+                    <button class="btn btn-primary btn__close" style="color: #fff">Закрывать</button>
                     <form action="{{ Route('admin.delete.company_img', $company->id) }}" method="POST"
                       style="margin: 0;">
                       @method('DELETE')
                       @csrf
-                      <button type="submit" class="btn btn-danger" style="color: #fff">Delete</button>
+                      <button type="submit" class="btn btn-danger" style="color: #fff">Удалить</button>
                     </form>
                   </div>
                 </div>

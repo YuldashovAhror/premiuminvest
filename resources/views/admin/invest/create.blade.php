@@ -5,7 +5,7 @@
         <div class="card">
             <form action="{{route('admin.invest')}}" method="get" style="margin-top: 2rem; padding-left: 1rem">
                 @csrf
-                <button type="submit" class="btn btn-primary" style="background-color: blue">Back</button>
+                <button type="submit" class="btn btn-primary" style="background-color: blue">Назад</button>
             </form>
             <div class="form-group container-fluid d-flex justify-content-between align-items-end" style="padding: 0px;display: flex ">
                 <form action="{{route('admin.invest.store')}}" method="post" enctype="multipart/form-data">
@@ -13,9 +13,9 @@
                     <ul style="padding-top: 20px ">
                         <div style="display: flex; align-items: center;">
                             <li style="font-size: 14.5px;">
-                                <label for="cars">Choose User Id:</label>
+                                <label for="cars">Выберите идентификатор пользователя:</label>
                                 <select name="user_id" id="cars" style="border-radius: 2rem">
-                                    <option value="volvo">User name</option>
+                                    <option value="volvo">Имя пользователя</option>
                                     @foreach($users as $user)
                                         <option value="{{$user->id}}">{{$user->name}} {{$user->last_name}}</option>
                                     @endforeach

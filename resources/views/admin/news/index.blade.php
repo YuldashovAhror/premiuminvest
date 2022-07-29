@@ -12,14 +12,14 @@
                             </tr>
                             <tr>
                                 <th>#</th>
-                                <th>Name UZ</th>
-                                <th>Name RU</th>
-                                <th>Name EN</th>
-                                <th>Photo</th>
-                                <th>Description Uz</th>
-                                <th>Description Ru</th>
-                                <th>Description En</th>
-                                <th>Action</th>
+                                <th>Имя UZ</th>
+                                <th>Имя RU</th>
+                                <th>Имя EN</th>
+                                <th>Фото</th>
+                                <th>Описание Uz</th>
+                                <th>Описание Ru</th>
+                                <th>Описание En</th>
+                                <th>Действие</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -45,7 +45,7 @@
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="myModalLabel">Rostdan ham o'chirmoqchimisiz?</h5>
+                                                    <h5 class="modal-title" id="myModalLabel">Вы уверены, что хотите удалить?</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                                     </button>
                                                 </div>
