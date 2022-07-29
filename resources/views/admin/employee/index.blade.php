@@ -48,8 +48,34 @@
                 </tr>
               </thead>
               <tbody>
-                @livewire('employee')
-                
+                <?php $num = 1; ?>
+                @if (count($employees) > 0)
+                  @foreach ($employees as $employee)
+                    <tr>
+                      <td>{{ $num++ }}</td>
+                      <td>{{ $employee->name_uz }}</td>
+                      <td>{{ $employee->name_ru }}</td>
+                      <td>{{ $employee->name_en }}</td>
+                      <td>{{ $employee->type }}</td>
+                        <td style="display: flex;">
+                          @foreach ($employee->employeeCompany as $company)
+                            <img src="/{{ $company->photo }}" alt=""
+                              style="width: 50px; height: 50px; margin-right: 5px;">
+                          @endforeach
+                        </td>
+                        <td style="">
+                          <a href="{{ Route('admin.employee.edit', $employee->id) }}" class="btn btn-primary"
+                            style="background-color: blue; margin-right: 10px;">Edit</a>
+                          <form action="{{ Route('admin.employee.delete', $employee->id) }}" method="post" style="display: inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" style="color: #fff">{{ $employee->id }} Delete</button>
+                          </form>
+                        </td>
+                    </tr>
+                  @endforeach
+                @endif
+
               </tbody>
             </table>
           </div>
@@ -57,7 +83,5 @@
       </div>
     </div>
   </div>
-
-
 
 @endsection
