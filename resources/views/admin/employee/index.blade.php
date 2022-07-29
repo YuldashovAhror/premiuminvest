@@ -69,7 +69,7 @@
                           <form action="{{ Route('admin.employee.delete', $employee->id) }}" method="post" style="display: inline;">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger" style="color: #fff">{{ $employee->id }} Delete</button>
+                            <button class="btn btn-danger" style="color: #fff">Delete</button>
                           </form>
                         </td>
                     </tr>
