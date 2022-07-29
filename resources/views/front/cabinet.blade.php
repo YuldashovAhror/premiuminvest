@@ -128,27 +128,26 @@
                 {{ __('asd.Уважаемый') }} <span>{{ Auth::user()->name }}</span>
             </div>
         </div>
-        @if ($invest)
             <div class="cabinet-wrap">
                 <ul class="cabinet-table">
                     <li>
                         <div class="cabinet-table__info">
                             {{ __('asd. Аванс') }}
                             <input type="hidden" id="deposit_date">
-                            <span>{{ $invest->deposit_date }}</span>
+                            <span>{{ $invest->deposit_date ?? now()->format('d.m.Y') }}</span>
                         </div>
                         <div class="cabinet-table__value">
                             {{-- @dd($invest) --}}
-                            {{ $invest->deposit }} US$
+                            {{ $invest->deposit ?? 0 }} US$
                         </div>
                     </li>
                     <li>
                         <div class="cabinet-table__info">
                             {{ __('asd. Мой вклад') }}
-                            <span>{{ $invest->investment_date }}</span>
+                            <span>{{ $invest->investment_date ?? now()->format('d.m.Y') }}</span>
                         </div>
                         <div class="cabinet-table__value">
-                            {{ $invest->investment }} US$
+                            {{ $invest->investment ?? 0 }} US$
                         </div>
                     </li>
                     <li>
@@ -156,18 +155,18 @@
                             {{ __('asd. Доля в фонде') }}
                         </div>
                         <div class="cabinet-table__value">
-                            {{ $invest->percentage }} %
+                            {{ $invest->percentage ?? 0}} %
                         </div>
                     </li>
                     <li>
                         <div class="cabinet-table__info">
                             {{ __('asd. Ожидаемый доход') }}
-                            <span>{{ $invest->earnings_date }}</span>
+                            <span>{{ $invest->earnings_date ?? now()->format('d.m.Y') }}</span>
                         </div>
                         <div class="cabinet-table__value">
-                            {{ $invest->earnings }} US$
+                            {{ $invest->earnings ?? 0}} US$
                             <div>
-                                +{{ $invest->earnings_percentage }} %
+                                +{{ $invest->earnings_percentage ?? 0}} %
                             </div>
                         </div>
                     </li>
@@ -176,15 +175,15 @@
                             {{ __('asd.Рыночная Σ актива') }}
                         </div>
                         <div class="cabinet-table__value">
-                            {{ $invest->current_earning }} US$
+                            {{ $invest->current_earning ?? 0}} US$
                         </div>
                     </li>
                     <li>
                         <div class="cabinet-table__info">
-                            {{ $invest->revaluation_date }}
+                            {{ $invest->revaluation_date ?? 0}}
                         </div>
                         <div class="cabinet-table__value">
-                            <span>{{ $invest->revaluation_date }}</span>
+                            <span>{{ $invest->revaluation_date ?? now()->format('d.m.Y')}}</span>
                         </div>
                     </li>
                     <li>
@@ -192,7 +191,7 @@
                             {{ __('asd. Дней до закрытия фонда ') }}
                         </div>
                         <div class="cabinet-table__value">
-                            <span>{{ $invest->end_date }}</span>
+                            <span>{{ $invest->end_date ?? now()->format('d.m.Y')}}</span>
                         </div>
                     </li>
                     <li>
@@ -200,19 +199,23 @@
                             {{ __('asd.Отчет') }}
                         </div>
                         <ul class="cabinet-table__list">
+                            @isset($invest->use_funds)
                             <li>
                                 <!-- unread непрочитанный-->
-                                <a href="{{ $invest->use_funds }}" download class="unread">
+                                <a href="{{ $invest->use_funds ?? 0}}" download class="unread">
                                     {{ __('asd. Использование средств') }} <img src="assets/img/download.svg"
                                         alt="ico">
                                 </a>
                             </li>
+                            @endisset 
+                            @isset($invest->progress_report)
                             <li>
-                                <a href="{{ $invest->progress_report }}" download>
+                                <a href="{{ $invest->progress_report ?? 0}}" download>
                                     {{ __('asd. Отчет о прогрессе') }} <img src="assets/img/download.svg"
                                         alt="ico">
                                 </a>
                             </li>
+                            @endisset 
                         </ul>
                     </li>
                 </ul>
@@ -220,7 +223,6 @@
                     <canvas id="myChart"></canvas>
                 </div>
             </div>
-        @endif
 
     </section>
 

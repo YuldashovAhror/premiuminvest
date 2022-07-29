@@ -30,6 +30,7 @@ class ProfileController extends Controller
         $lang = session()->get('locale');
         $invest = Invest::where('user_id', auth()->user()->id)->first();
         $news = News::all();
+        
         return view('front.cabinet', [
             'invest'=>$invest,
             'news'=>$news,

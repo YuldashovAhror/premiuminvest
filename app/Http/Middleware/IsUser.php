@@ -20,6 +20,10 @@ class IsUser
             return redirect()->route('login');
         }
 
+        if(auth()->check() && auth()->user()->type == 'admin') {
+            return redirect()->route('admin.dashboard');
+        }
+
         return $next($request);
     }
 }
